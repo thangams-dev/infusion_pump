@@ -1,0 +1,47 @@
+{
+    aliases{
+        led = &led_node;
+        buzzer = &buzzzer_node;
+        enc = &enc_node;
+        sw = &sw_node;
+        step = &step_node;
+        dir = &dir_node;
+        enab = &enab_node;
+    };
+    my_outputs{
+        compatible = "gpio-leds";
+        led_node : led1{
+            gpios = <&gpiox x GPIO_ACTIVE_HIGH>;
+        };
+        buzzer_node : buz1{
+            gpios = <&gpiox x GPIO_ACTIVE_HIGH>;
+        };
+        step_node : step1{
+            gpios = <&gpiox x GPIO_ACTIVE_HIGH>;
+        };
+        dir_node : dir1{
+            gpios = <&gpiox x GPIO_ACTIVE_HIGH>;
+        };
+        enab_node : enab1{
+            gpios = <&gpiox x GPIO_ACTIVE_HIGH>;
+        };
+    };
+    my_inputs{
+        compatible = "gpio-keys";
+        
+        enc_node : enc1{
+            gpios = <&gpiox x (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        };
+        sw_node : sw1{
+            gpios = <&gpiox x (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        };
+    };
+};
+&i2c1{
+    status = "okay";
+    lps22hb@5d{
+                compatible = "st,lps22hb-press";
+        reg = <0x5d>;
+        label = "LPS22HB";
+    };
+};

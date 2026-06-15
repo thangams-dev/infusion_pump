@@ -1,5 +1,17 @@
-#include <zephyr/kernel.h>
+#pragma once
 #include <cmath>
+#ifndef UNIT_TEST
+#include <zephyr/kernel.h>
+#else
+#include <cstdint>
+int64_t k_uptime_get();
+uint32_t atomic_get(void*);
+typedef int atomic_t;
+#endif
+
+extern float sensor_press();
+extern void set_delay_rate(uint32_t);
+extern atomic_t tick_count;
 class OcclusionMonitor{
     public:
     float press;
@@ -23,7 +35,7 @@ class VolumeTracker{
     float expected;
     float rate;
     float deviation;
-    float ml;
+    float ml;   
     float actual;   
     public:
     VolumeTracker(float setrate, uint64_t start_ms , float ml_step) : rate(setrate),initial(start_ms), ml(ml_step){}
@@ -32,6 +44,7 @@ class VolumeTracker{
         ticks = (uint32_t)atomic_get(&tick_count);
         expected = elapsed_time*rate;
         actual = ticks*ml;
+        if(expected == 0.0f) return true; 
         float deviation = fabsf(expected-actual)/expected*100.0f;
         if(deviation > 5.0f){
             return false;
@@ -48,18 +61,23 @@ class Alarmobserver{
 class led : public Alarmobserver{
     public:
     void update(){
+        #ifndef UNIT_TEST
         printf("led");
+        #endif
     }
 };
 class buz : public Alarmobserver{
     public:
     void update(){
+        #ifndef UNIT_TEST
         printf("buzzzer");
+        #endif
     }
 };
 class AlarmManager{
     public:
     Alarmobserver* alarm[10];
+    uint16_t noti_count = 0;
     uint8_t count = 0;
     void add(Alarmobserver* obj){
         alarm[count] = obj;
@@ -69,6 +87,7 @@ class AlarmManager{
         for(int i = 0 ; i < count ; i++){
             alarm[i]->update();
         }
+        noti_count++;   
     }
 };
 class InfusionMode{
@@ -90,14 +109,14 @@ class InfusionMode{
         applyRate(rate);
         checkAlarm();
     }
-        void applyRate(float rate){
+        void applyRate(float rate){ 
                 if (!started_) {
                     start_ms_ = k_uptime_get();
                     started_ = true;
                 }
             ml_sec = rate/3600.0f;
             step_sec = ml_sec*200;
-            delay = 1000000.0f / step_sec;
+            delay = (uint32_t)(1000000.0f / step_sec);
             set_delay_rate(delay);
         }
         void checkAlarm(){
