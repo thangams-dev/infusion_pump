@@ -1,13 +1,13 @@
 {
-    aliases{
-        led = &led_node;
-        buzzer = &buzzzer_node;
-        enc = &enc_node;
-        sw = &sw_node;
-        step = &step_node;
-        dir = &dir_node;
-        enab = &enab_node;
-    };
+   aliases {
+    led0 = &led_node;
+    buz0 = &buzzer_node;
+    enc1 = &enc_node;
+    sw1 = &sw_node;
+    step1 = &step_node;
+    dir1 = &dir_node;
+    enab1 = &enab_node;
+};
     my_outputs{
         compatible = "gpio-leds";
         led_node : led1{
