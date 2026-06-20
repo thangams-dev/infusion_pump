@@ -6,7 +6,7 @@
 atomic_t tick_count = 0;
 int64_t fake_time = 0;
 uint32_t fake_ticks = 0;
-float fake_press = 0.0f;
+float fake_press = 0.0F;
 
 float sensor_press() { return fake_press; }
 uint32_t atomic_get(void*) { return fake_ticks; }

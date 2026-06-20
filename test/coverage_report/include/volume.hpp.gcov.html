@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-06-20 11:47:10</td>
+            <td class="headerValue">2026-06-20 15:02:54</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -66,7 +66,7 @@
 <span id="L4"><span class="lineNum">       4</span>              : /// @brief Tracks infused volume via encoder ticks</span>
 <span id="L5"><span class="lineNum">       5</span>              : class VolumeTracker {</span>
 <span id="L6"><span class="lineNum">       6</span>              : public:</span>
-<span id="L7"><span class="lineNum">       7</span>              :     uint32_t ticks;</span>
+<span id="L7"><span class="lineNum">       7</span>              :     float ticks;</span>
 <span id="L8"><span class="lineNum">       8</span>              :     uint64_t initial;</span>
 <span id="L9"><span class="lineNum">       9</span>              :     float elapsed_time;</span>
 <span id="L10"><span class="lineNum">      10</span>              :     float expected;</span>
@@ -76,8 +76,8 @@
 <span id="L14"><span class="lineNum">      14</span>              :     float actual;</span>
 <span id="L15"><span class="lineNum">      15</span>              : </span>
 <span id="L16"><span class="lineNum">      16</span>              :     /// @brief Constructor @param setrate mL/hr @param start_ms start time @param ml_step mL per step</span>
-<span id="L17"><span class="lineNum">      17</span> <span class="tlaGNC tlaBgGNC">          17 :     VolumeTracker(float setrate, uint64_t start_ms, float ml_step)</span></span>
-<span id="L18"><span class="lineNum">      18</span> <span class="tlaGNC">          17 :         : rate(setrate), initial(start_ms), ml(ml_step) {}</span></span>
+<span id="L17"><span class="lineNum">      17</span> <span class="tlaGNC tlaBgGNC">          51 :     VolumeTracker(float setrate, uint64_t start_ms, float ml_step)</span></span>
+<span id="L18"><span class="lineNum">      18</span> <span class="tlaGNC">          51 :         : rate(setrate), initial(start_ms), ml(ml_step) {}</span></span>
 <span id="L19"><span class="lineNum">      19</span>              :     </span>
 <span id="L20"><span class="lineNum">      20</span>              :     /// @brief Calculate volume deviation @return true if within 5%</span>
 <span id="L21"><span class="lineNum">      21</span>              :     bool cal();</span>

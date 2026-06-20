@@ -5,99 +5,90 @@
 #include "infusion.hpp"
 #include "mock_hardware.hpp"
 
-extern float fake_press;
-extern uint32_t fake_ticks;
-extern int64_t fake_time;
-class infusion_test :public testing::Test{
-    protected:
+class InfusionTest : public testing::Test {
+protected:
+    void SetUp() override {
+        fake_press = 0.0F;
+        fake_ticks = 0;
+        fake_time = 0;
+    }
     OcclusionMonitor occlu;
     AlarmManager alarm;
-    VolumeTracker vt{100.0f, 0, 0.005f};
-    ConstantRateMode constant{100.0f,vt,occlu,alarm};
-    LinearRampMode ramp{10.0f,2.0f,100.0f,vt,occlu,alarm};
+    VolumeTracker vt{100.0F, 0, 0.005F};
+    ConstantRateMode constant{100.0F, vt, occlu, alarm};
+    LinearRampMode ramp{10.0F, 2.0F, 100.0F, vt, occlu, alarm};
 };
-TEST_F(infusion_test,occlu_cal){
-    EXPECT_EQ(occlu.isocclued(),true);
-}   
-TEST_F(infusion_test,notify_alarm){
-    led l;
-    buz b;
-    alarm.add(&l);
-    alarm.add(&b);
+TEST_F(InfusionTest, OcclusionMonitor_NormalPressure_ReturnsTrue){
+        printf("fake_press = %f\n", fake_press);
+    EXPECT_EQ(occlu.isocclued(), true);
+}
+TEST_F(InfusionTest, AlarmManager_TwoObservers_NotifyCountOne){
+    led l; buz b;
+    alarm.add(&l); alarm.add(&b);
     alarm.notify();
-    EXPECT_EQ(alarm.noti_count,1);
+    EXPECT_EQ(alarm.noti_count, 1);
 }
-TEST_F(infusion_test,vol_cal){
+TEST_F(InfusionTest, VolumeTracker_TimeElapsed_ReturnsDeviation){
     fake_time = 2000;
-    EXPECT_EQ(vt.cal(),false);
+    EXPECT_EQ(vt.cal(), false);
 }
-TEST_F(infusion_test, const_t){
-    EXPECT_EQ(constant.computeTargetRate(),100.0f);
+TEST_F(InfusionTest, ConstantRateMode_ComputeRate_Returns100){
+    EXPECT_EQ(constant.computeTargetRate(), 100.0F);
 }
-TEST_F(infusion_test, ramp_t){
-    EXPECT_EQ(ramp.computeTargetRate(),12.0f);
+TEST_F(InfusionTest, LinearRampMode_FirstCall_Returns12){
+    EXPECT_EQ(ramp.computeTargetRate(), 12.0F);
 }
-TEST_F(infusion_test, multi_ramp_t){
+TEST_F(InfusionTest, LinearRampMode_FourCalls_Returns18){
     ramp.computeTargetRate();
     ramp.computeTargetRate();
     ramp.computeTargetRate();
-    EXPECT_EQ(ramp.computeTargetRate(),18.0f);
+    EXPECT_EQ(ramp.computeTargetRate(), 18.0F);
 }
-TEST_F(infusion_test, occlu_cal_alram){
-    fake_press = 400.0f;
-    EXPECT_EQ(occlu.isocclued(),false);
+TEST_F(InfusionTest, OcclusionMonitor_HighPressure_ReturnsFalse){
+    fake_press = 400.0F;
+    EXPECT_EQ(occlu.isocclued(), false);
 }
-TEST_F(infusion_test, vt_alarm){
+TEST_F(InfusionTest, VolumeTracker_CorrectTicks_ReturnsTrue){
     fake_time = 3600000;
     fake_ticks = 20000;
-    EXPECT_EQ(vt.cal(),true);
+    EXPECT_EQ(vt.cal(), true);
 }
-TEST_F(infusion_test, switch_mode){
+TEST_F(InfusionTest, InfusionMode_SwitchMode_ComputesCorrectRate){
     InfusionMode *active = &constant;
-
-    EXPECT_EQ(active->computeTargetRate(),100.0f);
-
+    EXPECT_EQ(active->computeTargetRate(), 100.0F);
     active = &ramp;
-    EXPECT_EQ(active->computeTargetRate(),12.0f);
+    EXPECT_EQ(active->computeTargetRate(), 12.0F);
 }
-TEST_F(infusion_test, ramp_cap){
-    for(int i=0; i<50; i++) ramp.computeTargetRate();
-    EXPECT_EQ(ramp.computeTargetRate(), 100.0f);  // hits fin cap
+TEST_F(InfusionTest, LinearRampMode_OverMax_CapsAtFin){
+    for(int i = 0; i < 50; i++) ramp.computeTargetRate();
+    EXPECT_EQ(ramp.computeTargetRate(), 100.0F);
 }
-
-TEST_F(infusion_test, alarm_no_observer){
- // count=0, loop doesn't run
+TEST_F(InfusionTest, AlarmManager_NoObservers_CountZero){
     EXPECT_EQ(alarm.noti_count, 0);
 }
-
-TEST_F(infusion_test, vt_zero_expected){
-    fake_time = 0;
-    fake_ticks = 0;
-    EXPECT_EQ(vt.cal(), true);  // no deviation
+TEST_F(InfusionTest, VolumeTracker_ZeroTime_ReturnsTrue){
+    fake_time = 0; fake_ticks = 0;
+    EXPECT_EQ(vt.cal(), true);
 }
-TEST_F(infusion_test, check_alarm){
-    fake_press = 400.0f;
-    fake_time = 0;
+TEST_F(InfusionTest, InfusionMode_OcclusionAlarm_NotifyCount1){
+    fake_press = 400.0F; fake_time = 0;
     constant.run();
-    EXPECT_EQ(alarm.noti_count, 1);  // alarm triggered
+    EXPECT_EQ(alarm.noti_count, 1);
 }
-TEST_F(infusion_test, apply_rate){
+TEST_F(InfusionTest, InfusionMode_ApplyRate_NoError){
     constant.run();
     constant.run();
 }
-TEST_F(infusion_test, vol_ok_no_alarm){
-    fake_press = 0.0f;  // no occlusion
-    fake_time = 0;
-    fake_ticks = 0;
+TEST_F(InfusionTest, InfusionMode_NoPressure_NoAlarm){
+    fake_press = 0.0F; fake_time = 0; fake_ticks = 0;
     constant.run();
     EXPECT_EQ(alarm.noti_count, 0);
 }
-TEST_F(infusion_test, vol_deviation_alarm){
-    fake_time = 3600000;
-    fake_ticks = 0;  // expected high, actual zero → deviation >5%
+TEST_F(InfusionTest, VolumeTracker_ZeroTicks_AlarmTriggered){
+    fake_time = 3600000; fake_ticks = 0;
     constant.run();
     EXPECT_GT(alarm.noti_count, 0);
 }
-TEST_F(infusion_test, get_mode){
+TEST_F(InfusionTest, Hardware_GetPumpMode_ReturnsConstant){
     EXPECT_EQ(get_pump_mode(), PumpMode::Constant_mode);
 }

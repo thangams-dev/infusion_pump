@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-06-20 11:47:10</td>
+            <td class="headerValue">2026-06-20 15:02:54</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -67,39 +67,39 @@
 <span id="L5"><span class="lineNum">       5</span>              : #include &quot;hardware.hpp&quot;</span>
 <span id="L6"><span class="lineNum">       6</span>              : #endif</span>
 <span id="L7"><span class="lineNum">       7</span>              : </span>
-<span id="L8"><span class="lineNum">       8</span>              : static constexpr float sec_per_hr = 3600.0f;</span>
-<span id="L9"><span class="lineNum">       9</span>              : static constexpr float steps_per_ml = 200.0f;</span>
-<span id="L10"><span class="lineNum">      10</span>              : static constexpr float usec_per_sec = 1000000.0f;</span>
-<span id="L11"><span class="lineNum">      11</span> <span class="tlaGNC tlaBgGNC">          13 :     void InfusionMode::run() {</span></span>
-<span id="L12"><span class="lineNum">      12</span> <span class="tlaGNC">          13 :         float rate = computeTargetRate();</span></span>
-<span id="L13"><span class="lineNum">      13</span> <span class="tlaGNC">          13 :         applyRate(rate);</span></span>
-<span id="L14"><span class="lineNum">      14</span> <span class="tlaGNC">          13 :         checkAlarm();</span></span>
-<span id="L15"><span class="lineNum">      15</span> <span class="tlaGNC">          13 :     }</span></span>
-<span id="L16"><span class="lineNum">      16</span> <span class="tlaGNC">          13 :     void InfusionMode::applyRate(float rate) {</span></span>
-<span id="L17"><span class="lineNum">      17</span> <span class="tlaGNC">          13 :         if (!started_) {</span></span>
-<span id="L18"><span class="lineNum">      18</span> <span class="tlaGNC">          10 :             start_ms_ = k_uptime_get();</span></span>
-<span id="L19"><span class="lineNum">      19</span> <span class="tlaGNC">          10 :             started_ = true;</span></span>
+<span id="L8"><span class="lineNum">       8</span>              : static constexpr float sec_per_hr = 3600.0F;</span>
+<span id="L9"><span class="lineNum">       9</span>              : static constexpr float steps_per_ml = 200.0F;</span>
+<span id="L10"><span class="lineNum">      10</span>              : static constexpr float usec_per_sec = 1000000.0F;</span>
+<span id="L11"><span class="lineNum">      11</span> <span class="tlaGNC tlaBgGNC">          15 :     void InfusionMode::run() {</span></span>
+<span id="L12"><span class="lineNum">      12</span> <span class="tlaGNC">          15 :         float rate = computeTargetRate();</span></span>
+<span id="L13"><span class="lineNum">      13</span> <span class="tlaGNC">          15 :         applyRate(rate);</span></span>
+<span id="L14"><span class="lineNum">      14</span> <span class="tlaGNC">          15 :         checkAlarm();</span></span>
+<span id="L15"><span class="lineNum">      15</span> <span class="tlaGNC">          15 :     }</span></span>
+<span id="L16"><span class="lineNum">      16</span> <span class="tlaGNC">          15 :     void InfusionMode::applyRate(float rate) {</span></span>
+<span id="L17"><span class="lineNum">      17</span> <span class="tlaGNC">          15 :         if (!started_) {</span></span>
+<span id="L18"><span class="lineNum">      18</span> <span class="tlaGNC">          12 :             start_ms_ = k_uptime_get();</span></span>
+<span id="L19"><span class="lineNum">      19</span> <span class="tlaGNC">          12 :             started_ = true;</span></span>
 <span id="L20"><span class="lineNum">      20</span>              :         }</span>
-<span id="L21"><span class="lineNum">      21</span> <span class="tlaGNC">          13 :         ml_sec = rate / sec_per_hr;</span></span>
-<span id="L22"><span class="lineNum">      22</span> <span class="tlaGNC">          13 :         step_sec = ml_sec * steps_per_ml;</span></span>
-<span id="L23"><span class="lineNum">      23</span> <span class="tlaGNC">          13 :         delay = static_cast&lt;uint32_t&gt;(usec_per_sec / step_sec);</span></span>
-<span id="L24"><span class="lineNum">      24</span> <span class="tlaGNC">          13 :         set_delay_rate(delay);</span></span>
-<span id="L25"><span class="lineNum">      25</span> <span class="tlaGNC">          13 :     }</span></span>
+<span id="L21"><span class="lineNum">      21</span> <span class="tlaGNC">          15 :         ml_sec = rate / sec_per_hr;</span></span>
+<span id="L22"><span class="lineNum">      22</span> <span class="tlaGNC">          15 :         step_sec = ml_sec * steps_per_ml;</span></span>
+<span id="L23"><span class="lineNum">      23</span> <span class="tlaGNC">          15 :         delay = static_cast&lt;uint32_t&gt;(usec_per_sec / step_sec);</span></span>
+<span id="L24"><span class="lineNum">      24</span> <span class="tlaGNC">          15 :         set_delay_rate(delay);</span></span>
+<span id="L25"><span class="lineNum">      25</span> <span class="tlaGNC">          15 :     }</span></span>
 <span id="L26"><span class="lineNum">      26</span>              : </span>
-<span id="L27"><span class="lineNum">      27</span> <span class="tlaGNC">          13 :     void InfusionMode::checkAlarm() {</span></span>
-<span id="L28"><span class="lineNum">      28</span> <span class="tlaGNC">          13 :         if (!volume.cal()) {</span></span>
-<span id="L29"><span class="lineNum">      29</span> <span class="tlaGNC">           1 :             alarm.notify();</span></span>
+<span id="L27"><span class="lineNum">      27</span> <span class="tlaGNC">          15 :     void InfusionMode::checkAlarm() {</span></span>
+<span id="L28"><span class="lineNum">      28</span> <span class="tlaGNC">          15 :         if (!volume.cal()) {</span></span>
+<span id="L29"><span class="lineNum">      29</span> <span class="tlaGNC">           3 :             alarm.notify();</span></span>
 <span id="L30"><span class="lineNum">      30</span>              :         }</span>
-<span id="L31"><span class="lineNum">      31</span> <span class="tlaGNC">          13 :         if (!occlu.isocclued()) {</span></span>
-<span id="L32"><span class="lineNum">      32</span> <span class="tlaGNC">           9 :             alarm.notify();</span></span>
+<span id="L31"><span class="lineNum">      31</span> <span class="tlaGNC">          15 :         if (!occlu.isocclued()) {</span></span>
+<span id="L32"><span class="lineNum">      32</span> <span class="tlaGNC">           3 :             alarm.notify();</span></span>
 <span id="L33"><span class="lineNum">      33</span>              :         }</span>
-<span id="L34"><span class="lineNum">      34</span> <span class="tlaGNC">          13 :     }</span></span>
+<span id="L34"><span class="lineNum">      34</span> <span class="tlaGNC">          15 :     }</span></span>
 <span id="L35"><span class="lineNum">      35</span>              : </span>
-<span id="L36"><span class="lineNum">      36</span> <span class="tlaGNC">          19 :     float ConstantRateMode::computeTargetRate() {</span></span>
-<span id="L37"><span class="lineNum">      37</span> <span class="tlaGNC">          19 :         return setrate;</span></span>
+<span id="L36"><span class="lineNum">      36</span> <span class="tlaGNC">          21 :     auto ConstantRateMode::computeTargetRate() -&gt; float{</span></span>
+<span id="L37"><span class="lineNum">      37</span> <span class="tlaGNC">          21 :         return setrate;</span></span>
 <span id="L38"><span class="lineNum">      38</span>              :     }</span>
 <span id="L39"><span class="lineNum">      39</span>              : </span>
-<span id="L40"><span class="lineNum">      40</span> <span class="tlaGNC">         171 :     float LinearRampMode::computeTargetRate() {</span></span>
+<span id="L40"><span class="lineNum">      40</span> <span class="tlaGNC">         171 :     auto LinearRampMode::computeTargetRate() -&gt; float{</span></span>
 <span id="L41"><span class="lineNum">      41</span> <span class="tlaGNC">         171 :         current_lvl += incr;</span></span>
 <span id="L42"><span class="lineNum">      42</span> <span class="tlaGNC">         171 :         if (current_lvl &gt; fin) {</span></span>
 <span id="L43"><span class="lineNum">      43</span> <span class="tlaGNC">          18 :             current_lvl = fin;</span></span>

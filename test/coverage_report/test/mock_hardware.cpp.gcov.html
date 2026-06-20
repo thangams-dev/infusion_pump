@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-06-20 11:47:10</td>
+            <td class="headerValue">2026-06-20 15:02:54</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -68,16 +68,16 @@
 <span id="L6"><span class="lineNum">       6</span>              : atomic_t tick_count = 0;</span>
 <span id="L7"><span class="lineNum">       7</span>              : int64_t fake_time = 0;</span>
 <span id="L8"><span class="lineNum">       8</span>              : uint32_t fake_ticks = 0;</span>
-<span id="L9"><span class="lineNum">       9</span>              : float fake_press = 0.0f;</span>
+<span id="L9"><span class="lineNum">       9</span>              : float fake_press = 0.0F;</span>
 <span id="L10"><span class="lineNum">      10</span>              : </span>
-<span id="L11"><span class="lineNum">      11</span> <span class="tlaGNC tlaBgGNC">          19 : float sensor_press() { return fake_press; }</span></span>
-<span id="L12"><span class="lineNum">      12</span> <span class="tlaGNC">          22 : uint32_t atomic_get(void*) { return fake_ticks; }</span></span>
-<span id="L13"><span class="lineNum">      13</span> <span class="tlaGNC">          32 : int64_t k_uptime_get() { return fake_time; }</span></span>
-<span id="L14"><span class="lineNum">      14</span> <span class="tlaGNC">          13 : void set_delay_rate(uint32_t) {}</span></span>
+<span id="L11"><span class="lineNum">      11</span> <span class="tlaGNC tlaBgGNC">          21 : float sensor_press() { return fake_press; }</span></span>
+<span id="L12"><span class="lineNum">      12</span> <span class="tlaGNC">          24 : uint32_t atomic_get(void*) { return fake_ticks; }</span></span>
+<span id="L13"><span class="lineNum">      13</span> <span class="tlaGNC">          36 : int64_t k_uptime_get() { return fake_time; }</span></span>
+<span id="L14"><span class="lineNum">      14</span> <span class="tlaGNC">          15 : void set_delay_rate(uint32_t) {}</span></span>
 <span id="L15"><span class="lineNum">      15</span>              : </span>
 <span id="L16"><span class="lineNum">      16</span> <span class="tlaGNC">           3 : void led::update(){}</span></span>
 <span id="L17"><span class="lineNum">      17</span> <span class="tlaGNC">           3 : void buz::update(){}</span></span>
-<span id="L18"><span class="lineNum">      18</span> <span class="tlaGNC">           2 : PumpMode get_pump_mode(){ return PumpMode::Constant_mode; }</span></span>
+<span id="L18"><span class="lineNum">      18</span> <span class="tlaGNC">           3 : PumpMode get_pump_mode(){ return PumpMode::Constant_mode; }</span></span>
         </pre>
               </td>
             </tr>
