@@ -11,7 +11,7 @@ static AlarmManager  alarm;
 static OcclusionMonitor occlus;
 float initial = 10.0F;
 float fin = 100.0F;
-float incr = (fin - initial) /5.0F; 
+float incr = (fin - initial) /60.0F; 
 static LinearRampMode ramp(initial,incr,fin, 100.0F, volume, occlus, alarm);
 static ConstantRateMode constant(100.0F, volume, occlus, alarm);
 static InfusionMode     *active_mode = nullptr;

@@ -38,7 +38,7 @@ void hardware_init(){
 
     gpio_pin_configure_dt(&enc, GPIO_INPUT | GPIO_PULL_UP);
 
-gpio_pin_configure_dt(&enab, GPIO_OUTPUT_INACTIVE);
+    gpio_pin_configure_dt(&enab, GPIO_OUTPUT_INACTIVE);
 
     gpio_pin_configure_dt(&led_pin, GPIO_OUTPUT_INACTIVE);
 
