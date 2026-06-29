@@ -1,6 +1,9 @@
 // mock_hardware.hpp
 #pragma once
+#include <cstdio>
 #include <cstdint>
+#include <cmath>
+#define printk(...) printf(__VA_ARGS__)
 
 typedef int atomic_t;
 extern atomic_t tick_count;

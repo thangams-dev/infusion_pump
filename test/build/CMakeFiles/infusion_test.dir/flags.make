@@ -6,5 +6,5 @@ CXX_DEFINES = -DUNIT_TEST
 
 CXX_INCLUDES = -I/home/thanga-inc-5829/Documents/Infusion_pump/test/../include -I/home/thanga-inc-5829/Documents/Infusion_pump/test
 
-CXX_FLAGS = --coverage -std=gnu++20 -DGTEST_HAS_PTHREAD=1
+CXX_FLAGS = --coverage --coverage -std=gnu++20 -DGTEST_HAS_PTHREAD=1
 

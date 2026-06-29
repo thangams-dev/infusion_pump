@@ -129,6 +129,19 @@ infusion_test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/infusion_test.dir/build.make CMakeFiles/infusion_test.dir/build
 .PHONY : infusion_test/fast
 
+#=============================================================================
+# Target rules for targets named coverage
+
+# Build rule for target.
+coverage: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 coverage
+.PHONY : coverage
+
+# fast build rule for target.
+coverage/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/coverage.dir/build.make CMakeFiles/coverage.dir/build
+.PHONY : coverage/fast
+
 home/thanga-inc-5829/Documents/Infusion_pump/src/alarm.o: home/thanga-inc-5829/Documents/Infusion_pump/src/alarm.cpp.o
 .PHONY : home/thanga-inc-5829/Documents/Infusion_pump/src/alarm.o
 
@@ -281,6 +294,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... coverage"
 	@echo "... infusion_test"
 	@echo "... home/thanga-inc-5829/Documents/Infusion_pump/src/alarm.o"
 	@echo "... home/thanga-inc-5829/Documents/Infusion_pump/src/alarm.i"

@@ -1,47 +1,64 @@
-{
-   aliases {
-    led0 = &led_node;
-    buz0 = &buzzer_node;
-    enc1 = &enc_node;
-    sw1 = &sw_node;
-    step1 = &step_node;
-    dir1 = &dir_node;
-    enab1 = &enab_node;
-};
-    my_outputs{
+/ {
+    aliases {
+        led0 = &led_node;
+        buz0 = &buzzer_node;
+        enc1 = &enc_node;
+        sw1 = &sw_node;
+        step1 = &step_node;
+        dir1 = &dir_node;
+        enab1 = &enab_node;
+    };
+
+    my_outputs {
         compatible = "gpio-leds";
-        led_node : led1{
-            gpios = <&gpiox x GPIO_ACTIVE_HIGH>;
+        led_node: led1 {
+            gpios = <&gpioa 8 GPIO_ACTIVE_HIGH>;
         };
-        buzzer_node : buz1{
-            gpios = <&gpiox x GPIO_ACTIVE_HIGH>;
+        buzzer_node: buz1 {
+            gpios = <&gpioa 9 GPIO_ACTIVE_HIGH>;
         };
-        step_node : step1{
-            gpios = <&gpiox x GPIO_ACTIVE_HIGH>;
-        };
-        dir_node : dir1{
-            gpios = <&gpiox x GPIO_ACTIVE_HIGH>;
-        };
-        enab_node : enab1{
-            gpios = <&gpiox x GPIO_ACTIVE_HIGH>;
+        dir_node: dir1 {
+            gpios = <&gpioa 6 GPIO_ACTIVE_HIGH>;
         };
     };
-    my_inputs{
-        compatible = "gpio-keys";
-        
-        enc_node : enc1{
-            gpios = <&gpiox x (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+    my_pwm {
+    compatible = "pwm-leds";
+    step_node: step1 {
+        pwms = <&pwm2 1 1000000 PWM_POLARITY_NORMAL>;
+    };
+};
+    my_controls {
+        compatible = "gpio-leds";
+        enab_node: enab1 {
+            gpios = <&gpioa 7 GPIO_ACTIVE_LOW>;
         };
-        sw_node : sw1{
-            gpios = <&gpiox x (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+    };
+
+    my_inputs {
+        compatible = "gpio-keys";
+        enc_node: enc1 {
+            gpios = <&gpioa 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        };
+        sw_node: sw1 {
+            gpios = <&gpioc 12 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         };
     };
 };
-&i2c1{
+
+&i2c1 {
     status = "okay";
-    lps22hb@5d{
-                compatible = "st,lps22hb-press";
+    lps22hb@5d {
+        compatible = "st,lps22hb-press";
         reg = <0x5d>;
         label = "LPS22HB";
+    };
+};
+&timers2 {
+    status = "okay";
+    pwm2: pwm {
+        status = "okay";
+        pinctrl-0 = <&tim2_ch1_pa0>;
+        pinctrl-names = "default";
+        #pwm-cells = <3>;
     };
 };

@@ -4,19 +4,14 @@
 /// @brief Tracks infused volume via encoder ticks
 class VolumeTracker {
 public:
-    uint32_t ticks;
-    uint64_t initial;
-    float elapsed_time;
-    float expected;
-    float rate;
-    float deviation;
-    float ml;
-    float actual;
+    int64_t initial = 0;
+    float ticks        = 0.0F;
+    float elapsed_time = 0.0F;
+    float expected     = 0.0F;
+    float deviation    = 0.0F;
+    float actual       = 0.0F;
+    static constexpr float ml_per_tick = 0.00202F;
 
-    /// @brief Constructor @param setrate mL/hr @param start_ms start time @param ml_step mL per step
-    VolumeTracker(float setrate, uint64_t start_ms, float ml_step)
-        : rate(setrate), initial(start_ms), ml(ml_step) {}
-    
     /// @brief Calculate volume deviation @return true if within 5%
-    bool cal();
+    bool cal(float rate);
 };

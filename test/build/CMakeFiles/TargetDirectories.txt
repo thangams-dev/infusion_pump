@@ -1,3 +1,4 @@
 /home/thanga-inc-5829/Documents/Infusion_pump/test/build/CMakeFiles/infusion_test.dir
+/home/thanga-inc-5829/Documents/Infusion_pump/test/build/CMakeFiles/coverage.dir
 /home/thanga-inc-5829/Documents/Infusion_pump/test/build/CMakeFiles/edit_cache.dir
 /home/thanga-inc-5829/Documents/Infusion_pump/test/build/CMakeFiles/rebuild_cache.dir

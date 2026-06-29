@@ -5,7 +5,7 @@
 class OcclusionMonitor{
     public:
     float press;   
-    static constexpr float thrshold = 300.0f;
+    static constexpr float thrshold = 100.56F;
     /// @brief check the the press and thrshold and @return true or false
     bool isocclued();
 };
