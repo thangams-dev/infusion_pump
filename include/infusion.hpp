@@ -20,7 +20,7 @@
             virtual float computeTargetRate() = 0; 
         /// @brief Execute one infusion cycle
         void run();
-        /// @brief Apply computed rate to stepper @param rate mL/hr
+        /// @brief Apply compu  ted rate to stepper @param rate mL/hr
         void applyRate(float rate);
         /// @brief Check and trigger alarms if needed
         void checkAlarm(float rate);
@@ -43,10 +43,12 @@
         float tot;
         float total_volume; 
         int64_t last_step_ms_ = 0;
-        static constexpr int64_t step_interval_ms_ = 60000;
+        static constexpr int64_t step_interval_ms_ = 90000;
         LinearRampMode(float st, float in, float fi, float total,
                    VolumeTracker &vt, OcclusionMonitor &om, AlarmManager &am)
         : InfusionMode(vt, om, am), initial(st), incr(in), fin(fi),
           current_lvl(st), tot(total), total_volume(total) {}
     float computeTargetRate()override;
     };
+    /// @brief Switch active mode without requiring a restart; resets new mode's timing/volume state
+    InfusionMode* switch_mode(InfusionMode* current, InfusionMode* next);

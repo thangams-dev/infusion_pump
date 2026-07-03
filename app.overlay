@@ -37,10 +37,7 @@
     my_inputs {
         compatible = "gpio-keys";
         enc_node: enc1 {
-            gpios = <&gpioa 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        };
-        sw_node: sw1 {
-            gpios = <&gpioc 12 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+            gpios = <&gpioa 1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         };
     };
 };

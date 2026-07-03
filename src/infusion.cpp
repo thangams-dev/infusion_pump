@@ -8,11 +8,11 @@
 
 extern bool running;
 
-static constexpr float sec_per_hr    = 3600.0F;
-static constexpr float steps_per_ml  = 1600.0F;
-static constexpr float usec_per_sec  = 1000000.0F;
-static constexpr float ms_per_tick   = 10.0F;
-static constexpr float ms_per_hr     = 3600000.0F;
+static constexpr float sec_per_hr   = 3600.0F;
+static constexpr float steps_per_ml = 1600.0F;
+static constexpr float usec_per_sec = 1000000.0F;
+static constexpr float ms_per_tick  = 10.0F;
+static constexpr float ms_per_hr    = 3600000.0F;
 
 void InfusionMode::run() {
     float rate = computeTargetRate();
@@ -25,21 +25,25 @@ void InfusionMode::applyRate(float rate) {
         start_ms_ = k_uptime_get();
         started_  = true;
     }
-    if (rate < 0.001F) { return; }  // guard zero rate
+    if (rate < 0.001F) { return; }
     ml_per_sec    = rate / sec_per_hr;
     steps_per_sec = ml_per_sec * steps_per_ml;
-    current_ml    = rate * (ms_per_tick / ms_per_hr);
-    motor_enable(); 
-    delay         = static_cast<uint32_t>(usec_per_sec / steps_per_sec);
+    current_ml = rate * ((k_uptime_get() - start_ms_) / ms_per_hr);
+    motor_enable();
+    delay = static_cast<uint32_t>(usec_per_sec / steps_per_sec);
     set_delay_rate(delay);
 }
 
 void InfusionMode::checkAlarm(float rate) {
-    if (!volume.cal(rate)) {
-        printk("Vlome Alert\n");
+    static int64_t last_alert = 0;
+    if (!volume.cal(rate,steps_per_sec)) {
+        int64_t now = k_uptime_get();
+        if (now - last_alert >= 2500) {
+            printk("Vlome Alert\n");
+            last_alert = now;
+        }
         alarm.notify();
     }
-        static uint32_t print_cnt = 0U;
     if (!occlu.isocclued()) {
         printk("Pressure Alert\n");
         alarm.notify();
@@ -59,7 +63,6 @@ auto LinearRampMode::computeTargetRate() -> float {
         if (current_lvl > fin) { current_lvl = fin; }
         last_step_ms_ = now;
     }
-
     float infused = current_lvl * (ms_per_tick / ms_per_hr);
     tot -= infused;
     if (tot <= 0.0F) {
@@ -68,4 +71,14 @@ auto LinearRampMode::computeTargetRate() -> float {
         printk(">> Infusion completed\n");
     }
     return current_lvl;
+}
+InfusionMode* switch_mode(InfusionMode* current, InfusionMode* next) {
+    if (current == next) { return current; }
+    motor_stop();
+    next->volume.correction = 1.0F;
+    next->volume.corrected  = false;
+    next->started_ = false;
+    next->volume.initial = k_uptime_get();
+    atomic_set(&tick_count, 0);
+    return next;
 }

@@ -9,10 +9,10 @@
 static VolumeTracker volume;
 static AlarmManager  alarm;
 static OcclusionMonitor occlus;
-float initial = 10.0F;
-float fin = 100.0F;
-float incr = (fin - initial) /60.0F; 
-static LinearRampMode ramp(initial,incr,fin, 100.0F, volume, occlus, alarm);
+float initial = 40.0F;
+float fin     = 190.0F;
+float incr    = 1.0F;
+static LinearRampMode ramp(initial, incr, fin, 100.0F, volume, occlus, alarm);
 static ConstantRateMode constant(100.0F, volume, occlus, alarm);
 static InfusionMode     *active_mode = nullptr;
 static led l;
@@ -39,10 +39,10 @@ static void read_line(char *buf, uint8_t max_len) {
 }
 
 void th_fn(void *arg1, void *arg2, void *arg3) {
-    InfusionMode *mode = static_cast<InfusionMode *>(arg1);
-    mode->volume.initial = k_uptime_get();
     while (true) {
-        if (running && !paused) { mode->run(); }
+        if (running && !paused && active_mode != nullptr) {
+            active_mode->run();
+        }
         k_sleep(K_MSEC(10));
     }
 }
@@ -61,17 +61,20 @@ int main() {
 
     if (strcmp(mode_buf, "LINEAR") == 0) {
         active_mode = static_cast<InfusionMode*>(&ramp);
-        printk("Linear Mode");
+        printk("Linear Mode\n");
+        printk("Setrate: 10 to 190 ml/hr, Increment: 3 ml/min, Duration: 60 min, Volume: 100 ml\n");
     } else {
-        printk("Constant Mode");
         active_mode = static_cast<InfusionMode*>(&constant);
+        printk("Constant Mode\n");
+        printk("Setrate 100ml per hour");
+        
     }
 
     volume.initial = k_uptime_get();
     k_thread_create(&my_thread, thread1, K_THREAD_STACK_SIZEOF(thread1),
-                    th_fn, active_mode, NULL, NULL, 5, 0, K_NO_WAIT);
+                th_fn, NULL, NULL, NULL, 5, 0, K_NO_WAIT);
 
-    printk("=== Infusion Pump ===\nCmds: START|STOP|PAUSE|RESET\n> ");
+    printk("=== Infusion Pump ===\nCmds: START|STOP|PAUSE|RESET|MODE\n> ");
 
     while (true) {
         uint8_t c;
@@ -82,10 +85,12 @@ int main() {
                 printk("\n");
 
                 if (strcmp(buf, "START") == 0) {
+                    if (!paused) {
+                        active_mode->started_ = false;
+                        active_mode->volume.initial = k_uptime_get();
+                        atomic_set(&tick_count, 0);
+                    }
                     running = true; paused = false;
-                    active_mode->started_ = false;
-                    active_mode->volume.initial = k_uptime_get();
-                    atomic_set(&tick_count, 0);  // add this
                     printk(">> Started\n");
                 } else if (strcmp(buf, "STOP") == 0) {
                     running = false; paused = false;
@@ -109,6 +114,13 @@ int main() {
                     active_mode->volume.initial = k_uptime_get();
                     atomic_set(&tick_count, 0);
                     printk(">> Reset\n");
+
+                } else if (strcmp(buf, "MODE") == 0) {
+                    InfusionMode *next = (active_mode == static_cast<InfusionMode*>(&constant))
+                                        ? static_cast<InfusionMode*>(&ramp)
+                                        : static_cast<InfusionMode*>(&constant);
+                    active_mode = switch_mode(active_mode, next);
+                    printk(">> Mode switched\n");
 
                 } else { printk(">> Unknown\n"); }
 

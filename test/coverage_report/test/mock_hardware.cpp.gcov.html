@@ -32,17 +32,17 @@
             <td></td>
             <td class="headerItem">Lines:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
-            <td class="headerCovTableEntry">7</td>
-            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntry">18</td>
+            <td class="headerCovTableEntry">18</td>
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-06-20 15:02:54</td>
+            <td class="headerValue">2026-07-03 10:14:30</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
-            <td class="headerCovTableEntry">7</td>
-            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntry">14</td>
+            <td class="headerCovTableEntry">14</td>
           </tr>
                   <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
                 </table>
@@ -64,20 +64,35 @@
 <span id="L2"><span class="lineNum">       2</span>              : #include &quot;alarm.hpp&quot;</span>
 <span id="L3"><span class="lineNum">       3</span>              : #include &quot;pumpmode.hpp&quot;</span>
 <span id="L4"><span class="lineNum">       4</span>              : </span>
-<span id="L5"><span class="lineNum">       5</span>              : </span>
-<span id="L6"><span class="lineNum">       6</span>              : atomic_t tick_count = 0;</span>
-<span id="L7"><span class="lineNum">       7</span>              : int64_t fake_time = 0;</span>
-<span id="L8"><span class="lineNum">       8</span>              : uint32_t fake_ticks = 0;</span>
-<span id="L9"><span class="lineNum">       9</span>              : float fake_press = 0.0F;</span>
+<span id="L5"><span class="lineNum">       5</span>              : atomic_t tick_count = 0;</span>
+<span id="L6"><span class="lineNum">       6</span>              : int64_t fake_time = 0;</span>
+<span id="L7"><span class="lineNum">       7</span>              : uint32_t fake_ticks = 0;</span>
+<span id="L8"><span class="lineNum">       8</span>              : float fake_press = 0.0F;</span>
+<span id="L9"><span class="lineNum">       9</span>              : bool running = false;</span>
 <span id="L10"><span class="lineNum">      10</span>              : </span>
-<span id="L11"><span class="lineNum">      11</span> <span class="tlaGNC tlaBgGNC">          21 : float sensor_press() { return fake_press; }</span></span>
-<span id="L12"><span class="lineNum">      12</span> <span class="tlaGNC">          24 : uint32_t atomic_get(void*) { return fake_ticks; }</span></span>
-<span id="L13"><span class="lineNum">      13</span> <span class="tlaGNC">          36 : int64_t k_uptime_get() { return fake_time; }</span></span>
-<span id="L14"><span class="lineNum">      14</span> <span class="tlaGNC">          15 : void set_delay_rate(uint32_t) {}</span></span>
-<span id="L15"><span class="lineNum">      15</span>              : </span>
-<span id="L16"><span class="lineNum">      16</span> <span class="tlaGNC">           3 : void led::update(){}</span></span>
-<span id="L17"><span class="lineNum">      17</span> <span class="tlaGNC">           3 : void buz::update(){}</span></span>
-<span id="L18"><span class="lineNum">      18</span> <span class="tlaGNC">           3 : PumpMode get_pump_mode(){ return PumpMode::Constant_mode; }</span></span>
+<span id="L11"><span class="lineNum">      11</span> <span class="tlaGNC tlaBgGNC">           9 : float sensor_press() { </span></span>
+<span id="L12"><span class="lineNum">      12</span> <span class="tlaGNC">           9 :     return fake_press; </span></span>
+<span id="L13"><span class="lineNum">      13</span>              : }</span>
+<span id="L14"><span class="lineNum">      14</span> <span class="tlaGNC">          10 : uint32_t atomic_get(void*) { </span></span>
+<span id="L15"><span class="lineNum">      15</span> <span class="tlaGNC">          10 :     return fake_ticks; </span></span>
+<span id="L16"><span class="lineNum">      16</span>              : }</span>
+<span id="L17"><span class="lineNum">      17</span> <span class="tlaGNC">          94 : int64_t k_uptime_get() { </span></span>
+<span id="L18"><span class="lineNum">      18</span> <span class="tlaGNC">          94 :     return fake_time; }</span></span>
+<span id="L19"><span class="lineNum">      19</span> <span class="tlaGNC">           6 : void set_delay_rate(uint32_t) {}</span></span>
+<span id="L20"><span class="lineNum">      20</span> <span class="tlaGNC">           3 : void motor_stop() {}</span></span>
+<span id="L21"><span class="lineNum">      21</span> <span class="tlaGNC">           7 : void motor_enable() {}</span></span>
+<span id="L22"><span class="lineNum">      22</span> <span class="tlaGNC">           1 : void hardware_init() {}</span></span>
+<span id="L23"><span class="lineNum">      23</span> <span class="tlaGNC">           1 : void atomic_inc(atomic_t*) {}</span></span>
+<span id="L24"><span class="lineNum">      24</span> <span class="tlaGNC">           1 : void atomic_set(atomic_t* t, int v) { *t = v; fake_ticks = v; }</span></span>
+<span id="L25"><span class="lineNum">      25</span>              : </span>
+<span id="L26"><span class="lineNum">      26</span> <span class="tlaGNC">           1 : void led::update() {}</span></span>
+<span id="L27"><span class="lineNum">      27</span> <span class="tlaGNC">           1 : void led::clear() {}</span></span>
+<span id="L28"><span class="lineNum">      28</span> <span class="tlaGNC">           1 : void buz::update() {}</span></span>
+<span id="L29"><span class="lineNum">      29</span> <span class="tlaGNC">           1 : void buz::clear() {}</span></span>
+<span id="L30"><span class="lineNum">      30</span>              : </span>
+<span id="L31"><span class="lineNum">      31</span> <span class="tlaGNC">           1 : PumpMode get_pump_mode() { </span></span>
+<span id="L32"><span class="lineNum">      32</span> <span class="tlaGNC">           1 :     return PumpMode::Constant_mode; </span></span>
+<span id="L33"><span class="lineNum">      33</span>              : }</span>
         </pre>
               </td>
             </tr>

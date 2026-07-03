@@ -1,0 +1,86 @@
+        -:    0:Source:/home/thanga-inc-5829/Documents/Infusion_pump/src/infusion.cpp
+        -:    0:Graph:build/CMakeFiles/infusion_test.dir/home/thanga-inc-5829/Documents/Infusion_pump/src/infusion.cpp.gcno
+        -:    0:Data:build/CMakeFiles/infusion_test.dir/home/thanga-inc-5829/Documents/Infusion_pump/src/infusion.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "infusion.hpp"
+        -:    2:#include <stdlib.h>
+        -:    3:#ifdef UNIT_TEST
+        -:    4:#include "mock_hardware.hpp"
+        -:    5:#else
+        -:    6:#include "hardware.hpp"
+        -:    7:#endif
+        -:    8:
+        -:    9:extern bool running;
+        -:   10:
+        -:   11:static constexpr float sec_per_hr   = 3600.0F;
+        -:   12:static constexpr float steps_per_ml = 1600.0F;
+        -:   13:static constexpr float usec_per_sec = 1000000.0F;
+        -:   14:static constexpr float ms_per_tick  = 10.0F;
+        -:   15:static constexpr float ms_per_hr    = 3600000.0F;
+        -:   16:
+        7:   17:void InfusionMode::run() {
+        7:   18:    float rate = computeTargetRate();
+        7:   19:    applyRate(rate);
+        7:   20:    checkAlarm(rate);
+        7:   21:}
+        -:   22:
+        7:   23:void InfusionMode::applyRate(float rate) {
+        7:   24:    if (!started_) {
+        6:   25:        start_ms_ = k_uptime_get();
+        6:   26:        started_  = true;
+        -:   27:    }
+        7:   28:    if (rate < 0.001F) { return; }
+        6:   29:    ml_per_sec    = rate / sec_per_hr;
+        6:   30:    steps_per_sec = ml_per_sec * steps_per_ml;
+        6:   31:    current_ml = rate * ((k_uptime_get() - start_ms_) / ms_per_hr);
+        6:   32:    motor_enable();
+        6:   33:    delay = static_cast<uint32_t>(usec_per_sec / steps_per_sec);
+        6:   34:    set_delay_rate(delay);
+        -:   35:}
+        -:   36:
+        7:   37:void InfusionMode::checkAlarm(float rate) {
+        -:   38:    static int64_t last_alert = 0;
+        7:   39:    if (!volume.cal(rate,steps_per_sec)) {
+        2:   40:        int64_t now = k_uptime_get();
+        2:   41:        if (now - last_alert >= 2500) {
+        1:   42:            printk("Vlome Alert\n");
+        1:   43:            last_alert = now;
+        -:   44:        }
+        2:   45:        alarm.notify();
+        -:   46:    }
+        7:   47:    if (!occlu.isocclued()) {
+        1:   48:        printk("Pressure Alert\n");
+        1:   49:        alarm.notify();
+        -:   50:    } else {
+        6:   51:        alarm.clearAll();
+        -:   52:    }
+        7:   53:}
+        -:   54:
+        9:   55:auto ConstantRateMode::computeTargetRate() -> float {
+        9:   56:    return setrate;
+        -:   57:}
+        -:   58:
+       65:   59:auto LinearRampMode::computeTargetRate() -> float {
+       65:   60:    int64_t now = k_uptime_get();
+       65:   61:    if ((now - last_step_ms_) >= step_interval_ms_) {
+       61:   62:        current_lvl += incr;
+       61:   63:        if (current_lvl > fin) { current_lvl = fin; }
+       61:   64:        last_step_ms_ = now;
+        -:   65:    }
+       65:   66:    float infused = current_lvl * (ms_per_tick / ms_per_hr);
+       65:   67:    tot -= infused;
+       65:   68:    if (tot <= 0.0F) {
+    #####:   69:        running = false;
+    #####:   70:        motor_stop();
+    #####:   71:        printk(">> Infusion completed\n");
+        -:   72:    }
+       65:   73:    return current_lvl;
+        -:   74:}
+        1:   75:InfusionMode* switch_mode(InfusionMode* current, InfusionMode* next) {
+       1*:   76:    if (current == next) { return current; }
+        1:   77:    motor_stop();
+        1:   78:    next->started_ = false;
+        1:   79:    next->volume.initial = k_uptime_get();
+        1:   80:    atomic_set(&tick_count, 0);
+        1:   81:    return next;
+        -:   82:}
