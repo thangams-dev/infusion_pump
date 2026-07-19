@@ -17,7 +17,7 @@ uint32_t atomic_get(void*);
 int64_t k_uptime_get();
 void set_delay_rate(uint32_t);
 void motor_stop();
-void motor_enable();
+void motor_start();
 void hardware_init();
 void atomic_inc(atomic_t*);
 void atomic_set(atomic_t*, int);

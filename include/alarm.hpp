@@ -1,39 +1,26 @@
 #pragma once
-#include <cstdint>
-/// @brief Abstract observer for alarm events
-class Alarmobserver {
-public:
-    /// @brief Called when alarm is triggered
-    virtual void update() = 0;
-    virtual void clear() = 0;
+#include <stdint.h>
+#include "alarm_observer.hpp"
+
+enum class AlarmType : uint8_t {
+    kVolume,
+    kOcclusion
 };
 
-/// @brief Buzzer alarm observer
-class buz : public Alarmobserver {
-public:
-    void update();
-    void clear();
-};
-
-/// @brief LED alarm observer
-class led : public Alarmobserver {
-public:
-    void update();
-    void clear();
-};
-
-/// @brief Manages and notifies alarm observers
 class AlarmManager {
 public:
-    static constexpr uint8_t MAX_OBSERVERS = 10U;
-    Alarmobserver* alarm[10] = {nullptr};
-    uint16_t noti_count = 0;
-    uint8_t count = 0;
-
-    /// @brief Add observer @param obj pointer to observer
-    void add(Alarmobserver* obj);
-    /// @brief To clear all indication
+    void add(AlarmObserver* obj);
+    void notify(AlarmType type);
+    void clear(AlarmType type);
     void clearAll();
-    /// @brief Notify all observers
-    void notify();
+    uint8_t get_notify_count() const { return noti_count; } 
+
+private:
+    static constexpr uint8_t MAX_OBSERVERS = 4U;
+    AlarmObserver* alarm[MAX_OBSERVERS] = {nullptr};
+    uint8_t count = 0U;
+    uint8_t noti_count = 0U;
+
+    bool volume_active = false;
+    bool occlusion_active = false;
 };

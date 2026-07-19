@@ -44,6 +44,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/home/thanga-inc-5829/Documents/Infusion_pump/build/zephyr/lib/cpp/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/home/thanga-inc-5829/Documents/Infusion_pump/build/zephyr/lib/hash/cmake_install.cmake")
 endif()
 

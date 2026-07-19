@@ -24,11 +24,10 @@
 		sw0 = &user_button;        /* in zephyr/boards/st/nucleo_f446re/nucleo_f446re.dts:56 */
 		led0 = &led_node;          /* in ../Documents/Infusion_pump/app.overlay:3 */
 		buz0 = &buzzer_node;       /* in ../Documents/Infusion_pump/app.overlay:4 */
-		enc1 = &enc_node;          /* in ../Documents/Infusion_pump/app.overlay:5 */
-		sw1 = &sw_node;            /* in ../Documents/Infusion_pump/app.overlay:6 */
-		step1 = &step_node;        /* in ../Documents/Infusion_pump/app.overlay:7 */
-		dir1 = &dir_node;          /* in ../Documents/Infusion_pump/app.overlay:8 */
-		enab1 = &enab_node;        /* in ../Documents/Infusion_pump/app.overlay:9 */
+		step1 = &step_node;        /* in ../Documents/Infusion_pump/app.overlay:5 */
+		dir1 = &dir_node;          /* in ../Documents/Infusion_pump/app.overlay:6 */
+		enab1 = &enab_node;        /* in ../Documents/Infusion_pump/app.overlay:7 */
+		qdec0 = &qdec4;            /* in ../Documents/Infusion_pump/app.overlay:8 */
 	};
 
 	/* node '/soc' defined in zephyr/dts/arm/armv7-m.dtsi:6 */
@@ -147,7 +146,7 @@
 						reg = < 0x2a 0x2 >;          /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:158 */
 						#nvmem-cell-cells = < 0x0 >; /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:159 */
 						read-only;                   /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:160 */
-						phandle = < 0x22 >;          /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:685 */
+						phandle = < 0x24 >;          /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:685 */
 					};
 
 					/* node '/soc/flash-controller@40023c00/flash@1fff7a00/nvmem-layout/ts-cal1@2c' defined in zephyr/dts/arm/st/f4/stm32f4.dtsi:163 */
@@ -155,7 +154,7 @@
 						reg = < 0x2c 0x2 >;          /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:164 */
 						#nvmem-cell-cells = < 0x0 >; /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:165 */
 						read-only;                   /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:166 */
-						phandle = < 0x1f >;          /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:674 */
+						phandle = < 0x21 >;          /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:674 */
 					};
 
 					/* node '/soc/flash-controller@40023c00/flash@1fff7a00/nvmem-layout/ts-cal2@2e' defined in zephyr/dts/arm/st/f4/stm32f4.dtsi:169 */
@@ -163,7 +162,7 @@
 						reg = < 0x2e 0x2 >;          /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:170 */
 						#nvmem-cell-cells = < 0x0 >; /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:171 */
 						read-only;                   /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:172 */
-						phandle = < 0x20 >;          /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:674 */
+						phandle = < 0x22 >;          /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:674 */
 					};
 				};
 			};
@@ -235,7 +234,7 @@
 				#gpio-cells = < 0x2 >;        /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:214 */
 				reg = < 0x40020000 0x400 >;   /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:215 */
 				clocks = < &rcc 0x30 0x1 >;   /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:216 */
-				phandle = < 0x1e >;           /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:668 */
+				phandle = < 0x20 >;           /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:668 */
 			};
 
 			/* node '/soc/pin-controller@40020000/gpio@40020400' defined in zephyr/dts/arm/st/f4/stm32f4.dtsi:219 */
@@ -245,7 +244,7 @@
 				#gpio-cells = < 0x2 >;        /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:222 */
 				reg = < 0x40020400 0x400 >;   /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:223 */
 				clocks = < &rcc 0x30 0x2 >;   /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:224 */
-				phandle = < 0x26 >;           /* in zephyr/boards/st/nucleo_f446re/arduino_r3_connector.dtsi:15 */
+				phandle = < 0x28 >;           /* in zephyr/boards/st/nucleo_f446re/arduino_r3_connector.dtsi:15 */
 			};
 
 			/* node '/soc/pin-controller@40020000/gpio@40020800' defined in zephyr/dts/arm/st/f4/stm32f4.dtsi:227 */
@@ -255,7 +254,7 @@
 				#gpio-cells = < 0x2 >;        /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:230 */
 				reg = < 0x40020800 0x400 >;   /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:231 */
 				clocks = < &rcc 0x30 0x4 >;   /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:232 */
-				phandle = < 0x27 >;           /* in zephyr/boards/st/nucleo_f446re/arduino_r3_connector.dtsi:15 */
+				phandle = < 0x29 >;           /* in zephyr/boards/st/nucleo_f446re/arduino_r3_connector.dtsi:15 */
 			};
 
 			/* node '/soc/pin-controller@40020000/gpio@40020c00' defined in zephyr/dts/arm/st/f4/stm32f4.dtsi:235 */
@@ -265,7 +264,7 @@
 				#gpio-cells = < 0x2 >;        /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:238 */
 				reg = < 0x40020c00 0x400 >;   /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:239 */
 				clocks = < &rcc 0x30 0x8 >;   /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:240 */
-				phandle = < 0x28 >;           /* in zephyr/boards/st/nucleo_f446re/st_morpho_connector.dtsi:15 */
+				phandle = < 0x2a >;           /* in zephyr/boards/st/nucleo_f446re/st_morpho_connector.dtsi:15 */
 			};
 
 			/* node '/soc/pin-controller@40020000/gpio@40021000' defined in zephyr/dts/arm/st/f4/stm32f4.dtsi:243 */
@@ -302,33 +301,33 @@
 				#gpio-cells = < 0x2 >;        /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:270 */
 				reg = < 0x40021c00 0x400 >;   /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:271 */
 				clocks = < &rcc 0x30 0x80 >;  /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:272 */
-				phandle = < 0x29 >;           /* in zephyr/boards/st/nucleo_f446re/st_morpho_connector.dtsi:15 */
+				phandle = < 0x2b >;           /* in zephyr/boards/st/nucleo_f446re/st_morpho_connector.dtsi:15 */
 			};
 
 			/* node '/soc/pin-controller@40020000/can1_rx_pb8' defined in modules/hal/stm32/dts/st/f4/stm32f446r(c-e)tx-pinctrl.dtsi:382 */
 			can1_rx_pb8: can1_rx_pb8 {
 				pinmux = < 0x309 >; /* in modules/hal/stm32/dts/st/f4/stm32f446r(c-e)tx-pinctrl.dtsi:383 */
 				bias-pull-up;       /* in modules/hal/stm32/dts/st/f4/stm32f446r(c-e)tx-pinctrl.dtsi:384 */
-				phandle = < 0x17 >; /* in zephyr/boards/st/nucleo_f446re/nucleo_f446re.dts:151 */
+				phandle = < 0x19 >; /* in zephyr/boards/st/nucleo_f446re/nucleo_f446re.dts:151 */
 			};
 
 			/* node '/soc/pin-controller@40020000/can2_rx_pb12' defined in modules/hal/stm32/dts/st/f4/stm32f446r(c-e)tx-pinctrl.dtsi:392 */
 			can2_rx_pb12: can2_rx_pb12 {
 				pinmux = < 0x389 >; /* in modules/hal/stm32/dts/st/f4/stm32f446r(c-e)tx-pinctrl.dtsi:393 */
 				bias-pull-up;       /* in modules/hal/stm32/dts/st/f4/stm32f446r(c-e)tx-pinctrl.dtsi:394 */
-				phandle = < 0x19 >; /* in zephyr/boards/st/nucleo_f446re/nucleo_f446re.dts:157 */
+				phandle = < 0x1b >; /* in zephyr/boards/st/nucleo_f446re/nucleo_f446re.dts:157 */
 			};
 
 			/* node '/soc/pin-controller@40020000/can1_tx_pb9' defined in modules/hal/stm32/dts/st/f4/stm32f446r(c-e)tx-pinctrl.dtsi:403 */
 			can1_tx_pb9: can1_tx_pb9 {
 				pinmux = < 0x329 >; /* in modules/hal/stm32/dts/st/f4/stm32f446r(c-e)tx-pinctrl.dtsi:404 */
-				phandle = < 0x18 >; /* in zephyr/boards/st/nucleo_f446re/nucleo_f446re.dts:151 */
+				phandle = < 0x1a >; /* in zephyr/boards/st/nucleo_f446re/nucleo_f446re.dts:151 */
 			};
 
 			/* node '/soc/pin-controller@40020000/can2_tx_pb13' defined in modules/hal/stm32/dts/st/f4/stm32f446r(c-e)tx-pinctrl.dtsi:411 */
 			can2_tx_pb13: can2_tx_pb13 {
 				pinmux = < 0x3a9 >; /* in modules/hal/stm32/dts/st/f4/stm32f446r(c-e)tx-pinctrl.dtsi:412 */
-				phandle = < 0x1a >; /* in zephyr/boards/st/nucleo_f446re/nucleo_f446re.dts:157 */
+				phandle = < 0x1c >; /* in zephyr/boards/st/nucleo_f446re/nucleo_f446re.dts:157 */
 			};
 
 			/* node '/soc/pin-controller@40020000/i2c1_scl_pb8' defined in modules/hal/stm32/dts/st/f4/stm32f446r(c-e)tx-pinctrl.dtsi:520 */
@@ -414,7 +413,19 @@
 			/* node '/soc/pin-controller@40020000/tim2_ch1_pa0' defined in modules/hal/stm32/dts/st/f4/stm32f446r(c-e)tx-pinctrl.dtsi:1171 */
 			tim2_ch1_pa0: tim2_ch1_pa0 {
 				pinmux = < 0x1 >;   /* in modules/hal/stm32/dts/st/f4/stm32f446r(c-e)tx-pinctrl.dtsi:1172 */
-				phandle = < 0x14 >; /* in ../Documents/Infusion_pump/app.overlay:60 */
+				phandle = < 0x14 >; /* in ../Documents/Infusion_pump/app.overlay:50 */
+			};
+
+			/* node '/soc/pin-controller@40020000/tim4_ch1_pb6' defined in modules/hal/stm32/dts/st/f4/stm32f446r(c-e)tx-pinctrl.dtsi:1271 */
+			tim4_ch1_pb6: tim4_ch1_pb6 {
+				pinmux = < 0x2c2 >; /* in ../Documents/Infusion_pump/app.overlay:57 */
+				phandle = < 0x15 >; /* in ../Documents/Infusion_pump/app.overlay:72 */
+			};
+
+			/* node '/soc/pin-controller@40020000/tim4_ch2_pb7' defined in modules/hal/stm32/dts/st/f4/stm32f446r(c-e)tx-pinctrl.dtsi:1275 */
+			tim4_ch2_pb7: tim4_ch2_pb7 {
+				pinmux = < 0x2e2 >; /* in ../Documents/Infusion_pump/app.overlay:61 */
+				phandle = < 0x16 >; /* in ../Documents/Infusion_pump/app.overlay:72 */
 			};
 
 			/* node '/soc/pin-controller@40020000/usart1_rx_pb7' defined in modules/hal/stm32/dts/st/f4/stm32f446r(c-e)tx-pinctrl.dtsi:1411 */
@@ -513,14 +524,14 @@
 			pinctrl-0 = < &i2c1_scl_pb8 &i2c1_sda_pb9 >; /* in zephyr/boards/st/nucleo_f446re/nucleo_f446re.dts:102 */
 			pinctrl-names = "default";                   /* in zephyr/boards/st/nucleo_f446re/nucleo_f446re.dts:103 */
 			clock-frequency = < 0x61a80 >;               /* in zephyr/boards/st/nucleo_f446re/nucleo_f446re.dts:105 */
-			status = "okay";                             /* in ../Documents/Infusion_pump/app.overlay:49 */
-			phandle = < 0x23 >;                          /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:707 */
+			status = "okay";                             /* in ../Documents/Infusion_pump/app.overlay:39 */
+			phandle = < 0x25 >;                          /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:707 */
 
-			/* node '/soc/i2c@40005400/lps22hb@5d' defined in ../Documents/Infusion_pump/app.overlay:50 */
+			/* node '/soc/i2c@40005400/lps22hb@5d' defined in ../Documents/Infusion_pump/app.overlay:40 */
 			lps22hb@5d {
-				compatible = "st,lps22hb-press"; /* in ../Documents/Infusion_pump/app.overlay:51 */
-				reg = < 0x5d >;                  /* in ../Documents/Infusion_pump/app.overlay:52 */
-				label = "LPS22HB";               /* in ../Documents/Infusion_pump/app.overlay:53 */
+				compatible = "st,lps22hb-press"; /* in ../Documents/Infusion_pump/app.overlay:41 */
+				reg = < 0x5d >;                  /* in ../Documents/Infusion_pump/app.overlay:42 */
+				label = "LPS22HB";               /* in ../Documents/Infusion_pump/app.overlay:43 */
 			};
 		};
 
@@ -539,7 +550,7 @@
 			pinctrl-names = "default";                    /* in zephyr/boards/st/nucleo_f446re/nucleo_f446re.dts:110 */
 			status = "okay";                              /* in zephyr/boards/st/nucleo_f446re/nucleo_f446re.dts:111 */
 			clock-frequency = < 0x61a80 >;                /* in zephyr/boards/st/nucleo_f446re/nucleo_f446re.dts:112 */
-			phandle = < 0x24 >;                           /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:715 */
+			phandle = < 0x26 >;                           /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:715 */
 		};
 
 		/* node '/soc/i2c@40005c00' defined in zephyr/dts/arm/st/f4/stm32f4.dtsi:341 */
@@ -557,7 +568,7 @@
 			pinctrl-names = "default";                   /* in zephyr/boards/st/nucleo_f446re/nucleo_f446re.dts:117 */
 			status = "okay";                             /* in zephyr/boards/st/nucleo_f446re/nucleo_f446re.dts:118 */
 			clock-frequency = < 0x61a80 >;               /* in zephyr/boards/st/nucleo_f446re/nucleo_f446re.dts:119 */
-			phandle = < 0x25 >;                          /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:723 */
+			phandle = < 0x27 >;                          /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:723 */
 		};
 
 		/* node '/soc/spi@40013000' defined in zephyr/dts/arm/st/f4/stm32f4.dtsi:353 */
@@ -638,16 +649,16 @@
 			interrupts = < 0x1c 0x0 >;      /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:413 */
 			interrupt-names = "global";     /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:414 */
 			st,prescaler = < 0x0 >;         /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:415 */
-			status = "okay";                /* in ../Documents/Infusion_pump/app.overlay:57 */
+			status = "okay";                /* in ../Documents/Infusion_pump/app.overlay:47 */
 
 			/* node '/soc/timers@40000000/pwm' defined in zephyr/dts/arm/st/f4/stm32f4.dtsi:418 */
 			pwm2: pwm {
 				compatible = "st,stm32-pwm";   /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:419 */
-				status = "okay";               /* in ../Documents/Infusion_pump/app.overlay:59 */
-				pinctrl-0 = < &tim2_ch1_pa0 >; /* in ../Documents/Infusion_pump/app.overlay:60 */
-				pinctrl-names = "default";     /* in ../Documents/Infusion_pump/app.overlay:61 */
-				#pwm-cells = < 0x3 >;          /* in ../Documents/Infusion_pump/app.overlay:62 */
-				phandle = < 0x2a >;            /* in zephyr/boards/st/nucleo_f446re/nucleo_f446re.dts:39 */
+				status = "okay";               /* in ../Documents/Infusion_pump/app.overlay:49 */
+				pinctrl-0 = < &tim2_ch1_pa0 >; /* in ../Documents/Infusion_pump/app.overlay:50 */
+				pinctrl-names = "default";     /* in ../Documents/Infusion_pump/app.overlay:51 */
+				#pwm-cells = < 0x3 >;          /* in ../Documents/Infusion_pump/app.overlay:52 */
+				phandle = < 0x2c >;            /* in zephyr/boards/st/nucleo_f446re/nucleo_f446re.dts:39 */
 			};
 
 			/* node '/soc/timers@40000000/counter' defined in zephyr/dts/arm/st/f4/stm32f4.dtsi:424 */
@@ -706,8 +717,8 @@
 			resets = < &rctl 0x402 >;       /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:470 */
 			interrupts = < 0x1e 0x0 >;      /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:471 */
 			interrupt-names = "global";     /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:472 */
-			st,prescaler = < 0x0 >;         /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:473 */
-			status = "disabled";            /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:474 */
+			status = "okay";                /* in ../Documents/Infusion_pump/app.overlay:66 */
+			st,prescaler = < 0x0 >;         /* in ../Documents/Infusion_pump/app.overlay:67 */
 
 			/* node '/soc/timers@40000800/pwm' defined in zephyr/dts/arm/st/f4/stm32f4.dtsi:476 */
 			pwm {
@@ -727,6 +738,16 @@
 				compatible = "st,stm32-qdec";    /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:488 */
 				st,input-filter-level = < 0x0 >; /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:489 */
 				status = "disabled";             /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:490 */
+			};
+
+			/* node '/soc/timers@40000800/qdec4' defined in ../Documents/Infusion_pump/app.overlay:69 */
+			qdec4: qdec4 {
+				compatible = "st,stm32-qdec";                /* in ../Documents/Infusion_pump/app.overlay:70 */
+				status = "okay";                             /* in ../Documents/Infusion_pump/app.overlay:71 */
+				pinctrl-0 = < &tim4_ch1_pb6 &tim4_ch2_pb7 >; /* in ../Documents/Infusion_pump/app.overlay:72 */
+				pinctrl-names = "default";                   /* in ../Documents/Infusion_pump/app.overlay:73 */
+				st,encoder-mode = < 0x3 >;                   /* in ../Documents/Infusion_pump/app.overlay:74 */
+				st,counts-per-revolution = < 0x960 >;        /* in ../Documents/Infusion_pump/app.overlay:75 */
 			};
 		};
 
@@ -878,7 +899,7 @@
 			st,adc-internal-regulator = "none";                          /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:621 */
 			st,adc-has-injected-support;                                 /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:622 */
 			status = "disabled";                                         /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:623 */
-			phandle = < 0x21 >;                                          /* in zephyr/dts/arm/st/f4/stm32f446.dtsi:199 */
+			phandle = < 0x23 >;                                          /* in zephyr/dts/arm/st/f4/stm32f446.dtsi:199 */
 		};
 
 		/* node '/soc/dma@40026000' defined in zephyr/dts/arm/st/f4/stm32f4.dtsi:626 */
@@ -889,7 +910,7 @@
 			interrupts = < 0xb 0x0 0xc 0x0 0xd 0x0 0xe 0x0 0xf 0x0 0x10 0x0 0x11 0x0 0x2f 0x0 >; /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:630 */
 			clocks = < &rcc 0x30 0x200000 >;                                                     /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:631 */
 			status = "disabled";                                                                 /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:632 */
-			phandle = < 0x15 >;                                                                  /* in zephyr/dts/arm/st/f4/stm32f401.dtsi:61 */
+			phandle = < 0x17 >;                                                                  /* in zephyr/dts/arm/st/f4/stm32f401.dtsi:61 */
 		};
 
 		/* node '/soc/dma@40026400' defined in zephyr/dts/arm/st/f4/stm32f4.dtsi:635 */
@@ -901,7 +922,7 @@
 			clocks = < &rcc 0x30 0x400000 >;                                                          /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:640 */
 			st,mem2mem;                                                                               /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:641 */
 			status = "disabled";                                                                      /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:642 */
-			phandle = < 0x16 >;                                                                       /* in zephyr/dts/arm/st/f4/stm32f446.dtsi:38 */
+			phandle = < 0x18 >;                                                                       /* in zephyr/dts/arm/st/f4/stm32f446.dtsi:38 */
 		};
 
 		/* node '/soc/sdmmc@40012c00' defined in zephyr/dts/arm/st/f4/stm32f4.dtsi:645 */
@@ -1201,7 +1222,7 @@
 				power-state-name = "suspend-to-idle"; /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:44 */
 				min-residency-us = < 0x190 >;         /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:51 */
 				exit-latency-us = < 0x12c >;          /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:52 */
-				phandle = < 0x1c >;                   /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:38 */
+				phandle = < 0x1e >;                   /* in zephyr/dts/arm/st/f4/stm32f4.dtsi:38 */
 			};
 		};
 	};
@@ -1224,7 +1245,7 @@
 			hse-bypass;                        /* in zephyr/boards/st/nucleo_f446re/nucleo_f446re.dts:65 */
 			clock-frequency = < 0x7a1200 >;    /* in zephyr/boards/st/nucleo_f446re/nucleo_f446re.dts:66 */
 			status = "okay";                   /* in zephyr/boards/st/nucleo_f446re/nucleo_f446re.dts:67 */
-			phandle = < 0x1d >;                /* in zephyr/boards/st/nucleo_f446re/nucleo_f446re.dts:75 */
+			phandle = < 0x1f >;                /* in zephyr/boards/st/nucleo_f446re/nucleo_f446re.dts:75 */
 		};
 
 		/* node '/clocks/clk-hsi' defined in zephyr/dts/arm/st/f4/stm32f4.dtsi:69 */
@@ -1390,7 +1411,7 @@
 	otghs_fs_phy: otghs_fs_phy {
 		compatible = "usb-nop-xceiv"; /* in zephyr/dts/arm/st/f4/stm32f446.dtsi:203 */
 		#phy-cells = < 0x0 >;         /* in zephyr/dts/arm/st/f4/stm32f446.dtsi:204 */
-		phandle = < 0x1b >;           /* in zephyr/dts/arm/st/f4/stm32f446.dtsi:105 */
+		phandle = < 0x1d >;           /* in zephyr/dts/arm/st/f4/stm32f446.dtsi:105 */
 	};
 
 	/* node '/connector' defined in zephyr/boards/st/nucleo_f446re/arduino_r3_connector.dtsi:10 */
@@ -1514,58 +1535,43 @@
 		};
 	};
 
-	/* node '/my_outputs' defined in ../Documents/Infusion_pump/app.overlay:12 */
+	/* node '/my_outputs' defined in ../Documents/Infusion_pump/app.overlay:11 */
 	my_outputs {
-		compatible = "gpio-leds"; /* in ../Documents/Infusion_pump/app.overlay:13 */
+		compatible = "gpio-leds"; /* in ../Documents/Infusion_pump/app.overlay:12 */
 
-		/* node '/my_outputs/led1' defined in ../Documents/Infusion_pump/app.overlay:14 */
+		/* node '/my_outputs/led1' defined in ../Documents/Infusion_pump/app.overlay:13 */
 		led_node: led1 {
-			gpios = < &gpioa 0x8 0x0 >; /* in ../Documents/Infusion_pump/app.overlay:15 */
+			gpios = < &gpioa 0x8 0x0 >; /* in ../Documents/Infusion_pump/app.overlay:14 */
 		};
 
-		/* node '/my_outputs/buz1' defined in ../Documents/Infusion_pump/app.overlay:17 */
+		/* node '/my_outputs/buz1' defined in ../Documents/Infusion_pump/app.overlay:16 */
 		buzzer_node: buz1 {
-			gpios = < &gpioa 0x9 0x0 >; /* in ../Documents/Infusion_pump/app.overlay:18 */
+			gpios = < &gpioa 0x9 0x0 >; /* in ../Documents/Infusion_pump/app.overlay:17 */
 		};
 
-		/* node '/my_outputs/dir1' defined in ../Documents/Infusion_pump/app.overlay:20 */
+		/* node '/my_outputs/dir1' defined in ../Documents/Infusion_pump/app.overlay:19 */
 		dir_node: dir1 {
-			gpios = < &gpioa 0x6 0x0 >; /* in ../Documents/Infusion_pump/app.overlay:21 */
+			gpios = < &gpioa 0x6 0x0 >; /* in ../Documents/Infusion_pump/app.overlay:20 */
 		};
 	};
 
-	/* node '/my_pwm' defined in ../Documents/Infusion_pump/app.overlay:24 */
+	/* node '/my_pwm' defined in ../Documents/Infusion_pump/app.overlay:23 */
 	my_pwm {
-		compatible = "pwm-leds"; /* in ../Documents/Infusion_pump/app.overlay:25 */
+		compatible = "pwm-leds"; /* in ../Documents/Infusion_pump/app.overlay:24 */
 
-		/* node '/my_pwm/step1' defined in ../Documents/Infusion_pump/app.overlay:26 */
+		/* node '/my_pwm/step1' defined in ../Documents/Infusion_pump/app.overlay:25 */
 		step_node: step1 {
-			pwms = < &pwm2 0x1 0xf4240 0x0 >; /* in ../Documents/Infusion_pump/app.overlay:27 */
+			pwms = < &pwm2 0x1 0xf4240 0x0 >; /* in ../Documents/Infusion_pump/app.overlay:26 */
 		};
 	};
 
-	/* node '/my_controls' defined in ../Documents/Infusion_pump/app.overlay:30 */
+	/* node '/my_controls' defined in ../Documents/Infusion_pump/app.overlay:29 */
 	my_controls {
-		compatible = "gpio-leds"; /* in ../Documents/Infusion_pump/app.overlay:31 */
+		compatible = "gpio-leds"; /* in ../Documents/Infusion_pump/app.overlay:30 */
 
-		/* node '/my_controls/enab1' defined in ../Documents/Infusion_pump/app.overlay:32 */
+		/* node '/my_controls/enab1' defined in ../Documents/Infusion_pump/app.overlay:31 */
 		enab_node: enab1 {
-			gpios = < &gpioa 0x7 0x1 >; /* in ../Documents/Infusion_pump/app.overlay:33 */
-		};
-	};
-
-	/* node '/my_inputs' defined in ../Documents/Infusion_pump/app.overlay:37 */
-	my_inputs {
-		compatible = "gpio-keys"; /* in ../Documents/Infusion_pump/app.overlay:38 */
-
-		/* node '/my_inputs/enc1' defined in ../Documents/Infusion_pump/app.overlay:39 */
-		enc_node: enc1 {
-			gpios = < &gpioa 0x1 0x11 >; /* in ../Documents/Infusion_pump/app.overlay:40 */
-		};
-
-		/* node '/my_inputs/sw1' defined in ../Documents/Infusion_pump/app.overlay:42 */
-		sw_node: sw1 {
-			gpios = < &gpioc 0xc 0x11 >; /* in ../Documents/Infusion_pump/app.overlay:43 */
+			gpios = < &gpioa 0x7 0x1 >; /* in ../Documents/Infusion_pump/app.overlay:32 */
 		};
 	};
 };

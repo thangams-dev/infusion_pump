@@ -1,13 +1,25 @@
+#include <cmath>
 #include "occlusion.hpp"
 #ifdef UNIT_TEST
-#include "mock_hardware.hpp"
+#include "stub_file.hpp"
+#include <cstdio>
+#define printk printf
 #else
 #include "hardware.hpp"
+#include <zephyr/sys/printk.h>
 #endif
 
 auto OcclusionMonitor::isocclued() -> bool {
     press = sensor_press();
-  // printk("occlue: %d\n",(int)press);
-    
-    return press <= thrshold;  // true = no occlusion, false = occluded
+
+    static int64_t last_print = 0;
+    int64_t now_ms = k_uptime_get();
+    if (now_ms - last_print >= 2000) {   // print every 2s, matches your VolumeTracker throttle
+        printk("[PRESSURE] Current:%d.%02d hPa | Threshold:%d.%02d hPa\n",
+               (int)press, (int)(fabsf(press - (int)press) * 100),
+               (int)thrshold, (int)(fabsf(thrshold - (int)thrshold) * 100));
+        last_print = now_ms;
+    }
+
+    return press <= thrshold;
 }

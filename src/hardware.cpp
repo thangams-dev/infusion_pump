@@ -1,58 +1,62 @@
 #ifdef UNIT_TEST
+#include <zephyr/sys/printk.h>
+#include <zephyr/drivers/sensor.h>
 #include "mock_hardware.hpp"
 #else
 #include "hardware.hpp"
 #include "alarm.hpp"
 
-static const struct gpio_dt_spec led_pin = GPIO_DT_SPEC_GET(DT_ALIAS(led0),gpios);
-static const struct gpio_dt_spec buzzer = GPIO_DT_SPEC_GET(DT_ALIAS(buz0),gpios);
-static const struct gpio_dt_spec dir = GPIO_DT_SPEC_GET(DT_ALIAS(dir1),gpios);
-static const struct gpio_dt_spec enc = GPIO_DT_SPEC_GET(DT_ALIAS(enc1),gpios);
-const struct device *lps = DEVICE_DT_GET_ANY(st_lps22hb_press);
-static const struct gpio_dt_spec enab = GPIO_DT_SPEC_GET(DT_ALIAS(enab1),gpios);
+static const struct gpio_dt_spec led_pin = GPIO_DT_SPEC_GET(DT_ALIAS(led0), gpios);
+static const struct gpio_dt_spec buzzer  = GPIO_DT_SPEC_GET(DT_ALIAS(buz0), gpios);
+static const struct gpio_dt_spec dir     = GPIO_DT_SPEC_GET(DT_ALIAS(dir1), gpios);
+static const struct gpio_dt_spec enab    = GPIO_DT_SPEC_GET(DT_ALIAS(enab1), gpios);
+static const struct device *qdec = DEVICE_DT_GET(DT_ALIAS(qdec0));
 static const struct pwm_dt_spec step_pwm = PWM_DT_SPEC_GET(DT_ALIAS(step1));
-static struct gpio_callback cb_data;
-struct sensor_value pressure;
-atomic_t tick_count = ATOMIC_INIT(0);
+const struct device *lps = DEVICE_DT_GET_ANY(st_lps22hb_press);
 
-///
-void encoder_isr(const struct device* dev, struct gpio_callback* cb, uint32_t pins) {
-    static int64_t last_tick_ms = 0;
-    int64_t now = k_uptime_get();
-    if ((now - last_tick_ms) >= 5) {  // 2ms debounce
-        atomic_inc(&tick_count);
-        last_tick_ms = now;
+struct sensor_value pressure;
+
+int32_t get_encoder_position() {
+    struct sensor_value val;
+    sensor_sample_fetch(qdec);
+    sensor_channel_get(qdec, SENSOR_CHAN_ROTATION, &val);
+    int32_t raw = (val.val1 * 2400) / 360;   // 0-2400 within one rotation
+
+    static int32_t last_raw = raw;
+    static int32_t cumulative = 0;
+
+    int32_t delta = raw - last_raw;
+
+    // detect wrap: large jump means it wrapped around
+    if (delta < -1200) {
+        delta += 2400;   // wrapped forward (e.g. 2350 -> 20)
+    } else if (delta > 1200) {
+        delta -= 2400;   // wrapped backward (reverse direction)
     }
+
+    cumulative += delta;
+    last_raw = raw;
+
+    return cumulative;
 }
 
-void hardware_init(){
-    if (!device_is_ready(led_pin.port)) { return; }
-    if (!device_is_ready(buzzer.port)) { return; }
-    if (!device_is_ready(dir.port)) { return; }
-    if (!device_is_ready(enc.port)) { return; }
-    if (!device_is_ready(enab.port)) { return; }
-    if (!device_is_ready(step_pwm.dev)) { return; }
+void hardware_init() {
+    if (!device_is_ready(led_pin.port)) { printk("FAIL: led_pin\n"); return; }
+    if (!device_is_ready(step_pwm.dev)) { printk("FAIL: pwm\n"); return; }
+    if (!device_is_ready(lps))          { printk("FAIL: lps\n"); return; }
+    if (!device_is_ready(qdec))         { printk("FAIL: qdec\n"); return; }
 
     gpio_pin_configure_dt(&buzzer, GPIO_OUTPUT_INACTIVE);
-
     gpio_pin_configure_dt(&dir, GPIO_OUTPUT_INACTIVE);
-
-    gpio_pin_configure_dt(&enc, GPIO_INPUT | GPIO_PULL_UP);
-
     gpio_pin_configure_dt(&enab, GPIO_OUTPUT_INACTIVE);
-
     gpio_pin_configure_dt(&led_pin, GPIO_OUTPUT_INACTIVE);
+    gpio_pin_set_dt(&dir, 0);
 
-    gpio_pin_interrupt_configure_dt(&enc, GPIO_INT_EDGE_TO_ACTIVE);
-
-    gpio_init_callback(&cb_data, encoder_isr, BIT(enc.pin));
-
-    gpio_add_callback(enc.port, &cb_data);
-
-    gpio_pin_set_dt(&dir, 1);  // set direction forward
+    printk("Hardware initialized OK\n");   // ← add
 }
-float sensor_press(){   
-        if (!device_is_ready(lps)) {
+
+float sensor_press() {
+    if (!device_is_ready(lps)) {
         return 0.0F;
     }
     sensor_sample_fetch(lps);
@@ -60,27 +64,29 @@ float sensor_press(){
     return static_cast<float>(sensor_value_to_double(&pressure));
 }
 
-void led::update(){
-    gpio_pin_set_dt(&led_pin,1);
+void led::update(bool active) {
+    gpio_pin_set_dt(&led_pin, active ? 1 : 0);
 }
-void buz::update(){
-    gpio_pin_set_dt(&buzzer,1);
+
+void buz::update(bool active) {
+    gpio_pin_set_dt(&buzzer, active ? 1 : 0);
 }
-void buz::clear(){
-    gpio_pin_set_dt(&buzzer, 0);
+void uart_observer::update(bool active) {
+    if (active) {
+        printk("ALARM ACTIVE\n");  // check this function exists in your uart module
+    }
 }
 void motor_stop() {
-     gpio_pin_set_dt(&enab, 0);  // EN high = TMC2209 disabled
+    gpio_pin_set_dt(&enab, 0);  // EN high = TMC2209 disabled
 }
-void led::clear(){
-    gpio_pin_set_dt(&led_pin, 0);
+void motor_start() {
+
+    gpio_pin_set_dt(&enab, 1);  // EN low = TMC2209 enabled (active-low)
 }
+
 void set_delay_rate(uint32_t delay_us) {
-    uint32_t period_ns = delay_us * 2000U;  // convert µs to ns
-    pwm_set_dt(&step_pwm, period_ns, period_ns / 2U);
-}
-void motor_enable() {
-    gpio_pin_set_dt(&enab, 1);  
+    uint32_t period_ns = delay_us * 1000U;  // convert µs to ns
+    pwm_set_dt(&step_pwm, period_ns, period_ns / 2U); // which pin , total cycle time, PWM 50%
 }
 
 #endif

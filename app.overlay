@@ -2,11 +2,10 @@
     aliases {
         led0 = &led_node;
         buz0 = &buzzer_node;
-        enc1 = &enc_node;
-        sw1 = &sw_node;
         step1 = &step_node;
         dir1 = &dir_node;
         enab1 = &enab_node;
+        qdec0 = &qdec4;
     };
 
     my_outputs {
@@ -34,12 +33,6 @@
         };
     };
 
-    my_inputs {
-        compatible = "gpio-keys";
-        enc_node: enc1 {
-            gpios = <&gpioa 1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        };
-    };
 };
 
 &i2c1 {
@@ -57,5 +50,28 @@
         pinctrl-0 = <&tim2_ch1_pa0>;
         pinctrl-names = "default";
         #pwm-cells = <3>;
+    };
+};
+&pinctrl {
+    tim4_ch1_pb6: tim4_ch1_pb6 {
+        pinmux = <STM32_PINMUX('B', 6, AF2)>;
+    };
+
+    tim4_ch2_pb7: tim4_ch2_pb7 {
+        pinmux = <STM32_PINMUX('B', 7, AF2)>;
+    };
+};
+
+&timers4 {
+    status = "okay";
+    st,prescaler = <0>;
+
+    qdec4: qdec4 {
+        compatible = "st,stm32-qdec";
+        status = "okay";
+        pinctrl-0 = <&tim4_ch1_pb6 &tim4_ch2_pb7>;
+        pinctrl-names = "default";
+        st,encoder-mode = <3>;
+        st,counts-per-revolution = <2400>;
     };
 };

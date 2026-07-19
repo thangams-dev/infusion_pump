@@ -3038,11 +3038,10 @@ arduino_spi: &spi1 {};
     aliases {
         led0 = &led_node;
         buz0 = &buzzer_node;
-        enc1 = &enc_node;
-        sw1 = &sw_node;
         step1 = &step_node;
         dir1 = &dir_node;
         enab1 = &enab_node;
+        qdec0 = &qdec4;
     };
 
     my_outputs {
@@ -3070,15 +3069,6 @@ arduino_spi: &spi1 {};
         };
     };
 
-    my_inputs {
-        compatible = "gpio-keys";
-        enc_node: enc1 {
-            gpios = <&gpioa 1 ((1 << 0) | (1 << 4))>;
-        };
-        sw_node: sw1 {
-            gpios = <&gpioc 12 ((1 << 0) | (1 << 4))>;
-        };
-    };
 };
 
 &i2c1 {
@@ -3096,6 +3086,29 @@ arduino_spi: &spi1 {};
         pinctrl-0 = <&tim2_ch1_pa0>;
         pinctrl-names = "default";
         #pwm-cells = <3>;
+    };
+};
+&pinctrl {
+    tim4_ch1_pb6: tim4_ch1_pb6 {
+        pinmux = <((((('B') - 'A') & 0x1FU) << 9U) | (((6) & 0xFU) << 5U) | (((0x2) & 0x1FU) << 0U))>;
+    };
+
+    tim4_ch2_pb7: tim4_ch2_pb7 {
+        pinmux = <((((('B') - 'A') & 0x1FU) << 9U) | (((7) & 0xFU) << 5U) | (((0x2) & 0x1FU) << 0U))>;
+    };
+};
+
+&timers4 {
+    status = "okay";
+    st,prescaler = <0>;
+
+    qdec4: qdec4 {
+        compatible = "st,stm32-qdec";
+        status = "okay";
+        pinctrl-0 = <&tim4_ch1_pb6 &tim4_ch2_pb7>;
+        pinctrl-names = "default";
+        st,encoder-mode = <3>;
+        st,counts-per-revolution = <2400>;
     };
 };
 # 0 "<command-line>" 2

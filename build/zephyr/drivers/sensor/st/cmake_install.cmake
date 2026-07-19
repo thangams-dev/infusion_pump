@@ -42,3 +42,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/thanga-inc-5829/Documents/Infusion_pump/build/zephyr/drivers/sensor/st/lps22hb/cmake_install.cmake")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/thanga-inc-5829/Documents/Infusion_pump/build/zephyr/drivers/sensor/st/qdec_stm32/cmake_install.cmake")
+endif()
+

@@ -253,6 +253,17 @@
     ]
   ],
   [
+    "CONFIG_DT_HAS_ST_STM32_QDEC_ENABLED",
+    "n",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/thanga-inc-5829/Documents/Infusion_pump/build/Kconfig/Kconfig.dts",
+      13708
+    ]
+  ],
+  [
     "CONFIG_DT_HAS_ST_STM32_RCC_RCTL_ENABLED",
     "n",
     "bool",
@@ -471,7 +482,7 @@
     "assign",
     [
       "/home/thanga-inc-5829/Documents/Infusion_pump/prj.conf",
-      9
+      38
     ]
   ],
   [
@@ -490,7 +501,7 @@
     "assign",
     [
       "/home/thanga-inc-5829/Documents/Infusion_pump/prj.conf",
-      2
+      46
     ]
   ],
   [
@@ -1105,7 +1116,7 @@
     "assign",
     [
       "/home/thanga-inc-5829/Documents/Infusion_pump/prj.conf",
-      12
+      88
     ]
   ],
   [
@@ -1142,9 +1153,12 @@
     "CONFIG_ASSERT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "y",
+    "assign",
+    [
+      "/home/thanga-inc-5829/Documents/Infusion_pump/prj.conf",
+      29
+    ]
   ],
   [
     "CONFIG_DEVICE_DEPS",
@@ -1260,6 +1274,17 @@
     [
       "/home/thanga-inc-5829/zephyrproject/zephyr/Kconfig.zephyr",
       256
+    ]
+  ],
+  [
+    "CONFIG_SPIN_VALIDATE",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/thanga-inc-5829/zephyrproject/zephyr/subsys/debug/Kconfig",
+      202
     ]
   ],
   [
@@ -2819,6 +2844,14 @@
     null
   ],
   [
+    "CONFIG_USE_STM32_ASSERT",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
     "CONFIG_HAS_STM32_FLASH_PREFETCH",
     "n",
     "bool",
@@ -3923,9 +3956,11 @@
     "CONFIG_NONZERO_SPINLOCK_SIZE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "y",
+    "select",
+    [
+      "CPP"
+    ]
   ],
   [
     "CONFIG_THREAD_MONITOR",
@@ -3998,11 +4033,11 @@
     "CONFIG_SYSTEM_WORKQUEUE_WORK_TIMEOUT_MS",
     "y",
     "int",
-    "0",
+    "5000",
     "default",
     [
       "/home/thanga-inc-5829/zephyrproject/zephyr/kernel/Kconfig",
-      527
+      526
     ]
   ],
   [
@@ -4065,9 +4100,12 @@
     "CONFIG_MEM_SLAB_POINTER_VALIDATE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "y",
+    "default",
+    [
+      "/home/thanga-inc-5829/zephyrproject/zephyr/kernel/Kconfig",
+      608
+    ]
   ],
   [
     "CONFIG_MEM_SLAB_TRACE_MAX_UTILIZATION",
@@ -4104,7 +4142,7 @@
     "assign",
     [
       "/home/thanga-inc-5829/Documents/Infusion_pump/prj.conf",
-      1
+      26
     ]
   ],
   [
@@ -4201,10 +4239,10 @@
     "y",
     "bool",
     "y",
-    "assign",
+    "default",
     [
-      "/home/thanga-inc-5829/Documents/Infusion_pump/prj.conf",
-      6
+      "/home/thanga-inc-5829/zephyrproject/zephyr/kernel/Kconfig",
+      971
     ]
   ],
   [
@@ -5064,6 +5102,7 @@
     [
       "I2C_STM32 && (DT_HAS_ST_STM32_I2C_V1_ENABLED || DT_HAS_ST_STM32_I2C_V2_ENABLED) && I2C",
       "PWM_STM32 && DT_HAS_ST_STM32_PWM_ENABLED && PWM",
+      "QDEC_STM32 && DT_HAS_ST_STM32_QDEC_ENABLED && SENSOR",
       "UART_STM32 && DT_HAS_ST_STM32_UART_ENABLED && SERIAL"
     ]
   ],
@@ -5145,7 +5184,7 @@
     "assign",
     [
       "/home/thanga-inc-5829/Documents/Infusion_pump/prj.conf",
-      13
+      54
     ]
   ],
   [
@@ -5251,7 +5290,7 @@
     "assign",
     [
       "/home/thanga-inc-5829/Documents/Infusion_pump/prj.conf",
-      4
+      62
     ]
   ],
   [
@@ -5311,7 +5350,7 @@
     "assign",
     [
       "/home/thanga-inc-5829/Documents/Infusion_pump/prj.conf",
-      5
+      63
     ]
   ],
   [
@@ -5323,6 +5362,17 @@
     [
       "/home/thanga-inc-5829/zephyrproject/zephyr/drivers/sensor/st/lps22hb/Kconfig",
       15
+    ]
+  ],
+  [
+    "CONFIG_QDEC_STM32",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/thanga-inc-5829/zephyrproject/zephyr/drivers/sensor/st/qdec_stm32/Kconfig",
+      7
     ]
   ],
   [
@@ -5683,9 +5733,11 @@
     "CONFIG_REQUIRES_FULL_LIBC",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "y",
+    "select",
+    [
+      "REQUIRES_FULL_LIBCPP && CPP"
+    ]
   ],
   [
     "CONFIG_REQUIRES_FLOAT_PRINTF",
@@ -5734,14 +5786,6 @@
       "/home/thanga-inc-5829/zephyrproject/zephyr/lib/libc/Kconfig",
       58
     ]
-  ],
-  [
-    "CONFIG_MINIMAL_LIBC",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
   ],
   [
     "CONFIG_PICOLIBC",
@@ -5860,14 +5904,6 @@
     ]
   ],
   [
-    "CONFIG_PICOLIBC_USE_MODULE",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
     "CONFIG_PICOLIBC_USE_TOOLCHAIN",
     "y",
     "bool",
@@ -5912,9 +5948,157 @@
     "CONFIG_CPP",
     "y",
     "bool",
+    "y",
+    "assign",
+    [
+      "/home/thanga-inc-5829/Documents/Infusion_pump/prj.conf",
+      6
+    ]
+  ],
+  [
+    "CONFIG_STD_CPP_VERSION",
+    "n",
+    "int",
+    "202002",
+    "default",
+    [
+      "/home/thanga-inc-5829/zephyrproject/zephyr/lib/cpp/Kconfig",
+      22
+    ]
+  ],
+  [
+    "CONFIG_STD_CPP98",
+    "y",
+    "bool",
     null,
     "unset",
     null
+  ],
+  [
+    "CONFIG_STD_CPP11",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_STD_CPP14",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_STD_CPP17",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_STD_CPP2A",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_STD_CPP20",
+    "y",
+    "bool",
+    "y",
+    "assign",
+    null
+  ],
+  [
+    "CONFIG_STD_CPP2B",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_STD_CPP23",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_REQUIRES_FULL_LIBCPP",
+    "y",
+    "bool",
+    "y",
+    "assign",
+    [
+      "/home/thanga-inc-5829/Documents/Infusion_pump/prj.conf",
+      12
+    ]
+  ],
+  [
+    "CONFIG_FULL_LIBCPP_SUPPORTED",
+    "n",
+    "bool",
+    "y",
+    "select",
+    [
+      "GLIBCXX_LIBCPP && y = y && (NEWLIB_LIBC || PICOLIBC) && <choice LIBCPP_IMPLEMENTATION>"
+    ]
+  ],
+  [
+    "CONFIG_GLIBCXX_LIBCPP",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/thanga-inc-5829/zephyrproject/zephyr/lib/cpp/Kconfig",
+      106
+    ]
+  ],
+  [
+    "CONFIG_EXTERNAL_LIBCPP",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_EXTERNAL_MODULE_LIBCPP",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_CPP_EXCEPTIONS",
+    "y",
+    "bool",
+    "n",
+    "assign",
+    [
+      "/home/thanga-inc-5829/Documents/Infusion_pump/prj.conf",
+      18
+    ]
+  ],
+  [
+    "CONFIG_CPP_RTTI",
+    "y",
+    "bool",
+    "n",
+    "assign",
+    [
+      "/home/thanga-inc-5829/Documents/Infusion_pump/prj.conf",
+      15
+    ]
   ],
   [
     "CONFIG_SYS_HASH_FUNC32",
@@ -6006,20 +6190,20 @@
     "CONFIG_SYS_HEAP_HARDENING_BASIC",
     "y",
     "bool",
-    "y",
-    "default",
-    [
-      "/home/thanga-inc-5829/zephyrproject/zephyr/lib/heap/Kconfig",
-      83
-    ]
+    null,
+    "unset",
+    null
   ],
   [
     "CONFIG_SYS_HEAP_HARDENING_MODERATE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "y",
+    "default",
+    [
+      "/home/thanga-inc-5829/zephyrproject/zephyr/lib/heap/Kconfig",
+      82
+    ]
   ],
   [
     "CONFIG_SYS_HEAP_HARDENING_FULL",
@@ -6041,11 +6225,11 @@
     "CONFIG_SYS_HEAP_HARDENING_LEVEL",
     "n",
     "int",
-    "1",
+    "2",
     "default",
     [
       "/home/thanga-inc-5829/zephyrproject/zephyr/lib/heap/Kconfig",
-      148
+      149
     ]
   ],
   [
@@ -6195,7 +6379,7 @@
     "assign",
     [
       "/home/thanga-inc-5829/Documents/Infusion_pump/prj.conf",
-      10
+      35
     ]
   ],
   [
@@ -6561,6 +6745,25 @@
     [
       "BOOT_BANNER"
     ]
+  ],
+  [
+    "CONFIG_ASSERT_LEVEL",
+    "y",
+    "int",
+    "2",
+    "default",
+    [
+      "/home/thanga-inc-5829/zephyrproject/zephyr/subsys/debug/Kconfig",
+      188
+    ]
+  ],
+  [
+    "CONFIG_ASSERT_CUSTOM_HEADER",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
   ],
   [
     "CONFIG_FORCE_NO_ASSERT",
