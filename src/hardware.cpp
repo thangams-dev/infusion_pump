@@ -14,16 +14,15 @@ static const struct device *qdec = DEVICE_DT_GET(DT_ALIAS(qdec0));
 static const struct pwm_dt_spec step_pwm = PWM_DT_SPEC_GET(DT_ALIAS(step1));
 const struct device *lps = DEVICE_DT_GET_ANY(st_lps22hb_press);
 
-struct sensor_value pressure;
-
+/// @brief Reads quadrature encoder and returns cumulative tick count.
 int32_t get_encoder_position() {
     struct sensor_value val;
     sensor_sample_fetch(qdec);
     sensor_channel_get(qdec, SENSOR_CHAN_ROTATION, &val);
     int32_t raw = (val.val1 * 2400) / 360;   // 0-2400 within one rotation
 
-    static int32_t last_raw = raw;
-    static int32_t cumulative = 0;
+    static int32_t last_raw = raw;  // it will run once
+    static int32_t cumulative = 0; 
 
     int32_t delta = raw - last_raw;
 
@@ -40,6 +39,7 @@ int32_t get_encoder_position() {
     return cumulative;
 }
 
+/// @brief Initializes all GPIO/PWM/sensor peripherals, checks each is ready.
 void hardware_init() {
     if (!device_is_ready(led_pin.port)) { printk("FAIL: led_pin\n"); return; }
     if (!device_is_ready(step_pwm.dev)) { printk("FAIL: pwm\n"); return; }
@@ -52,15 +52,18 @@ void hardware_init() {
     gpio_pin_configure_dt(&led_pin, GPIO_OUTPUT_INACTIVE);
     gpio_pin_set_dt(&dir, 0);
 
-    printk("Hardware initialized OK\n");   // ← add
+    printk("Hardware initialized OK\n");
 }
 
+/// @brief Reads LPS22HB pressure sensor.
+/// @return Pressure in kPa, or 0.0 if sensor not ready.
 float sensor_press() {
     if (!device_is_ready(lps)) {
         return 0.0F;
     }
+    struct sensor_value pressure;
     sensor_sample_fetch(lps);
-    sensor_channel_get(lps, SENSOR_CHAN_PRESS, &pressure);
+    sensor_channel_get(lps, SENSOR_CHAN_PRESS, &pressure); // returns kPa
     return static_cast<float>(sensor_value_to_double(&pressure));
 }
 
@@ -71,22 +74,28 @@ void led::update(bool active) {
 void buz::update(bool active) {
     gpio_pin_set_dt(&buzzer, active ? 1 : 0);
 }
+
 void uart_observer::update(bool active) {
     if (active) {
-        printk("ALARM ACTIVE\n");  // check this function exists in your uart module
+        printk("ALARM ACTIVE\n");
     }
 }
+
+/// @brief Disables the TMC2209 motor driver (EN active-low).
 void motor_stop() {
-    gpio_pin_set_dt(&enab, 0);  // EN high = TMC2209 disabled
+    gpio_pin_set_dt(&enab, 0);  // EN high = disabled
 }
+
+/// @brief Enables the TMC2209 motor driver (EN active-low).
 void motor_start() {
-
-    gpio_pin_set_dt(&enab, 1);  // EN low = TMC2209 enabled (active-low)
+    gpio_pin_set_dt(&enab, 1);  // EN low = enabled
 }
 
+/// @brief Sets stepper pulse rate via PWM.
+/// @param delay_us Delay between steps, in microseconds.
 void set_delay_rate(uint32_t delay_us) {
-    uint32_t period_ns = delay_us * 1000U;  // convert µs to ns
-    pwm_set_dt(&step_pwm, period_ns, period_ns / 2U); // which pin , total cycle time, PWM 50%
+    uint32_t period_ns = delay_us * 1000U;
+    pwm_set_dt(&step_pwm, period_ns, period_ns / 2U);  // 50% duty cycle
 }
 
 #endif

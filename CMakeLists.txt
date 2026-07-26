@@ -21,7 +21,7 @@ target_sources(app PRIVATE
 #It will include all the headers
 target_include_directories(app PRIVATE include)
 
-# Bare-metal C++: no exceptions, no RTTI, no libstdc++ atexit/heap machinery
+# This will tell to compiler, disable this all, Bare-metal C++: no exceptions, no RTTI, no libstdc++ atexit/heap machinery
 target_compile_options(app PRIVATE
     -fno-exceptions
     -fno-rtti

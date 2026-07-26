@@ -1,24 +1,23 @@
 #pragma once
-#include <stdint.h>
+#include <cstdint>
 
-/// @brief Tracks infused volume via encoder ticks
+/// @brief Tracks infused volume via encoder ticks and checks accuracy against target rate.
 class VolumeTracker {
 public:
-    int64_t initial = 0;
-    float correction = 1.0F;
-    bool corrected = false;
-    float encoder_offset = 0.0F;
-    float ticks        = 0.0F;
-    float elapsed_time = 0.0F;
-    float expected     = 0.0F;
-    float deviation    = 0.0F;
-    float actual       = 0.0F;
-    float expected_accumulated = 0.0F;
-    int64_t last_calc_ms = 0;
-    static constexpr float ml_per_rotation    = 0.1F;
-    static constexpr float ticks_per_rotation = 2400.0F;
-    static constexpr float ml_per_tick = ml_per_rotation / ticks_per_rotation;
+    int64_t initial = 0;              ///< start time of infusion
+    float encoder_offset = 0.0F;      ///< encoder count at start
+              ///< ticks moved since start
+    float expected = 0.0F;             ///< mL that should be delivered
+    float deviation = 0.0F;            ///< % diff, expected vs actual
+    float actual = 0.0F;               ///< mL actually delivered
+    int64_t last_calc_ms = 0;          ///< last check timestamp
 
-    /// @brief Calculate volume deviation @param rate ml/hr @return true if within 5%
-    bool cal(float rate, float steps_per_sec);
+    static constexpr float ml_per_rotation    = 0.1F;   ///< mL per encoder rotation
+    static constexpr float ticks_per_rotation = 2400.0F; ///< encoder ticks per rotation
+    static constexpr float ml_per_tick = ml_per_rotation / ticks_per_rotation; ///< mL per tick
+
+    /// @brief Checks delivered volume against expected, for given rate.
+    /// @param rate Target rate, mL/hr.
+    /// @return true if deviation is within 5%.
+    bool cal(float rate);
 };

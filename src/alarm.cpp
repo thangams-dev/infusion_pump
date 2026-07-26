@@ -1,5 +1,6 @@
 #include "alarm.hpp"
 
+/// @brief Registers an observer, up to MAX_OBSERVERS.
 void AlarmManager::add(AlarmObserver* obj) {
     if (count < MAX_OBSERVERS) {
         alarm[count] = obj;
@@ -7,6 +8,7 @@ void AlarmManager::add(AlarmObserver* obj) {
     }
 }
 
+/// @brief Raises given alarm type and notifies all observers.
 void AlarmManager::notify(AlarmType type) {
     if (type == AlarmType::kVolume)    { volume_active = true; }
     if (type == AlarmType::kOcclusion) { occlusion_active = true; }
@@ -17,6 +19,7 @@ void AlarmManager::notify(AlarmType type) {
     noti_count++;
 }
 
+/// @brief Clears given alarm type; notifies observers only once all alarms are clear.
 void AlarmManager::clear(AlarmType type) {
     if (type == AlarmType::kVolume)    { volume_active = false; }
     if (type == AlarmType::kOcclusion) { occlusion_active = false; }
@@ -28,6 +31,7 @@ void AlarmManager::clear(AlarmType type) {
     }
 }
 
+/// @brief Clears all alarms and notifies observers.
 void AlarmManager::clearAll() {
     volume_active = false;
     occlusion_active = false;

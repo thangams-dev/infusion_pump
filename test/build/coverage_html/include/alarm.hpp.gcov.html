@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-07-18 06:01:06</td>
+            <td class="headerValue">2026-07-23 18:27:45</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -73,28 +73,39 @@
 <span id="L2"><span class="lineNum">       2</span>                 :             : #include &lt;stdint.h&gt;</span>
 <span id="L3"><span class="lineNum">       3</span>                 :             : #include &quot;alarm_observer.hpp&quot;</span>
 <span id="L4"><span class="lineNum">       4</span>                 :             : </span>
-<span id="L5"><span class="lineNum">       5</span>                 :             : enum class AlarmType : uint8_t {</span>
-<span id="L6"><span class="lineNum">       6</span>                 :             :     kVolume,</span>
-<span id="L7"><span class="lineNum">       7</span>                 :             :     kOcclusion</span>
-<span id="L8"><span class="lineNum">       8</span>                 :             : };</span>
-<span id="L9"><span class="lineNum">       9</span>                 :             : </span>
-<span id="L10"><span class="lineNum">      10</span>                 :             : class AlarmManager {</span>
-<span id="L11"><span class="lineNum">      11</span>                 :             : public:</span>
-<span id="L12"><span class="lineNum">      12</span>                 :             :     void add(AlarmObserver* obj);</span>
-<span id="L13"><span class="lineNum">      13</span>                 :             :     void notify(AlarmType type);</span>
-<span id="L14"><span class="lineNum">      14</span>                 :             :     void clear(AlarmType type);</span>
-<span id="L15"><span class="lineNum">      15</span>                 :             :     void clearAll();</span>
-<span id="L16"><span class="lineNum">      16</span>                 :<span class="tlaGNC tlaBgGNC">          10 :     uint8_t get_notify_count() const { return noti_count; } </span></span>
-<span id="L17"><span class="lineNum">      17</span>                 :             : </span>
-<span id="L18"><span class="lineNum">      18</span>                 :             : private:</span>
-<span id="L19"><span class="lineNum">      19</span>                 :             :     static constexpr uint8_t MAX_OBSERVERS = 4U;</span>
-<span id="L20"><span class="lineNum">      20</span>                 :             :     AlarmObserver* alarm[MAX_OBSERVERS] = {nullptr};</span>
-<span id="L21"><span class="lineNum">      21</span>                 :             :     uint8_t count = 0U;</span>
-<span id="L22"><span class="lineNum">      22</span>                 :             :     uint8_t noti_count = 0U;</span>
-<span id="L23"><span class="lineNum">      23</span>                 :             : </span>
-<span id="L24"><span class="lineNum">      24</span>                 :             :     bool volume_active = false;</span>
-<span id="L25"><span class="lineNum">      25</span>                 :             :     bool occlusion_active = false;</span>
-<span id="L26"><span class="lineNum">      26</span>                 :             : };</span>
+<span id="L5"><span class="lineNum">       5</span>                 :             : /// @brief Alarm categories tracked independently by AlarmManager.</span>
+<span id="L6"><span class="lineNum">       6</span>                 :             : enum class AlarmType : uint8_t {</span>
+<span id="L7"><span class="lineNum">       7</span>                 :             :     kVolume,</span>
+<span id="L8"><span class="lineNum">       8</span>                 :             :     kOcclusion</span>
+<span id="L9"><span class="lineNum">       9</span>                 :             : };</span>
+<span id="L10"><span class="lineNum">      10</span>                 :             : </span>
+<span id="L11"><span class="lineNum">      11</span>                 :             : /// @brief Subject (Observer pattern) - tracks alarm states and notifies all observers.</span>
+<span id="L12"><span class="lineNum">      12</span>                 :             : class AlarmManager {</span>
+<span id="L13"><span class="lineNum">      13</span>                 :             : public:</span>
+<span id="L14"><span class="lineNum">      14</span>                 :             :     /// @brief Registers an observer to receive alarm updates.</span>
+<span id="L15"><span class="lineNum">      15</span>                 :             :     void add(AlarmObserver* obj);</span>
+<span id="L16"><span class="lineNum">      16</span>                 :             : </span>
+<span id="L17"><span class="lineNum">      17</span>                 :             :     /// @brief Raises the given alarm type and notifies all observers.</span>
+<span id="L18"><span class="lineNum">      18</span>                 :             :     void notify(AlarmType type);</span>
+<span id="L19"><span class="lineNum">      19</span>                 :             : </span>
+<span id="L20"><span class="lineNum">      20</span>                 :             :     /// @brief Clears the given alarm type; notifies observers only if all alarms are clear.</span>
+<span id="L21"><span class="lineNum">      21</span>                 :             :     void clear(AlarmType type);</span>
+<span id="L22"><span class="lineNum">      22</span>                 :             : </span>
+<span id="L23"><span class="lineNum">      23</span>                 :             :     /// @brief Clears all alarms and notifies observers.</span>
+<span id="L24"><span class="lineNum">      24</span>                 :             :     void clearAll();</span>
+<span id="L25"><span class="lineNum">      25</span>                 :             : </span>
+<span id="L26"><span class="lineNum">      26</span>                 :             :     /// @brief Total number of notify() calls so far.</span>
+<span id="L27"><span class="lineNum">      27</span>                 :<span class="tlaGNC tlaBgGNC">           9 :     uint8_t get_notify_count() const { return noti_count; }</span></span>
+<span id="L28"><span class="lineNum">      28</span>                 :             : </span>
+<span id="L29"><span class="lineNum">      29</span>                 :             : private:</span>
+<span id="L30"><span class="lineNum">      30</span>                 :             :     static constexpr uint8_t MAX_OBSERVERS = 4U;</span>
+<span id="L31"><span class="lineNum">      31</span>                 :             :     AlarmObserver* alarm[MAX_OBSERVERS] = {nullptr};</span>
+<span id="L32"><span class="lineNum">      32</span>                 :             :     uint8_t count = 0U;</span>
+<span id="L33"><span class="lineNum">      33</span>                 :             :     uint8_t noti_count = 0U;</span>
+<span id="L34"><span class="lineNum">      34</span>                 :             : </span>
+<span id="L35"><span class="lineNum">      35</span>                 :             :     bool volume_active = false;</span>
+<span id="L36"><span class="lineNum">      36</span>                 :             :     bool occlusion_active = false;</span>
+<span id="L37"><span class="lineNum">      37</span>                 :             : };</span>
         </pre>
               </td>
             </tr>

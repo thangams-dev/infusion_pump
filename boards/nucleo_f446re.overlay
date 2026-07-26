@@ -1,0 +1,86 @@
+// here , we are creating new devices
+/ {
+    aliases {
+        led0 = &led_node;
+        buz0 = &buzzer_node;
+        step1 = &step_node;
+        dir1 = &dir_node;
+        enab1 = &enab_node;
+        qdec0 = &qdec4;
+    };
+
+    my_outputs {
+        compatible = "gpio-leds";
+        led_node: led1 {
+            gpios = <&gpioa 8 GPIO_ACTIVE_HIGH>;
+        };
+        buzzer_node: buz1 {
+            gpios = <&gpioa 9 GPIO_ACTIVE_HIGH>;
+        };
+        dir_node: dir1 {
+            gpios = <&gpioa 6 GPIO_ACTIVE_HIGH>;
+        };
+    };
+    my_pwm {
+    compatible = "pwm-leds"; // Here, we used pwm driver
+    step_node: step1 {
+        pwms = <&pwm2 1 1000000 PWM_POLARITY_NORMAL>; // Here we used TIM 2 , chl 1 , then nano seconds
+    };
+};
+    my_controls {
+        compatible = "gpio-leds";
+        enab_node: enab1 {
+            gpios = <&gpioa 7 GPIO_ACTIVE_LOW>;
+        };
+    };
+
+};
+
+// Here, we modifing existing pheriperals
+
+&i2c1 {                                    // enable i2c1 peripheral — needed to talk to
+                                            // the LPS22HB pressure sensor for occlusion sensing
+    status = "okay";
+    lps22hb@5d {
+        compatible = "st,lps22hb-press";   // loads the LPS sensor driver
+        reg = <0x5d>;                      // I2C address
+        label = "LPS22HB";
+    };
+};
+
+&timers2 {                                 // enable timer2 — this is what drives the PWM
+                                            // used for stepper STEP pulses
+    status = "okay";
+    pwm2: pwm {
+        status = "okay";
+        pinctrl-0 = <&tim2_ch1_pa0>;       // timer channel + pin
+        pinctrl-names = "default";
+    };
+};
+
+&pinctrl {
+    tim4_ch1_pb6: tim4_ch1_pb6 {
+        pinmux = <STM32_PINMUX('B', 6, AF2)>;   // pin for chl 1 — encoder phase A
+    };
+
+    tim4_ch2_pb7: tim4_ch2_pb7 {
+        pinmux = <STM32_PINMUX('B', 7, AF2)>;   // pin for chl 2 — encoder phase B
+    };
+};
+
+&timers4 {                                 // TIM4 used in hardware encoder mode,
+                                            // not GPIO interrupts — lets the timer count
+                                            // pulses on its own, no CPU load per tick
+    status = "okay";
+    st,prescaler = <0>;
+
+    qdec4: qdec4 {
+        compatible = "st,stm32-qdec";      // qdec driver
+        status = "okay";
+        pinctrl-0 = <&tim4_ch1_pb6 &tim4_ch2_pb7>;
+        pinctrl-names = "default";
+        st,encoder-mode = <3>;             // count on both edges of A & B — gives
+                                            // full 4x resolution (2400 CPR from 600 PPR)
+        st,counts-per-revolution = <2400>;
+    };
+};

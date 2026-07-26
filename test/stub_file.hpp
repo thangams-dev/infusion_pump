@@ -1,6 +1,7 @@
 #pragma once
 #include <cstdint>
 
+/// Host-build test doubles: controllable fake state for hardware I/O.
 extern int64_t fake_time;
 extern uint32_t fake_ticks;
 extern float fake_press;

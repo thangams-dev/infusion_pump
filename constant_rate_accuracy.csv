@@ -1,0 +1,8 @@
+Set Rate (mL/hr),Delivered (mL),Expected (mL),Deviation (%),Within +/-5%
+1,0.05,0.05,0,YES
+10,0.46,0.46,0,YES
+50,2.56,2.56,0,YES
+100,7.02,7.02,0,YES
+200,14.16,14.15,0,YES
+300,10.35,10.35,0,YES
+500,36.33,36.16,0,YES

@@ -3,7 +3,7 @@
 Parses infusion pump serial log for LinearRampMode data and plots rate vs time.
 
 Expects log lines in the format:
-    RAMP,<timestamp_ms>,<rate_mL_per_hr>
+    [DATA] time_ms:<ms> rate:<rate>
 
 Usage:
     python3 parse_ramp_log.py ramp_log.txt
@@ -35,7 +35,7 @@ def main():
 
     rows = parse_log(sys.argv[1])
     if not rows:
-        print("No RAMP lines found. Check log format matches 'RAMP,<ms>,<rate>'.")
+        print("No DATA lines found. Check log format matches '[DATA] time_ms:<ms> rate:<rate>'.")
         sys.exit(1)
 
     t0 = rows[0][0]

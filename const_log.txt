@@ -1,0 +1,3125 @@
+***** delaying boot 1000ms (per build configuration) *****
+
+*** Booting Zephyr OS build v4.4.0-3651-ge07c8cf4d645 (delayed boot 1000ms) ***
+
+Hardware initialized OK
+
+Mode: CONSTANT or LINEAR?
+
+> Constant Mode
+
+Default rate: 100 ml/hr
+
+Use SET_RATE <value> to customize, or START to use default
+
+
+
+   HCE Infusion Pump Platform v1.0
+
+Cmds: START|STOP|PAUSE|RESET|MODE|SET_RATE|SET_RAMP
+
+> SET_RATE 10
+
+
+>> Rate set to 10 mL/hr
+
+> START
+
+
+>> Started
+
+> [PRESSURE] Current:99.58 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.00 mL | Expected:0.00 mL | Dev:427%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:99.59 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.00 mL | Expected:0.00 mL | Dev:11%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:99.58 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.01 mL | Expected:0.01 mL | Dev:5%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:99.58 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.01 mL | Expected:0.01 mL | Dev:3%
+
+[PRESSURE] Current:99.58 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.02 mL | Expected:0.02 mL | Dev:3%
+
+[PRESSURE] Current:99.58 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.02 mL | Expected:0.02 mL | Dev:2%
+
+[PRESSURE] Current:99.58 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.03 mL | Expected:0.03 mL | Dev:2%
+
+[PRESSURE] Current:99.59 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.03 mL | Expected:0.03 mL | Dev:1%
+
+[PRESSURE] Current:99.59 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.04 mL | Expected:0.04 mL | Dev:1%
+
+[PRESSURE] Current:99.59 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.04 mL | Expected:0.05 mL | Dev:0%
+
+[PRESSURE] Current:99.58 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.05 mL | Expected:0.05 mL | Dev:0%
+
+[PRESSURE] Current:99.58 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.06 mL | Expected:0.06 mL | Dev:0%
+
+[PRESSURE] Current:99.58 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.06 mL | Expected:0.06 mL | Dev:0%
+
+[PRESSURE] Current:99.58 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.07 mL | Expected:0.07 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.07 mL | Expected:0.07 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.08 mL | Expected:0.08 mL | Dev:0%
+
+[PRESSURE] Current:99.56 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.08 mL | Expected:0.08 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.09 mL | Expected:0.09 mL | Dev:0%
+
+[PRESSURE] Current:99.56 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.09 mL | Expected:0.10 mL | Dev:0%
+
+[PRESSURE] Current:99.56 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.10 mL | Expected:0.10 mL | Dev:0%
+
+[PRESSURE] Current:99.56 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.11 mL | Expected:0.11 mL | Dev:0%
+
+[PRESSURE] Current:99.56 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.11 mL | Expected:0.11 mL | Dev:0%
+
+[PRESSURE] Current:99.56 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.12 mL | Expected:0.12 mL | Dev:0%
+
+[PRESSURE] Current:99.56 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.12 mL | Expected:0.12 mL | Dev:0%
+
+[PRESSURE] Current:99.56 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.13 mL | Expected:0.13 mL | Dev:0%
+
+[PRESSURE] Current:99.56 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.13 mL | Expected:0.13 mL | Dev:0%
+
+[PRESSURE] Current:99.56 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.14 mL | Expected:0.14 mL | Dev:0%
+
+[PRESSURE] Current:99.56 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.14 mL | Expected:0.15 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.15 mL | Expected:0.15 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.16 mL | Expected:0.16 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.16 mL | Expected:0.16 mL | Dev:0%
+
+[PRESSURE] Current:99.56 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.17 mL | Expected:0.17 mL | Dev:0%
+
+[PRESSURE] Current:99.55 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.17 mL | Expected:0.17 mL | Dev:0%
+
+[PRESSURE] Current:99.55 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.18 mL | Expected:0.18 mL | Dev:0%
+
+[PRESSURE] Current:99.55 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.18 mL | Expected:0.18 mL | Dev:0%
+
+[PRESSURE] Current:99.56 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.19 mL | Expected:0.19 mL | Dev:0%
+
+[PRESSURE] Current:99.56 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.20 mL | Expected:0.20 mL | Dev:0%
+
+[PRESSURE] Current:99.56 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.20 mL | Expected:0.20 mL | Dev:0%
+
+[PRESSURE] Current:99.56 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.21 mL | Expected:0.21 mL | Dev:0%
+
+[PRESSURE] Current:99.55 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.21 mL | Expected:0.21 mL | Dev:0%
+
+[PRESSURE] Current:99.54 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.22 mL | Expected:0.22 mL | Dev:0%
+
+[PRESSURE] Current:99.55 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.22 mL | Expected:0.22 mL | Dev:0%
+
+[PRESSURE] Current:99.54 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.23 mL | Expected:0.23 mL | Dev:0%
+
+[PRESSURE] Current:99.54 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.23 mL | Expected:0.23 mL | Dev:0%
+
+[PRESSURE] Current:99.54 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.24 mL | Expected:0.24 mL | Dev:0%
+
+[PRESSURE] Current:99.54 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.25 mL | Expected:0.25 mL | Dev:0%
+
+[PRESSURE] Current:99.54 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.25 mL | Expected:0.25 mL | Dev:0%
+
+[PRESSURE] Current:99.55 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.26 mL | Expected:0.26 mL | Dev:0%
+
+[PRESSURE] Current:99.55 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.26 mL | Expected:0.26 mL | Dev:0%
+
+[PRESSURE] Current:99.55 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.27 mL | Expected:0.27 mL | Dev:0%
+
+[PRESSURE] Current:99.54 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.27 mL | Expected:0.27 mL | Dev:0%
+
+[PRESSURE] Current:99.55 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.28 mL | Expected:0.28 mL | Dev:0%
+
+[PRESSURE] Current:99.54 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.28 mL | Expected:0.28 mL | Dev:0%
+
+[PRESSURE] Current:99.54 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.29 mL | Expected:0.29 mL | Dev:0%
+
+[PRESSURE] Current:99.53 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.30 mL | Expected:0.30 mL | Dev:0%
+
+[PRESSURE] Current:99.54 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.30 mL | Expected:0.30 mL | Dev:0%
+
+[PRESSURE] Current:99.53 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.31 mL | Expected:0.31 mL | Dev:0%
+
+[PRESSURE] Current:99.54 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.31 mL | Expected:0.31 mL | Dev:0%
+
+[PRESSURE] Current:99.53 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.32 mL | Expected:0.32 mL | Dev:0%
+
+[PRESSURE] Current:99.53 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.32 mL | Expected:0.32 mL | Dev:0%
+
+[PRESSURE] Current:99.52 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.33 mL | Expected:0.33 mL | Dev:0%
+
+[PRESSURE] Current:99.51 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.33 mL | Expected:0.34 mL | Dev:0%
+
+[PRESSURE] Current:99.51 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.34 mL | Expected:0.34 mL | Dev:0%
+
+[PRESSURE] Current:99.51 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.35 mL | Expected:0.35 mL | Dev:0%
+
+[PRESSURE] Current:99.50 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.35 mL | Expected:0.35 mL | Dev:0%
+
+[PRESSURE] Current:99.50 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.36 mL | Expected:0.36 mL | Dev:0%
+
+[PRESSURE] Current:99.49 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.36 mL | Expected:0.36 mL | Dev:0%
+
+[PRESSURE] Current:99.49 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.37 mL | Expected:0.37 mL | Dev:0%
+
+[PRESSURE] Current:99.49 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.37 mL | Expected:0.37 mL | Dev:0%
+
+[PRESSURE] Current:99.49 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.38 mL | Expected:0.38 mL | Dev:0%
+
+[PRESSURE] Current:99.48 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.38 mL | Expected:0.39 mL | Dev:0%
+
+[PRESSURE] Current:99.48 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.39 mL | Expected:0.39 mL | Dev:0%
+
+[PRESSURE] Current:99.47 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.40 mL | Expected:0.40 mL | Dev:0%
+
+[PRESSURE] Current:99.46 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.40 mL | Expected:0.40 mL | Dev:0%
+
+[PRESSURE] Current:99.46 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.41 mL | Expected:0.41 mL | Dev:0%
+
+[PRESSURE] Current:99.45 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.41 mL | Expected:0.41 mL | Dev:0%
+
+[PRESSURE] Current:99.44 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.42 mL | Expected:0.42 mL | Dev:0%
+
+[PRESSURE] Current:99.42 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.42 mL | Expected:0.42 mL | Dev:0%
+
+[PRESSURE] Current:99.42 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.43 mL | Expected:0.43 mL | Dev:0%
+
+[PRESSURE] Current:99.41 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.44 mL | Expected:0.44 mL | Dev:0%
+
+[PRESSURE] Current:99.40 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.44 mL | Expected:0.44 mL | Dev:0%
+
+[PRESSURE] Current:99.40 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.45 mL | Expected:0.45 mL | Dev:0%
+
+[PRESSURE] Current:99.40 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.45 mL | Expected:0.45 mL | Dev:0%
+
+[PRESSURE] Current:99.39 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.46 mL | Expected:0.46 mL | Dev:0%
+
+[PRESSURE] Current:99.38 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:10 mL/hr | Delivered:0.46 mL | Expected:0.46 mL | Dev:0%
+
+STOP
+
+
+>> Stopped
+
+> RESET
+
+
+>> Reset
+
+> 5SET_RATE 50
+
+
+>> Unknown
+
+> SET_RATE 50
+
+
+>> Rate set to 50 mL/hr
+
+> START
+
+
+>> Started
+
+> [PRESSURE] Current:99.38 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:0.00 mL | Expected:0.00 mL | Dev:12%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:99.36 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:0.02 mL | Expected:0.02 mL | Dev:1%
+
+[PRESSURE] Current:99.37 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:0.05 mL | Expected:0.05 mL | Dev:0%
+
+[PRESSURE] Current:99.37 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:0.08 mL | Expected:0.08 mL | Dev:0%
+
+[PRESSURE] Current:99.37 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:0.11 mL | Expected:0.11 mL | Dev:0%
+
+[PRESSURE] Current:99.37 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:0.13 mL | Expected:0.13 mL | Dev:0%
+
+[PRESSURE] Current:99.37 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:0.16 mL | Expected:0.16 mL | Dev:0%
+
+[PRESSURE] Current:99.37 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:0.19 mL | Expected:0.19 mL | Dev:0%
+
+[PRESSURE] Current:99.37 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:0.22 mL | Expected:0.22 mL | Dev:0%
+
+[PRESSURE] Current:99.37 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:0.25 mL | Expected:0.25 mL | Dev:0%
+
+[PRESSURE] Current:99.37 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:0.27 mL | Expected:0.27 mL | Dev:0%
+
+[PRESSURE] Current:99.37 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:0.30 mL | Expected:0.30 mL | Dev:0%
+
+[PRESSURE] Current:99.37 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:0.33 mL | Expected:0.33 mL | Dev:0%
+
+[PRESSURE] Current:99.37 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:0.36 mL | Expected:0.36 mL | Dev:0%
+
+[PRESSURE] Current:99.37 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:0.39 mL | Expected:0.39 mL | Dev:0%
+
+[PRESSURE] Current:99.36 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:0.41 mL | Expected:0.41 mL | Dev:0%
+
+[PRESSURE] Current:99.36 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:0.44 mL | Expected:0.44 mL | Dev:0%
+
+[PRESSURE] Current:99.36 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:0.47 mL | Expected:0.47 mL | Dev:0%
+
+[PRESSURE] Current:99.37 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:0.50 mL | Expected:0.50 mL | Dev:0%
+
+[PRESSURE] Current:99.37 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:0.52 mL | Expected:0.52 mL | Dev:0%
+
+[PRESSURE] Current:99.38 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:0.55 mL | Expected:0.55 mL | Dev:0%
+
+[PRESSURE] Current:99.38 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:0.58 mL | Expected:0.58 mL | Dev:0%
+
+[PRESSURE] Current:99.38 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:0.61 mL | Expected:0.61 mL | Dev:0%
+
+[PRESSURE] Current:99.38 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:0.64 mL | Expected:0.64 mL | Dev:0%
+
+[PRESSURE] Current:99.38 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:0.66 mL | Expected:0.66 mL | Dev:0%
+
+[PRESSURE] Current:99.38 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:0.69 mL | Expected:0.69 mL | Dev:0%
+
+[PRESSURE] Current:99.38 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:0.72 mL | Expected:0.72 mL | Dev:0%
+
+[PRESSURE] Current:99.38 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:0.75 mL | Expected:0.75 mL | Dev:0%
+
+[PRESSURE] Current:99.38 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:0.78 mL | Expected:0.78 mL | Dev:0%
+
+[PRESSURE] Current:99.38 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:0.80 mL | Expected:0.80 mL | Dev:0%
+
+[PRESSURE] Current:99.39 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:0.83 mL | Expected:0.83 mL | Dev:0%
+
+[PRESSURE] Current:99.39 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:0.86 mL | Expected:0.86 mL | Dev:0%
+
+[PRESSURE] Current:99.38 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:0.89 mL | Expected:0.89 mL | Dev:0%
+
+[PRESSURE] Current:99.37 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:0.91 mL | Expected:0.92 mL | Dev:0%
+
+[PRESSURE] Current:99.38 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:0.94 mL | Expected:0.94 mL | Dev:0%
+
+[PRESSURE] Current:99.37 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:0.97 mL | Expected:0.97 mL | Dev:0%
+
+[PRESSURE] Current:99.36 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:1.00 mL | Expected:1.00 mL | Dev:0%
+
+[PRESSURE] Current:99.36 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:1.03 mL | Expected:1.03 mL | Dev:0%
+
+[PRESSURE] Current:99.36 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:1.05 mL | Expected:1.05 mL | Dev:0%
+
+[PRESSURE] Current:99.36 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:1.08 mL | Expected:1.08 mL | Dev:0%
+
+[PRESSURE] Current:99.36 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:1.11 mL | Expected:1.11 mL | Dev:0%
+
+[PRESSURE] Current:99.36 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:1.14 mL | Expected:1.14 mL | Dev:0%
+
+[PRESSURE] Current:99.34 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:1.17 mL | Expected:1.17 mL | Dev:0%
+
+[PRESSURE] Current:99.33 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:1.19 mL | Expected:1.19 mL | Dev:0%
+
+[PRESSURE] Current:99.32 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:1.22 mL | Expected:1.22 mL | Dev:0%
+
+[PRESSURE] Current:99.31 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:1.25 mL | Expected:1.25 mL | Dev:0%
+
+[PRESSURE] Current:99.31 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:1.28 mL | Expected:1.28 mL | Dev:0%
+
+[PRESSURE] Current:99.30 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:1.30 mL | Expected:1.31 mL | Dev:0%
+
+[PRESSURE] Current:99.29 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:1.33 mL | Expected:1.33 mL | Dev:0%
+
+[PRESSURE] Current:99.28 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:1.36 mL | Expected:1.36 mL | Dev:0%
+
+[PRESSURE] Current:99.27 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:1.39 mL | Expected:1.39 mL | Dev:0%
+
+[PRESSURE] Current:99.26 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:1.42 mL | Expected:1.42 mL | Dev:0%
+
+	[PRESSURE] Current:99.25 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:1.44 mL | Expected:1.44 mL | Dev:0%
+
+[PRESSURE] Current:99.23 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:1.47 mL | Expected:1.47 mL | Dev:0%
+
+[PRESSURE] Current:99.23 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:1.50 mL | Expected:1.50 mL | Dev:0%
+
+[PRESSURE] Current:99.22 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:1.53 mL | Expected:1.53 mL | Dev:0%
+
+[PRESSURE] Current:99.21 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:1.56 mL | Expected:1.56 mL | Dev:0%
+
+[PRESSURE] Current:99.20 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:1.58 mL | Expected:1.58 mL | Dev:0%
+
+[PRESSURE] Current:99.19 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:1.61 mL | Expected:1.61 mL | Dev:0%
+
+[PRESSURE] Current:99.18 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:1.64 mL | Expected:1.64 mL | Dev:0%
+
+[PRESSURE] Current:99.18 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:1.67 mL | Expected:1.67 mL | Dev:0%
+
+[PRESSURE] Current:99.17 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:1.70 mL | Expected:1.70 mL | Dev:0%
+
+[PRESSURE] Current:99.17 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:1.72 mL | Expected:1.72 mL | Dev:0%
+
+[PRESSURE] Current:99.16 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:1.75 mL | Expected:1.75 mL | Dev:0%
+
+[PRESSURE] Current:99.15 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:1.78 mL | Expected:1.78 mL | Dev:0%
+
+[PRESSURE] Current:99.14 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:1.81 mL | Expected:1.81 mL | Dev:0%
+
+[PRESSURE] Current:99.14 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:1.84 mL | Expected:1.84 mL | Dev:0%
+
+[PRESSURE] Current:99.14 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:1.86 mL | Expected:1.86 mL | Dev:0%
+
+[PRESSURE] Current:99.13 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:1.89 mL | Expected:1.89 mL | Dev:0%
+
+[PRESSURE] Current:99.12 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:1.92 mL | Expected:1.92 mL | Dev:0%
+
+[PRESSURE] Current:99.11 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:1.95 mL | Expected:1.95 mL | Dev:0%
+
+[PRESSURE] Current:99.11 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:1.97 mL | Expected:1.97 mL | Dev:0%
+
+[PRESSURE] Current:99.10 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:2.00 mL | Expected:2.00 mL | Dev:0%
+
+[PRESSURE] Current:99.10 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:2.03 mL | Expected:2.03 mL | Dev:0%
+
+[PRESSURE] Current:99.11 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:2.06 mL | Expected:2.06 mL | Dev:0%
+
+[PRESSURE] Current:99.10 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:2.09 mL | Expected:2.09 mL | Dev:0%
+
+[PRESSURE] Current:99.10 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:2.11 mL | Expected:2.11 mL | Dev:0%
+
+[PRESSURE] Current:99.10 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:2.14 mL | Expected:2.14 mL | Dev:0%
+
+[PRESSURE] Current:99.10 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:2.17 mL | Expected:2.17 mL | Dev:0%
+
+[PRESSURE] Current:99.09 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:2.20 mL | Expected:2.20 mL | Dev:0%
+
+[PRESSURE] Current:99.10 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:2.23 mL | Expected:2.23 mL | Dev:0%
+
+[PRESSURE] Current:99.09 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:2.25 mL | Expected:2.25 mL | Dev:0%
+
+[PRESSURE] Current:99.09 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:2.28 mL | Expected:2.28 mL | Dev:0%
+
+[PRESSURE] Current:99.09 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:2.31 mL | Expected:2.31 mL | Dev:0%
+
+[PRESSURE] Current:99.09 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:2.34 mL | Expected:2.34 mL | Dev:0%
+
+[PRESSURE] Current:99.08 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:2.36 mL | Expected:2.37 mL | Dev:0%
+
+[PRESSURE] Current:99.08 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:2.39 mL | Expected:2.39 mL | Dev:0%
+
+[PRESSURE] Current:99.08 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:2.42 mL | Expected:2.42 mL | Dev:0%
+
+[PRESSURE] Current:99.08 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:2.45 mL | Expected:2.45 mL | Dev:0%
+
+[PRESSURE] Current:99.08 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:2.48 mL | Expected:2.48 mL | Dev:0%
+
+[PRESSURE] Current:99.08 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:2.50 mL | Expected:2.50 mL | Dev:0%
+
+[PRESSURE] Current:99.08 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:2.53 mL | Expected:2.53 mL | Dev:0%
+
+STOP[PRESSURE] Current:99.09 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | Delivered:2.56 mL | Expected:2.56 mL | Dev:0%
+
+
+
+
+>> Unknown
+
+> ST[PRESSURE] Current:99.10 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:50 mL/hr | DOelivered:2.59 mL | Expected:2.59 mL | Dev:0%
+
+P
+
+
+>> Stopped
+
+> RESET
+
+
+>> Reset
+
+> SET_RATE 1
+
+
+>> Rate set to 1 mL/hr
+
+> START
+
+
+>> Started
+
+> [PRESSURE] Current:99.10 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.00 mL | Expected:0.00 mL | Dev:191%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:99.17 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.00 mL | Expected:0.00 mL | Dev:27%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:99.17 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.00 mL | Expected:0.00 mL | Dev:13%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:99.18 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.00 mL | Expected:0.00 mL | Dev:10%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:99.18 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.00 mL | Expected:0.00 mL | Dev:7%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:99.19 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.00 mL | Expected:0.00 mL | Dev:5%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:99.19 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.00 mL | Expected:0.00 mL | Dev:5%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:99.20 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.00 mL | Expected:0.00 mL | Dev:4%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:99.20 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.00 mL | Expected:0.00 mL | Dev:3%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:99.20 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.00 mL | Expected:0.00 mL | Dev:3%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:99.19 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.00 mL | Expected:0.00 mL | Dev:3%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:99.19 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.00 mL | Expected:0.00 mL | Dev:2%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:99.20 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.00 mL | Expected:0.00 mL | Dev:2%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:99.20 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.00 mL | Expected:0.00 mL | Dev:2%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:99.20 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.00 mL | Expected:0.00 mL | Dev:2%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:99.20 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.00 mL | Expected:0.00 mL | Dev:2%
+
+[PRESSURE] Current:99.20 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.00 mL | Expected:0.00 mL | Dev:1%
+
+[PRESSURE] Current:99.21 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.00 mL | Expected:0.00 mL | Dev:1%
+
+[PRESSURE] Current:99.19 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.01 mL | Expected:0.01 mL | Dev:1%
+
+[PRESSURE] Current:99.18 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.01 mL | Expected:0.01 mL | Dev:1%
+
+[PRESSURE] Current:99.19 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.01 mL | Expected:0.01 mL | Dev:1%
+
+[PRESSURE] Current:99.19 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.01 mL | Expected:0.01 mL | Dev:1%
+
+[PRESSURE] Current:99.19 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.01 mL | Expected:0.01 mL | Dev:1%
+
+[PRESSURE] Current:99.18 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.01 mL | Expected:0.01 mL | Dev:1%
+
+[PRESSURE] Current:99.19 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.01 mL | Expected:0.01 mL | Dev:1%
+
+[PRESSURE] Current:99.18 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.01 mL | Expected:0.01 mL | Dev:1%
+
+[PRESSURE] Current:99.19 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.01 mL | Expected:0.01 mL | Dev:0%
+
+[PRESSURE] Current:99.19 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.01 mL | Expected:0.01 mL | Dev:1%
+
+[PRESSURE] Current:99.19 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.01 mL | Expected:0.01 mL | Dev:0%
+
+[PRESSURE] Current:99.17 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.01 mL | Expected:0.01 mL | Dev:0%
+
+[PRESSURE] Current:99.17 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.01 mL | Expected:0.01 mL | Dev:0%
+
+[PRESSURE] Current:99.16 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.01 mL | Expected:0.01 mL | Dev:0%
+
+[PRESSURE] Current:99.16 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.01 mL | Expected:0.01 mL | Dev:0%
+
+[PRESSURE] Current:99.16 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.01 mL | Expected:0.01 mL | Dev:0%
+
+[PRESSURE] Current:99.15 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.01 mL | Expected:0.01 mL | Dev:0%
+
+[PRESSURE] Current:99.15 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.01 mL | Expected:0.01 mL | Dev:0%
+
+[PRESSURE] Current:99.14 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.02 mL | Expected:0.02 mL | Dev:0%
+
+[PRESSURE] Current:99.14 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.02 mL | Expected:0.02 mL | Dev:0%
+
+[PRESSURE] Current:99.14 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.02 mL | Expected:0.02 mL | Dev:0%
+
+[PRESSURE] Current:99.14 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.02 mL | Expected:0.02 mL | Dev:0%
+
+[PRESSURE] Current:99.13 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.02 mL | Expected:0.02 mL | Dev:0%
+
+[PRESSURE] Current:99.12 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.02 mL | Expected:0.02 mL | Dev:0%
+
+[PRESSURE] Current:99.11 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.02 mL | Expected:0.02 mL | Dev:0%
+
+[PRESSURE] Current:99.11 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.02 mL | Expected:0.02 mL | Dev:0%
+
+[PRESSURE] Current:99.12 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.02 mL | Expected:0.02 mL | Dev:0%
+
+[PRESSURE] Current:99.12 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.02 mL | Expected:0.02 mL | Dev:0%
+
+[PRESSURE] Current:99.12 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.02 mL | Expected:0.02 mL | Dev:0%
+
+[PRESSURE] Current:99.12 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.02 mL | Expected:0.02 mL | Dev:0%
+
+[PRESSURE] Current:99.12 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.02 mL | Expected:0.02 mL | Dev:0%
+
+[PRESSURE] Current:99.13 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.02 mL | Expected:0.02 mL | Dev:0%
+
+[PRESSURE] Current:99.13 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.02 mL | Expected:0.02 mL | Dev:0%
+
+[PRESSURE] Current:99.13 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.02 mL | Expected:0.02 mL | Dev:0%
+
+[PRESSURE] Current:99.13 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.02 mL | Expected:0.02 mL | Dev:1%
+
+[PRESSURE] Current:99.14 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.02 mL | Expected:0.02 mL | Dev:0%
+
+[PRESSURE] Current:99.15 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.03 mL | Expected:0.03 mL | Dev:0%
+
+[PRESSURE] Current:99.15 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.03 mL | Expected:0.03 mL | Dev:1%
+
+[PRESSURE] Current:99.16 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.03 mL | Expected:0.03 mL | Dev:0%
+
+[PRESSURE] Current:99.16 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.03 mL | Expected:0.03 mL | Dev:0%
+
+[PRESSURE] Current:99.16 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.03 mL | Expected:0.03 mL | Dev:1%
+
+[PRESSURE] Current:99.16 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.03 mL | Expected:0.03 mL | Dev:0%
+
+[PRESSURE] Current:99.16 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.03 mL | Expected:0.03 mL | Dev:0%
+
+[PRESSURE] Current:99.16 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.03 mL | Expected:0.03 mL | Dev:1%
+
+[PRESSURE] Current:99.16 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.03 mL | Expected:0.03 mL | Dev:0%
+
+[PRESSURE] Current:99.17 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.03 mL | Expected:0.03 mL | Dev:0%
+
+[PRESSURE] Current:99.17 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.03 mL | Expected:0.03 mL | Dev:1%
+
+[PRESSURE] Current:99.17 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.03 mL | Expected:0.03 mL | Dev:0%
+
+[PRESSURE] Current:99.18 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.03 mL | Expected:0.03 mL | Dev:0%
+
+[PRESSURE] Current:99.18 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.03 mL | Expected:0.03 mL | Dev:0%
+
+[PRESSURE] Current:99.18 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.03 mL | Expected:0.03 mL | Dev:0%
+
+[PRESSURE] Current:99.19 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.03 mL | Expected:0.03 mL | Dev:0%
+
+[PRESSURE] Current:99.19 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.03 mL | Expected:0.03 mL | Dev:0%
+
+[PRESSURE] Current:99.19 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.04 mL | Expected:0.03 mL | Dev:0%
+
+[PRESSURE] Current:99.20 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.04 mL | Expected:0.04 mL | Dev:0%
+
+[PRESSURE] Current:99.20 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.04 mL | Expected:0.04 mL | Dev:0%
+
+[PRESSURE] Current:99.20 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.04 mL | Expected:0.04 mL | Dev:0%
+
+[PRESSURE] Current:99.21 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.04 mL | Expected:0.04 mL | Dev:0%
+
+[PRESSURE] Current:99.21 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.04 mL | Expected:0.04 mL | Dev:0%
+
+[PRESSURE] Current:99.22 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.04 mL | Expected:0.04 mL | Dev:0%
+
+[PRESSURE] Current:99.22 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.04 mL | Expected:0.04 mL | Dev:0%
+
+[PRESSURE] Current:99.22 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.04 mL | Expected:0.04 mL | Dev:0%
+
+[PRESSURE] Current:99.22 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.04 mL | Expected:0.04 mL | Dev:0%
+
+[PRESSURE] Current:99.23 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.04 mL | Expected:0.04 mL | Dev:0%
+
+[PRESSURE] Current:99.23 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.04 mL | Expected:0.04 mL | Dev:0%
+
+[PRESSURE] Current:99.22 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.04 mL | Expected:0.04 mL | Dev:0%
+
+[PRESSURE] Current:99.23 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.04 mL | Expected:0.04 mL | Dev:0%
+
+[PRESSURE] Current:99.22 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.04 mL | Expected:0.04 mL | Dev:0%
+
+[PRESSURE] Current:99.22 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.04 mL | Expected:0.04 mL | Dev:0%
+
+[PRESSURE] Current:99.22 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.04 mL | Expected:0.04 mL | Dev:0%
+
+[PRESSURE] Current:99.21 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.04 mL | Expected:0.04 mL | Dev:0%
+
+[PRESSURE] Current:99.21 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.05 mL | Expected:0.04 mL | Dev:0%
+
+[PRESSURE] Current:99.21 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.05 mL | Expected:0.05 mL | Dev:0%
+
+[PRESSURE] Current:99.22 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.05 mL | Expected:0.05 mL | Dev:0%
+
+[PRESSURE] Current:99.22 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.05 mL | Expected:0.05 mL | Dev:0%
+
+[PRESSURE] Current:99.23 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.05 mL | Expected:0.05 mL | Dev:0%
+
+[PRESSURE] Current:99.22 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.05 mL | Expected:0.05 mL | Dev:0%
+
+[PRESSURE] Current:99.22 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.05 mL | Expected:0.05 mL | Dev:0%
+
+[PRESSURE] Current:99.22 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.05 mL | Expected:0.05 mL | Dev:0%
+
+[PRESSURE] Current:99.23 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.05 mL | Expected:0.05 mL | Dev:0%
+
+[PRESSURE] Current:99.22 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.05 mL | Expected:0.05 mL | Dev:0%
+
+[PRESSURE] Current:99.21 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:1 mL/hr | Delivered:0.05 mL | Expected:0.05 mL | Dev:0%
+
+S[PRESSURE] Current:99.22 hPa | Threshold:100.55 hPa
+
+T[STATUS] Rate:1 mL/hr | Delivered:0.05 mL | Expected:0.05 mL | Dev:0%
+
+OP
+
+
+>> Stopped
+
+> RESET
+
+
+>> Reset
+
+> SET_RATE 100
+
+
+>> Rate set to 100 mL/hr
+
+> START
+
+
+>> Started
+
+> [STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:0.00 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:99.21 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.05 mL | Expected:0.05 mL | Dev:0%
+
+[PRESSURE] Current:99.21 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.11 mL | Expected:0.11 mL | Dev:0%
+
+[PRESSURE] Current:99.21 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.16 mL | Expected:0.16 mL | Dev:0%
+
+[PRESSURE] Current:99.21 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.22 mL | Expected:0.22 mL | Dev:0%
+
+[PRESSURE] Current:99.21 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.27 mL | Expected:0.27 mL | Dev:0%
+
+[PRESSURE] Current:99.22 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.33 mL | Expected:0.33 mL | Dev:0%
+
+[PRESSURE] Current:99.22 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.39 mL | Expected:0.39 mL | Dev:0%
+
+[PRESSURE] Current:99.22 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.44 mL | Expected:0.44 mL | Dev:0%
+
+[PRESSURE] Current:99.23 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.50 mL | Expected:0.50 mL | Dev:0%
+
+[PRESSURE] Current:99.23 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.55 mL | Expected:0.55 mL | Dev:0%
+
+[PRESSURE] Current:99.24 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.61 mL | Expected:0.61 mL | Dev:0%
+
+[PRESSURE] Current:99.24 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.66 mL | Expected:0.66 mL | Dev:0%
+
+[PRESSURE] Current:99.24 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.72 mL | Expected:0.72 mL | Dev:0%
+
+[PRESSURE] Current:99.24 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.78 mL | Expected:0.78 mL | Dev:0%
+
+[PRESSURE] Current:99.24 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.83 mL | Expected:0.83 mL | Dev:0%
+
+[PRESSURE] Current:99.25 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.89 mL | Expected:0.89 mL | Dev:0%
+
+[PRESSURE] Current:99.26 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.94 mL | Expected:0.94 mL | Dev:0%
+
+[PRESSURE] Current:99.25 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:1.00 mL | Expected:1.00 mL | Dev:0%
+
+[PRESSURE] Current:99.26 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:1.05 mL | Expected:1.05 mL | Dev:0%
+
+[PRESSURE] Current:99.27 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:1.11 mL | Expected:1.11 mL | Dev:0%
+
+[PRESSURE] Current:99.27 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:1.17 mL | Expected:1.17 mL | Dev:0%
+
+[PRESSURE] Current:99.27 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:1.22 mL | Expected:1.22 mL | Dev:0%
+
+[PRESSURE] Current:99.26 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:1.28 mL | Expected:1.28 mL | Dev:0%
+
+[PRESSURE] Current:99.26 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:1.33 mL | Expected:1.33 mL | Dev:0%
+
+[PRESSURE] Current:99.26 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:1.39 mL | Expected:1.39 mL | Dev:0%
+
+[PRESSURE] Current:99.26 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:1.44 mL | Expected:1.44 mL | Dev:0%
+
+[PRESSURE] Current:99.26 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:1.50 mL | Expected:1.50 mL | Dev:0%
+
+[PRESSURE] Current:99.26 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:1.56 mL | Expected:1.56 mL | Dev:0%
+
+[PRESSURE] Current:99.25 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:1.61 mL | Expected:1.61 mL | Dev:0%
+
+[PRESSURE] Current:99.25 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:1.67 mL | Expected:1.67 mL | Dev:0%
+
+[PRESSURE] Current:99.26 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:1.72 mL | Expected:1.72 mL | Dev:0%
+
+[PRESSURE] Current:99.26 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:1.78 mL | Expected:1.78 mL | Dev:0%
+
+[PRESSURE] Current:99.26 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:1.84 mL | Expected:1.83 mL | Dev:0%
+
+[PRESSURE] Current:99.27 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:1.89 mL | Expected:1.89 mL | Dev:0%
+
+[PRESSURE] Current:99.26 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:1.95 mL | Expected:1.95 mL | Dev:0%
+
+[PRESSURE] Current:99.27 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:2.00 mL | Expected:2.00 mL | Dev:0%
+
+[PRESSURE] Current:99.26 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:2.06 mL | Expected:2.06 mL | Dev:0%
+
+[PRESSURE] Current:99.26 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:2.11 mL | Expected:2.11 mL | Dev:0%
+
+[PRESSURE] Current:99.27 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:2.17 mL | Expected:2.17 mL | Dev:0%
+
+[PRESSURE] Current:99.27 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:2.23 mL | Expected:2.23 mL | Dev:0%
+
+[PRESSURE] Current:99.27 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:2.28 mL | Expected:2.28 mL | Dev:0%
+
+[PRESSURE] Current:99.28 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:2.34 mL | Expected:2.34 mL | Dev:0%
+
+[PRESSURE] Current:99.28 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:2.39 mL | Expected:2.39 mL | Dev:0%
+
+[PRESSURE] Current:99.29 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:2.45 mL | Expected:2.45 mL | Dev:0%
+
+[PRESSURE] Current:99.29 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:2.50 mL | Expected:2.50 mL | Dev:0%
+
+[PRESSURE] Current:99.29 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:2.56 mL | Expected:2.56 mL | Dev:0%
+
+[PRESSURE] Current:99.29 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:2.62 mL | Expected:2.62 mL | Dev:0%
+
+[PRESSURE] Current:99.29 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:2.67 mL | Expected:2.67 mL | Dev:0%
+
+[PRESSURE] Current:99.28 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:2.73 mL | Expected:2.73 mL | Dev:0%
+
+[PRESSURE] Current:99.29 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:2.78 mL | Expected:2.78 mL | Dev:0%
+
+[PRESSURE] Current:99.28 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:2.84 mL | Expected:2.84 mL | Dev:0%
+
+[PRESSURE] Current:99.27 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:2.89 mL | Expected:2.89 mL | Dev:0%
+
+[PRESSURE] Current:99.26 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:2.95 mL | Expected:2.95 mL | Dev:0%
+
+[PRESSURE] Current:99.26 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:3.01 mL | Expected:3.01 mL | Dev:0%
+
+[PRESSURE] Current:99.25 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:3.06 mL | Expected:3.06 mL | Dev:0%
+
+[PRESSURE] Current:99.24 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:3.12 mL | Expected:3.12 mL | Dev:0%
+
+[PRESSURE] Current:99.24 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:3.17 mL | Expected:3.17 mL | Dev:0%
+
+[PRESSURE] Current:99.23 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:3.23 mL | Expected:3.23 mL | Dev:0%
+
+[PRESSURE] Current:99.23 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:3.28 mL | Expected:3.28 mL | Dev:0%
+
+[PRESSURE] Current:99.24 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:3.34 mL | Expected:3.34 mL | Dev:0%
+
+[PRESSURE] Current:99.23 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:3.40 mL | Expected:3.40 mL | Dev:0%
+
+[PRESSURE] Current:99.23 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:3.45 mL | Expected:3.45 mL | Dev:0%
+
+[PRESSURE] Current:99.23 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:3.51 mL | Expected:3.51 mL | Dev:0%
+
+[PRESSURE] Current:99.23 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:3.56 mL | Expected:3.56 mL | Dev:0%
+
+[PRESSURE] Current:99.23 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:3.62 mL | Expected:3.62 mL | Dev:0%
+
+[PRESSURE] Current:99.23 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:3.68 mL | Expected:3.68 mL | Dev:0%
+
+[PRESSURE] Current:99.22 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:3.73 mL | Expected:3.73 mL | Dev:0%
+
+[PRESSURE] Current:99.23 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:3.79 mL | Expected:3.79 mL | Dev:0%
+
+[PRESSURE] Current:99.23 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:3.84 mL | Expected:3.84 mL | Dev:0%
+
+[PRESSURE] Current:99.22 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:3.90 mL | Expected:3.90 mL | Dev:0%
+
+[PRESSURE] Current:99.23 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:3.95 mL | Expected:3.95 mL | Dev:0%
+
+[PRESSURE] Current:99.22 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:4.01 mL | Expected:4.01 mL | Dev:0%
+
+[PRESSURE] Current:99.22 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:4.07 mL | Expected:4.07 mL | Dev:0%
+
+[PRESSURE] Current:99.22 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:4.12 mL | Expected:4.12 mL | Dev:0%
+
+[PRESSURE] Current:99.22 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:4.18 mL | Expected:4.18 mL | Dev:0%
+
+[PRESSURE] Current:99.22 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:4.23 mL | Expected:4.23 mL | Dev:0%
+
+[PRESSURE] Current:99.21 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:4.29 mL | Expected:4.29 mL | Dev:0%
+
+[PRESSURE] Current:99.20 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:4.34 mL | Expected:4.34 mL | Dev:0%
+
+[PRESSURE] Current:99.19 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:4.40 mL | Expected:4.40 mL | Dev:0%
+
+[PRESSURE] Current:99.19 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:4.46 mL | Expected:4.46 mL | Dev:0%
+
+[PRESSURE] Current:99.17 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:4.51 mL | Expected:4.51 mL | Dev:0%
+
+[PRESSURE] Current:99.17 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:4.57 mL | Expected:4.57 mL | Dev:0%
+
+[PRESSURE] Current:99.17 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:4.62 mL | Expected:4.62 mL | Dev:0%
+
+[PRESSURE] Current:99.17 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:4.68 mL | Expected:4.68 mL | Dev:0%
+
+[PRESSURE] Current:99.16 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:4.73 mL | Expected:4.74 mL | Dev:0%
+
+[PRESSURE] Current:99.15 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:4.79 mL | Expected:4.79 mL | Dev:0%
+
+[PRESSURE] Current:99.15 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:4.85 mL | Expected:4.85 mL | Dev:0%
+
+[PRESSURE] Current:99.14 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:4.90 mL | Expected:4.90 mL | Dev:0%
+
+[PRESSURE] Current:99.15 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:4.96 mL | Expected:4.96 mL | Dev:0%
+
+[PRESSURE] Current:99.14 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:5.01 mL | Expected:5.01 mL | Dev:0%
+
+[PRESSURE] Current:99.13 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:5.07 mL | Expected:5.07 mL | Dev:0%
+
+[PRESSURE] Current:99.13 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:5.13 mL | Expected:5.13 mL | Dev:0%
+
+[PRESSURE] Current:99.13 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:5.18 mL | Expected:5.18 mL | Dev:0%
+
+[PRESSURE] Current:99.12 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:5.24 mL | Expected:5.24 mL | Dev:0%
+
+[PRESSURE] Current:99.13 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:5.29 mL | Expected:5.29 mL | Dev:0%
+
+[PRESSURE] Current:99.13 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:5.35 mL | Expected:5.35 mL | Dev:0%
+
+[PRESSURE] Current:99.13 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:5.40 mL | Expected:5.40 mL | Dev:0%
+
+[PRESSURE] Current:99.13 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:5.46 mL | Expected:5.46 mL | Dev:0%
+
+[PRESSURE] Current:99.13 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:5.52 mL | Expected:5.52 mL | Dev:0%
+
+[PRESSURE] Current:99.13 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:5.57 mL | Expected:5.57 mL | Dev:0%
+
+[PRESSURE] Current:99.13 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:5.63 mL | Expected:5.63 mL | Dev:0%
+
+[PRESSURE] Current:99.14 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:5.68 mL | Expected:5.68 mL | Dev:0%
+
+[PRESSURE] Current:99.14 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:5.74 mL | Expected:5.74 mL | Dev:0%
+
+[PRESSURE] Current:99.14 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:5.79 mL | Expected:5.80 mL | Dev:0%
+
+[PRESSURE] Current:99.14 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:5.85 mL | Expected:5.85 mL | Dev:0%
+
+[PRESSURE] Current:99.14 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:5.91 mL | Expected:5.91 mL | Dev:0%
+
+[PRESSURE] Current:99.15 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:5.96 mL | Expected:5.96 mL | Dev:0%
+
+[PRESSURE] Current:99.15 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:6.02 mL | Expected:6.02 mL | Dev:0%
+
+[PRESSURE] Current:99.16 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:6.07 mL | Expected:6.07 mL | Dev:0%
+
+[PRESSURE] Current:99.17 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:6.13 mL | Expected:6.13 mL | Dev:0%
+
+[PRESSURE] Current:99.18 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:6.18 mL | Expected:6.19 mL | Dev:0%
+
+[PRESSURE] Current:99.18 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:6.24 mL | Expected:6.24 mL | Dev:0%
+
+[PRESSURE] Current:99.19 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:6.30 mL | Expected:6.30 mL | Dev:0%
+
+[PRESSURE] Current:99.20 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:6.35 mL | Expected:6.35 mL | Dev:0%
+
+[PRESSURE] Current:99.20 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:6.41 mL | Expected:6.41 mL | Dev:0%
+
+[PRESSURE] Current:99.21 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:6.46 mL | Expected:6.46 mL | Dev:0%
+
+[PRESSURE] Current:99.22 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:6.52 mL | Expected:6.52 mL | Dev:0%
+
+[PRESSURE] Current:99.23 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:6.57 mL | Expected:6.58 mL | Dev:0%
+
+[PRESSURE] Current:99.24 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:6.63 mL | Expected:6.63 mL | Dev:0%
+
+[PRESSURE] Current:99.25 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:6.69 mL | Expected:6.69 mL | Dev:0%
+
+[PRESSURE] Current:99.25 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:6.74 mL | Expected:6.74 mL | Dev:0%
+
+[PRESSURE] Current:99.26 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:6.80 mL | Expected:6.80 mL | Dev:0%
+
+[PRESSURE] Current:99.27 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:6.85 mL | Expected:6.86 mL | Dev:0%
+
+[PRESSURE] Current:99.28 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:6.91 mL | Expected:6.91 mL | Dev:0%
+
+[PRESSURE] Current:99.29 hPa | Threshold:100.55 hPa
+
+SO[STATUS] Rate:100 mL/hr | Delivered:6.97 mL | Expected:6.97 mL | Dev:0%
+
+[PRESSURE] Current:99.29 hPa | Threshold:100.55 hPa
+
+P
+
+
+>> Unknown
+
+> S[STATUS] Rate:100 mL/hr | Delivered:7.02 mL | Expected:7.02 mL | Dev:0%
+
+[PRESSURE] Current:99.30 hPa | Threshold:100.55 hPa
+
+TOP
+
+
+>> Stopped
+
+> RESET
+
+
+>> Reset
+
+> SET_RATE 200
+
+
+>> Rate set to 200 mL/hr
+
+> START
+
+
+>> Started
+
+> [STATUS] Rate:200 mL/hr | Delivered:0.00 mL | Expected:0.00 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:99.30 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:0.11 mL | Expected:0.11 mL | Dev:0%
+
+[PRESSURE] Current:99.38 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:0.22 mL | Expected:0.22 mL | Dev:0%
+
+[PRESSURE] Current:99.39 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:0.33 mL | Expected:0.33 mL | Dev:0%
+
+[PRESSURE] Current:99.40 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:0.44 mL | Expected:0.44 mL | Dev:0%
+
+[PRESSURE] Current:99.39 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:0.55 mL | Expected:0.55 mL | Dev:0%
+
+[PRESSURE] Current:99.40 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:0.66 mL | Expected:0.66 mL | Dev:0%
+
+[PRESSURE] Current:99.41 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:0.78 mL | Expected:0.78 mL | Dev:0%
+
+[PRESSURE] Current:99.42 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:0.89 mL | Expected:0.89 mL | Dev:0%
+
+[PRESSURE] Current:99.42 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:1.00 mL | Expected:1.00 mL | Dev:0%
+
+[PRESSURE] Current:99.42 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:1.11 mL | Expected:1.11 mL | Dev:0%
+
+[PRESSURE] Current:99.43 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:1.22 mL | Expected:1.22 mL | Dev:0%
+
+[PRESSURE] Current:99.43 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:1.33 mL | Expected:1.33 mL | Dev:0%
+
+[PRESSURE] Current:99.44 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:1.45 mL | Expected:1.44 mL | Dev:0%
+
+[PRESSURE] Current:99.44 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:1.56 mL | Expected:1.56 mL | Dev:0%
+
+[PRESSURE] Current:99.44 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:1.67 mL | Expected:1.67 mL | Dev:0%
+
+[PRESSURE] Current:99.45 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:1.78 mL | Expected:1.78 mL | Dev:0%
+
+[PRESSURE] Current:99.45 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:1.89 mL | Expected:1.89 mL | Dev:0%
+
+[PRESSURE] Current:99.45 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:2.00 mL | Expected:2.00 mL | Dev:0%
+
+[PRESSURE] Current:99.46 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:2.12 mL | Expected:2.11 mL | Dev:0%
+
+[PRESSURE] Current:99.45 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:2.23 mL | Expected:2.23 mL | Dev:0%
+
+[PRESSURE] Current:99.46 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:2.34 mL | Expected:2.34 mL | Dev:0%
+
+[PRESSURE] Current:99.46 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:2.45 mL | Expected:2.45 mL | Dev:0%
+
+[PRESSURE] Current:99.47 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:2.56 mL | Expected:2.56 mL | Dev:0%
+
+[PRESSURE] Current:99.47 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:2.67 mL | Expected:2.67 mL | Dev:0%
+
+[PRESSURE] Current:99.46 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:2.79 mL | Expected:2.78 mL | Dev:0%
+
+[PRESSURE] Current:99.46 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:2.90 mL | Expected:2.89 mL | Dev:0%
+
+[PRESSURE] Current:99.46 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:3.01 mL | Expected:3.01 mL | Dev:0%
+
+[PRESSURE] Current:99.46 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:3.12 mL | Expected:3.12 mL | Dev:0%
+
+[PRESSURE] Current:99.46 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:3.23 mL | Expected:3.23 mL | Dev:0%
+
+[PRESSURE] Current:99.47 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:3.34 mL | Expected:3.34 mL | Dev:0%
+
+[PRESSURE] Current:99.46 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:3.46 mL | Expected:3.45 mL | Dev:0%
+
+[PRESSURE] Current:99.46 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:3.57 mL | Expected:3.56 mL | Dev:0%
+
+[PRESSURE] Current:99.46 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:3.68 mL | Expected:3.67 mL | Dev:0%
+
+[PRESSURE] Current:99.45 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:3.79 mL | Expected:3.79 mL | Dev:0%
+
+[PRESSURE] Current:99.45 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:3.90 mL | Expected:3.90 mL | Dev:0%
+
+[PRESSURE] Current:99.45 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:4.01 mL | Expected:4.01 mL | Dev:0%
+
+[PRESSURE] Current:99.45 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:4.12 mL | Expected:4.12 mL | Dev:0%
+
+[PRESSURE] Current:99.44 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:4.24 mL | Expected:4.23 mL | Dev:0%
+
+[PRESSURE] Current:99.44 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:4.35 mL | Expected:4.34 mL | Dev:0%
+
+[PRESSURE] Current:99.44 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:4.46 mL | Expected:4.46 mL | Dev:0%
+
+[PRESSURE] Current:99.43 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:4.57 mL | Expected:4.57 mL | Dev:0%
+
+[PRESSURE] Current:99.44 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:4.68 mL | Expected:4.68 mL | Dev:0%
+
+[PRESSURE] Current:99.43 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:4.79 mL | Expected:4.79 mL | Dev:0%
+
+[PRESSURE] Current:99.44 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:4.91 mL | Expected:4.90 mL | Dev:0%
+
+[PRESSURE] Current:99.43 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:5.02 mL | Expected:5.01 mL | Dev:0%
+
+[PRESSURE] Current:99.44 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:5.13 mL | Expected:5.12 mL | Dev:0%
+
+[PRESSURE] Current:99.43 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:5.24 mL | Expected:5.24 mL | Dev:0%
+
+[PRESSURE] Current:99.43 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:5.35 mL | Expected:5.35 mL | Dev:0%
+
+[PRESSURE] Current:99.44 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:5.46 mL | Expected:5.46 mL | Dev:0%
+
+[PRESSURE] Current:99.44 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:5.58 mL | Expected:5.57 mL | Dev:0%
+
+[PRESSURE] Current:99.44 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:5.69 mL | Expected:5.68 mL | Dev:0%
+
+[PRESSURE] Current:99.43 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:5.80 mL | Expected:5.79 mL | Dev:0%
+
+[PRESSURE] Current:99.43 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:5.91 mL | Expected:5.91 mL | Dev:0%
+
+[PRESSURE] Current:99.42 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:6.02 mL | Expected:6.02 mL | Dev:0%
+
+[PRESSURE] Current:99.43 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:6.13 mL | Expected:6.13 mL | Dev:0%
+
+[PRESSURE] Current:99.42 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:6.25 mL | Expected:6.24 mL | Dev:0%
+
+[PRESSURE] Current:99.42 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:6.36 mL | Expected:6.35 mL | Dev:0%
+
+[PRESSURE] Current:99.42 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:6.47 mL | Expected:6.46 mL | Dev:0%
+
+[PRESSURE] Current:99.42 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:6.58 mL | Expected:6.57 mL | Dev:0%
+
+[PRESSURE] Current:99.42 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:6.69 mL | Expected:6.69 mL | Dev:0%
+
+[PRESSURE] Current:99.42 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:6.80 mL | Expected:6.80 mL | Dev:0%
+
+[PRESSURE] Current:99.42 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:6.92 mL | Expected:6.91 mL | Dev:0%
+
+[PRESSURE] Current:99.43 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:7.03 mL | Expected:7.02 mL | Dev:0%
+
+[PRESSURE] Current:99.43 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:7.14 mL | Expected:7.13 mL | Dev:0%
+
+[PRESSURE] Current:99.43 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:7.25 mL | Expected:7.24 mL | Dev:0%
+
+[PRESSURE] Current:99.43 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:7.36 mL | Expected:7.36 mL | Dev:0%
+
+[PRESSURE] Current:99.44 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:7.47 mL | Expected:7.47 mL | Dev:0%
+
+[PRESSURE] Current:99.44 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:7.59 mL | Expected:7.58 mL | Dev:0%
+
+[PRESSURE] Current:99.44 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:7.70 mL | Expected:7.69 mL | Dev:0%
+
+[PRESSURE] Current:99.45 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:7.81 mL | Expected:7.80 mL | Dev:0%
+
+[PRESSURE] Current:99.45 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:7.92 mL | Expected:7.91 mL | Dev:0%
+
+[PRESSURE] Current:99.44 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:8.03 mL | Expected:8.02 mL | Dev:0%
+
+[PRESSURE] Current:99.45 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:8.14 mL | Expected:8.14 mL | Dev:0%
+
+[PRESSURE] Current:99.46 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:8.26 mL | Expected:8.25 mL | Dev:0%
+
+[PRESSURE] Current:99.46 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:8.37 mL | Expected:8.36 mL | Dev:0%
+
+[PRESSURE] Current:99.46 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:8.48 mL | Expected:8.47 mL | Dev:0%
+
+[PRESSURE] Current:99.46 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:8.59 mL | Expected:8.58 mL | Dev:0%
+
+[PRESSURE] Current:99.47 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:8.70 mL | Expected:8.69 mL | Dev:0%
+
+[PRESSURE] Current:99.47 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:8.81 mL | Expected:8.81 mL | Dev:0%
+
+[PRESSURE] Current:99.48 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:8.93 mL | Expected:8.92 mL | Dev:0%
+
+[PRESSURE] Current:99.48 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:9.04 mL | Expected:9.03 mL | Dev:0%
+
+[PRESSURE] Current:99.49 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:9.15 mL | Expected:9.14 mL | Dev:0%
+
+[PRESSURE] Current:99.49 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:9.26 mL | Expected:9.25 mL | Dev:0%
+
+[PRESSURE] Current:99.49 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:9.37 mL | Expected:9.36 mL | Dev:0%
+
+[PRESSURE] Current:99.50 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:9.48 mL | Expected:9.48 mL | Dev:0%
+
+[PRESSURE] Current:99.51 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:9.59 mL | Expected:9.59 mL | Dev:0%
+
+[PRESSURE] Current:99.51 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:9.71 mL | Expected:9.70 mL | Dev:0%
+
+[PRESSURE] Current:99.51 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:9.82 mL | Expected:9.81 mL | Dev:0%
+
+[PRESSURE] Current:99.60 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:9.93 mL | Expected:9.92 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:10.04 mL | Expected:10.03 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:10.15 mL | Expected:10.14 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:10.26 mL | Expected:10.26 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:10.38 mL | Expected:10.37 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:10.49 mL | Expected:10.48 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:10.60 mL | Expected:10.59 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:10.71 mL | Expected:10.70 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:10.82 mL | Expected:10.81 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:10.93 mL | Expected:10.92 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:11.04 mL | Expected:11.04 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:11.16 mL | Expected:11.15 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:11.27 mL | Expected:11.26 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:11.38 mL | Expected:11.37 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:11.49 mL | Expected:11.48 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:11.60 mL | Expected:11.59 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:11.71 mL | Expected:11.70 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:11.82 mL | Expected:11.82 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:11.94 mL | Expected:11.93 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:12.05 mL | Expected:12.04 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:12.16 mL | Expected:12.15 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:12.27 mL | Expected:12.26 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:12.38 mL | Expected:12.37 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:12.49 mL | Expected:12.48 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:12.60 mL | Expected:12.59 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:12.71 mL | Expected:12.71 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:12.83 mL | Expected:12.82 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:12.94 mL | Expected:12.93 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:13.05 mL | Expected:13.04 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:13.16 mL | Expected:13.15 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:13.27 mL | Expected:13.26 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:13.38 mL | Expected:13.37 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:13.50 mL | Expected:13.49 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:13.61 mL | Expected:13.60 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:13.72 mL | Expected:13.71 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:13.83 mL | Expected:13.82 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:13.94 mL | Expected:13.93 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:200 mL/hr | Delivered:14.05 mL | Expected:14.04 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+STOP[STATUS] Rate:200 mL/hr | Delivered:14.16 mL | Expected:14.15 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+
+
+
+>> Stopped
+
+> RESET
+
+
+>> Reset
+
+> SET_RATE 300
+
+
+>> Rate set to 300 mL/hr
+
+> START
+
+
+>> Started
+
+> [PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:0.00 mL | Expected:0.00 mL | Dev:3%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:0.16 mL | Expected:0.16 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:0.33 mL | Expected:0.33 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:0.50 mL | Expected:0.50 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:0.66 mL | Expected:0.66 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:0.83 mL | Expected:0.83 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:1.00 mL | Expected:1.00 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:1.17 mL | Expected:1.17 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:1.33 mL | Expected:1.33 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:1.50 mL | Expected:1.50 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:1.67 mL | Expected:1.67 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:1.83 mL | Expected:1.83 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:2.00 mL | Expected:2.00 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:2.17 mL | Expected:2.17 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:2.33 mL | Expected:2.33 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:2.50 mL | Expected:2.50 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:2.67 mL | Expected:2.67 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:2.84 mL | Expected:2.84 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:3.00 mL | Expected:3.00 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:3.17 mL | Expected:3.17 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:3.34 mL | Expected:3.34 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:3.50 mL | Expected:3.50 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:3.67 mL | Expected:3.67 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:3.84 mL | Expected:3.84 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:4.00 mL | Expected:4.00 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:4.17 mL | Expected:4.17 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:4.34 mL | Expected:4.34 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:4.51 mL | Expected:4.50 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:4.67 mL | Expected:4.67 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:4.84 mL | Expected:4.84 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:5.01 mL | Expected:5.01 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:5.17 mL | Expected:5.17 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:5.34 mL | Expected:5.34 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:5.51 mL | Expected:5.51 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:5.67 mL | Expected:5.67 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:5.84 mL | Expected:5.84 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:6.01 mL | Expected:6.01 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:6.17 mL | Expected:6.17 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:6.34 mL | Expected:6.34 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:6.51 mL | Expected:6.51 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:6.67 mL | Expected:6.67 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:6.84 mL | Expected:6.84 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:7.01 mL | Expected:7.01 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:7.18 mL | Expected:7.18 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:7.34 mL | Expected:7.34 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:7.51 mL | Expected:7.51 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:7.68 mL | Expected:7.68 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:7.84 mL | Expected:7.84 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:8.01 mL | Expected:8.01 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:8.18 mL | Expected:8.18 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:8.34 mL | Expected:8.34 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:8.51 mL | Expected:8.51 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:8.68 mL | Expected:8.68 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:8.84 mL | Expected:8.84 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:9.01 mL | Expected:9.01 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:9.18 mL | Expected:9.18 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:9.35 mL | Expected:9.35 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:9.51 mL | Expected:9.51 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:9.68 mL | Expected:9.68 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:9.85 mL | Expected:9.85 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:10.01 mL | Expected:10.01 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:10.18 mL | Expected:10.18 mL | Dev:0%
+
+STOP[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:300 mL/hr | Delivered:10.35 mL | Expected:10.35 mL | Dev:0%
+
+
+
+
+>> Stopped
+
+> RESET
+
+
+>> Reset
+
+> SET_RATE 500
+
+
+>> Rate set to 500 mL/hr
+
+> START
+
+
+>> Started
+
+> [STATUS] Rate:500 mL/hr | Delivered:0.00 mL | Expected:0.00 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:0.27 mL | Expected:0.27 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:0.55 mL | Expected:0.55 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:0.83 mL | Expected:0.83 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:1.11 mL | Expected:1.11 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:1.39 mL | Expected:1.39 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:1.67 mL | Expected:1.66 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:1.95 mL | Expected:1.94 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:2.23 mL | Expected:2.22 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:2.51 mL | Expected:2.50 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+	[STATUS] Rate:500 mL/hr | Delivered:2.79 mL | Expected:2.78 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:3.07 mL | Expected:3.06 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:3.35 mL | Expected:3.33 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:3.63 mL | Expected:3.61 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:3.91 mL | Expected:3.89 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:4.19 mL | Expected:4.17 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:4.47 mL | Expected:4.45 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:4.75 mL | Expected:4.73 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:5.03 mL | Expected:5.00 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:5.31 mL | Expected:5.28 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:5.59 mL | Expected:5.56 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:5.86 mL | Expected:5.84 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:6.14 mL | Expected:6.12 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:6.42 mL | Expected:6.39 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:6.70 mL | Expected:6.67 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:6.98 mL | Expected:6.95 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:7.26 mL | Expected:7.23 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:7.54 mL | Expected:7.51 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:7.82 mL | Expected:7.79 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:8.10 mL | Expected:8.06 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:8.38 mL | Expected:8.34 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:8.66 mL | Expected:8.62 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:8.94 mL | Expected:8.90 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:9.22 mL | Expected:9.18 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:9.50 mL | Expected:9.46 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:9.78 mL | Expected:9.73 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:10.06 mL | Expected:10.01 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:10.34 mL | Expected:10.29 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:10.62 mL | Expected:10.57 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:10.90 mL | Expected:10.85 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:11.17 mL | Expected:11.12 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:11.45 mL | Expected:11.40 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:11.73 mL | Expected:11.68 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:12.01 mL | Expected:11.96 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:12.29 mL | Expected:12.24 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:12.57 mL | Expected:12.52 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:12.85 mL | Expected:12.79 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:13.13 mL | Expected:13.07 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:13.41 mL | Expected:13.35 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:13.69 mL | Expected:13.63 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:13.97 mL | Expected:13.91 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:14.25 mL | Expected:14.18 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:14.53 mL | Expected:14.46 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:14.81 mL | Expected:14.74 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:15.09 mL | Expected:15.02 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:15.37 mL | Expected:15.30 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:15.65 mL | Expected:15.58 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:15.93 mL | Expected:15.85 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:16.21 mL | Expected:16.13 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:16.48 mL | Expected:16.41 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:16.77 mL | Expected:16.69 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:17.05 mL | Expected:16.97 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:17.33 mL | Expected:17.25 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:17.60 mL | Expected:17.52 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:17.88 mL | Expected:17.80 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:18.16 mL | Expected:18.08 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:18.44 mL | Expected:18.36 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:18.72 mL | Expected:18.63 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:19.00 mL | Expected:18.91 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:19.28 mL | Expected:19.19 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:19.56 mL | Expected:19.47 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:19.84 mL | Expected:19.75 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:20.12 mL | Expected:20.03 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:20.40 mL | Expected:20.31 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:20.68 mL | Expected:20.58 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:20.96 mL | Expected:20.86 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:21.24 mL | Expected:21.14 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:21.52 mL | Expected:21.42 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:21.80 mL | Expected:21.70 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:22.08 mL | Expected:21.98 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:22.36 mL | Expected:22.25 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:22.64 mL | Expected:22.53 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:22.91 mL | Expected:22.81 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:23.19 mL | Expected:23.09 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:23.47 mL | Expected:23.37 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:23.75 mL | Expected:23.64 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:24.03 mL | Expected:23.92 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:24.31 mL | Expected:24.20 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:24.59 mL | Expected:24.48 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:24.87 mL | Expected:24.76 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:25.15 mL | Expected:25.03 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:25.43 mL | Expected:25.31 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:25.71 mL | Expected:25.59 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:25.99 mL | Expected:25.87 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:26.27 mL | Expected:26.15 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:26.55 mL | Expected:26.43 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:26.83 mL | Expected:26.70 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:27.11 mL | Expected:26.98 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:27.39 mL | Expected:27.26 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:27.67 mL | Expected:27.54 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:27.95 mL | Expected:27.82 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:28.23 mL | Expected:28.10 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:28.51 mL | Expected:28.38 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:28.79 mL | Expected:28.65 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:29.07 mL | Expected:28.93 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:29.34 mL | Expected:29.21 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:29.62 mL | Expected:29.49 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:29.90 mL | Expected:29.76 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:30.18 mL | Expected:30.04 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:30.46 mL | Expected:30.32 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:30.74 mL | Expected:30.60 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:31.02 mL | Expected:30.88 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:31.30 mL | Expected:31.16 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:31.58 mL | Expected:31.43 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:31.86 mL | Expected:31.71 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:32.14 mL | Expected:31.99 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:32.42 mL | Expected:32.27 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:32.70 mL | Expected:32.55 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:32.98 mL | Expected:32.83 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:33.26 mL | Expected:33.10 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:33.54 mL | Expected:33.38 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:33.82 mL | Expected:33.66 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:34.10 mL | Expected:33.94 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:34.38 mL | Expected:34.21 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:34.66 mL | Expected:34.49 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:34.94 mL | Expected:34.77 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:35.22 mL | Expected:35.05 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:35.50 mL | Expected:35.33 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:35.77 mL | Expected:35.61 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:36.05 mL | Expected:35.88 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:500 mL/hr | Delivered:36.33 mL | Expected:36.16 mL | Dev:0%
+
+[PRESSURE] Current:99.57 hPa | Threshold:100.55 hPa
+

@@ -16,16 +16,16 @@ static OcclusionMonitor occlus;
 static led l;
 static buz b;
 
-float initial = 10.0F;   // ramp mode starting rate, mL/hr
-float fin     = 190.0F;  // ramp mode max rate, mL/hr
-float incr    = 3.0F;    // ramp mode rate increase per step
+static float initial = 10.0F;   ///< ramp mode starting rate, mL/hr
+static float fin     = 190.0F;  ///< ramp mode max rate, mL/hr
+static float incr    = 3.0F;    ///< ramp mode rate increase per step
 
 static LinearRampMode ramp(initial, incr, fin, 100.0F, volume, occlus, alarm);
 static ConstantRateMode constant(100.0F, volume, occlus, alarm);
-static InfusionMode *active_mode = nullptr; // active_mode is a base_class pointer
+static InfusionMode *active_mode = nullptr;  ///< active mode, base-class pointer
 
-bool running = false;   // current state of pump
-bool paused  = false;   // paused or not
+static bool running = false;   ///< pump running state
+static bool paused  = false;   ///< pump paused state
 
 // Guards running/paused/active_mode and any mode-object fields (ramp/constant/volume)
 // touched from both the main thread (UART commands) and th_fn (control loop).
@@ -36,7 +36,7 @@ static const struct device *uart_dev = DEVICE_DT_GET(DT_CHOSEN(zephyr_console));
 K_THREAD_STACK_DEFINE(thread1, 1024);
 static struct k_thread my_thread;
 
-/// @brief Blocking line read over UART, used only during startup mode prompt
+/// @brief Blocking line read over UART, used only during startup mode prompt.
 static void read_line(char *buf, uint8_t max_len) {
     uint8_t idx = 0U;
     uint8_t c;
@@ -50,7 +50,7 @@ static void read_line(char *buf, uint8_t max_len) {
     buf[idx] = '\0';
 }
 
-/// @brief Control-loop thread: drives the active infusion mode every 10ms
+/// @brief Control-loop thread: drives the active infusion mode every 10ms.
 void th_fn(void *arg1, void *arg2, void *arg3) {
     while (true) {
         k_mutex_lock(&state_mutex, K_FOREVER);
@@ -66,6 +66,7 @@ void th_fn(void *arg1, void *arg2, void *arg3) {
     }
 }
 
+/// @brief Entry point: initializes hardware, prompts mode, starts control thread, runs UART command loop.
 int main() {
     char buf[32]      = {0};
     uint8_t idx       = 0U;
@@ -92,7 +93,7 @@ int main() {
 
     volume.initial = k_uptime_get();
     k_thread_create(&my_thread, thread1, K_THREAD_STACK_SIZEOF(thread1),
-                th_fn, NULL, NULL, NULL, 5, 0, K_NO_WAIT);
+                th_fn, nullptr, nullptr, nullptr, 5, 0, K_NO_WAIT);
 
     printk("\n   HCE Infusion Pump Platform v1.0\nCmds: START|STOP|PAUSE|RESET|MODE|SET_RATE|SET_RAMP\n> ");
 
@@ -110,7 +111,7 @@ int main() {
                         active_mode->started_ = false;
                         active_mode->volume.initial = k_uptime_get();
                     }
-                    active_mode->volume.last_calc_ms = k_uptime_get(); 
+                    active_mode->volume.last_calc_ms = k_uptime_get();
                     running = true; paused = false;
                     k_mutex_unlock(&state_mutex);
                     printk(">> Started\n");
@@ -118,9 +119,9 @@ int main() {
                 } else if (strcmp(buf, "STOP") == 0) {
                     k_mutex_lock(&state_mutex, K_FOREVER);
                     running = false; paused = false;
-                    active_mode->volume.expected_accumulated = 0.0F;   // add
-                    active_mode->volume.last_calc_ms = 0; 
-                                        active_mode->started_ = false;
+                    active_mode->volume.expected = 0.0F;
+                    active_mode->volume.last_calc_ms = 0;
+                    active_mode->started_ = false;
                     k_mutex_unlock(&state_mutex);
                     motor_stop();
                     printk(">> Stopped\n");
@@ -128,11 +129,10 @@ int main() {
                 } else if (strcmp(buf, "PAUSE") == 0) {
                     k_mutex_lock(&state_mutex, K_FOREVER);
                     paused = true;
-                    active_mode->volume.last_calc_ms = k_uptime_get();   // must be here
+                    active_mode->volume.last_calc_ms = k_uptime_get();
                     k_mutex_unlock(&state_mutex);
                     motor_stop();
                     printk(">> Paused\n");
-
 
                 } else if (strcmp(buf, "RESET") == 0) {
                     k_mutex_lock(&state_mutex, K_FOREVER);
@@ -144,9 +144,10 @@ int main() {
                         ramp.last_step_ms_ = 0;
                     }
                     active_mode->volume.initial = k_uptime_get();
-                    active_mode->volume.expected_accumulated = 0.0F;   // add
-                    active_mode->volume.last_calc_ms = 0;              
+                    active_mode->volume.expected = 0.0F;
+                    active_mode->volume.last_calc_ms = 0;
                     k_mutex_unlock(&state_mutex);
+                    alarm.clearAll();
                     motor_stop();
                     printk(">> Reset\n");
 

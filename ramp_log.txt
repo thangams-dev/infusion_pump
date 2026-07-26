@@ -1,0 +1,1500 @@
+L | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+***** delaying boot 1000ms (per build configuration) *****
+
+*** Booting Zephyr OS build v4.4.0-3651-ge07c8cf4d645 (delayed boot 1000ms) ***
+
+Constant Mode
+
+Default rate: 100 ml/hr
+
+Use SET_RATE <value> to customize, or START to use default
+
+
+
+   HCE Infusion Pump Platform v1.0
+
+Cmds: START|STOP|PAUSE|RESET|MODE|SET_RATE|SET_RAMP
+
+> START
+
+
+>> Started
+
+> [PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:0.00 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:0.05 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:0.11 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:0.16 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:0.22 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:0.27 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:0.33 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:0.39 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:0.44 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:0.50 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:0.55 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:0.61 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:0.66 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:0.72 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:0.77 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:0.83 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:0.89 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:0.94 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:1.00 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:1.05 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:1.11 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:1.16 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:1.22 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:1.28 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:1.33 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:1.39 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:1.44 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:1.50 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:1.55 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:1.61 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:1.67 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:1.72 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:1.78 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:1.83 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:1.89 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:1.94 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:2.00 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:2.05 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:2.11 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:2.17 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:2.22 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:2.28 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:2.33 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:2.39 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:2.44 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:2.50 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:2.56 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:2.61 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:2.67 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:2.72 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:2.78 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:2.83 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:2.89 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:2.95 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:3.00 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:3.06 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:3.11 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:3.17 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:3.22 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:3.28 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:3.33 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:3.39 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:3.45 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:3.50 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:3.56 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:3.61 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:3.67 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:3.72 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:3.78 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:3.84 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:3.89 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:3.95 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:4.00 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:4.06 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:4.11 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:4.17 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:4.23 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:4.28 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:4.34 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:4.39 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:4.45 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:4.50 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:4.56 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:4.62 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:4.67 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:4.73 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:4.78 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:4.84 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:4.89 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:4.95 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:5.01 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:5.06 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:5.12 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:5.17 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:5.23 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:5.28 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:5.34 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:5.40 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:5.45 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:5.51 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:5.56 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:5.62 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:5.67 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:5.73 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:5.79 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:5.84 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:5.90 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:5.95 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:6.01 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:6.06 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:6.12 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:6.18 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:6.23 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:6.29 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:6.34 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:6.40 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:6.45 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:6.51 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:6.57 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:6.62 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:6.68 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:6.73 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:6.79 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:6.84 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:6.90 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:6.96 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:7.01 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:7.07 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:7.12 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:7.18 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:7.23 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:7.29 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:7.34 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:7.40 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:7.46 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:7.51 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:7.57 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:7.62 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:7.68 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:7.73 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:7.79 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:7.85 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:7.90 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:7.96 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:8.01 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:8.07 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:8.12 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:8.18 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:8.24 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:8.29 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:8.35 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:8.40 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:8.46 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:8.51 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:8.57 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:8.63 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:8.68 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:8.74 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:8.79 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:8.85 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:8.90 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:8.96 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:9.01 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:9.07 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:9.13 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:9.18 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:9.24 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:9.29 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:9.35 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:9.40 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:9.46 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:9.51 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:9.57 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:9.63 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:9.68 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:9.74 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:9.79 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:9.85 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:9.90 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:9.96 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:10.02 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:10.07 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:10.13 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:10.18 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:10.24 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:10.29 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:10.35 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:10.40 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:10.46 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:10.52 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:10.57 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:10.63 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:10.68 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:10.74 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:10.79 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:10.85 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:10.90 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:10.96 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:11.02 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:11.07 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:11.13 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:11.18 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:11.24 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:11.29 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:11.35 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:11.41 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:11.46 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:11.52 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:11.57 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:11.63 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:11.68 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:11.74 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:11.79 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:11.85 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:11.91 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:11.96 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:12.02 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:12.07 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:12.13 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:12.18 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:12.24 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:12.30 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:12.35 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:12.41 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:12.46 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:12.52 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:12.57 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:12.63 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:12.68 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:12.74 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:12.80 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:12.85 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:12.91 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:12.96 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:13.02 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:13.07 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:13.13 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:13.18 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:13.24 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:13.30 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:13.35 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:13.41 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:13.46 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+␁x
+
+
+>> Unknown
+
+> [PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:13.52 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+
+[PRESSURE] Current:0.00 hPa | Threshold:100.55 hPa
+
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:13.57 mL | Dev:100%
+
+[ALARM] Volume deviation exceeded 5%
+

@@ -1,75 +1,74 @@
 #pragma once
-#include <stdint.h>
+#include <cstdint>
 #include "occlusion.hpp"
 #include "volume.hpp"
 #include "alarm.hpp"
 
-/// @brief Base class for infusion modes. Template Method pattern:
-///        run() always calls computeTargetRate() -> applyRate() -> checkAlarm(),
-///        but computeTargetRate() is overridden per mode (constant vs ramp).
+/// @brief Base class for infusion modes (Template Method pattern).
+///        run() always does computeTargetRate() -> applyRate() -> checkAlarm();
+///        only computeTargetRate() differs per mode.
 class InfusionMode {
     public:
-    //referance members to alias existing objects
-    VolumeTracker &volume;      
-    OcclusionMonitor &occlu;    
-    AlarmManager &alarm;      
+    VolumeTracker &volume;      ///< volume tracker reference
+    OcclusionMonitor &occlu;    ///< occlusion monitor reference
+    AlarmManager &alarm;        ///< alarm manager reference
 
-    float ml_per_sec = 0.0F;       // current rate converted to mL/sec
-    float steps_per_sec = 0.0F;    // current rate converted to motor steps/sec
-    float current_ml = 0.0F;       // volume delivered so far, this run
-    bool started_ = false;         // true once start_ms_ has been captured
-    bool completed_ = false;       // flags infusion-complete; consumed by main.cpp under lock
-    int64_t start_ms_ = 0;         // use to note start time
-    int64_t last_alert_ms_ = 0;    // last time a volume alert was printed
-    uint32_t delay = 0U;           // to store per-step delay (µs) sent to the stepper driver
+    float ml_per_sec = 0.0F;       ///< rate in mL/sec
+    float steps_per_sec = 0.0F;    ///< rate in steps/sec
+    float current_ml = 0.0F;       ///< mL delivered this run
+    bool started_ = false;         ///< run started or not
+    bool completed_ = false;       ///< infusion done flag
+    int64_t start_ms_ = 0;         ///< start time
+    int64_t last_alert_ms_ = 0;    ///< last alarm print time
+    uint32_t delay = 0U;           ///< delay per motor step (µs)
 
-    /// @brief constructor for Infusion pump to get object referances
-    /// @param vol volume module 
-    /// @param occ occulsion module
-    /// @param ala alarm 
+    /// @brief Binds mode to shared volume/occlusion/alarm modules.
     InfusionMode(VolumeTracker &vol, OcclusionMonitor &occ, AlarmManager &ala)
         : volume(vol), occlu(occ), alarm(ala) {}
 
-    // no-heap policy forbids delete on base ptr -> deleting-dtor variant unreachable
-    // LCOV_EXCL_LINE tells lcov to skip this line from coverage count (not a real gap)
+    // destructor
     virtual ~InfusionMode() {} // LCOV_EXCL_LINE
 
-    /// @brief Mode-specific rate calculation - must be implemented by each mode
-    virtual float computeTargetRate() = 0;
-
-    /// @brief Execute one infusion cycle (compute -> apply -> check)
+    /// @brief Runs one infusion cycle: compute -> apply -> check.
     void run();
 
-    /// @brief Apply computed rate to stepper @param rate mL/hr
+    /// @brief Mode-specific rate calculation.
+    virtual float computeTargetRate() = 0;
+
+    /// @brief Applies rate to stepper.
+    /// @param rate Target rate, mL/hr.
     void applyRate(float rate);
 
-    /// @brief Check and trigger alarms if needed
+    /// @brief Checks volume/occlusion and raises alarms if needed.
+    /// @param rate Current rate, mL/hr.
     void checkAlarm(float rate);
 };
 
-/// @brief Constant rate mode - motor runs at one fixed rate for the whole infusion
+/// @brief Fixed-rate infusion mode.
 class ConstantRateMode : public InfusionMode {
     public:
-    float setrate;   // fixed target rate, mL/hr
+    float setrate;   ///< fixed target rate, mL/hr
 
+    /// @brief Sets a fixed infusion rate.
     ConstantRateMode(float rate, VolumeTracker &vt, OcclusionMonitor &om, AlarmManager &am)
         : InfusionMode(vt, om, am), setrate(rate) {}
 
     float computeTargetRate() override;
 };
 
-/// @brief Linear ramp mode - rate increases step-wise every interval, up to a max, then holds
+/// @brief Step-wise ramping infusion mode, rate increases until capped at fin.
 class LinearRampMode : public InfusionMode {
     public:
-    float initial;         // starting rate, mL/hr
-    float incr;             // rate increase per step
-    float fin;               // max rate cap, mL/hr
-    float current_lvl;      // current rate level (mutates as ramp progresses)
-    float tot;               // remaining volume to infuse
-    float total_volume;      // original total volume (for RESET)
-    int64_t last_step_ms_ = 0;   // uptime (ms) of the last rate step-up
-    static constexpr int64_t step_interval_ms_ = 60000;  // time between rate increases (60s)
+    float initial;              ///< starting rate, mL/hr
+    float incr;                 ///< rate increase per step
+    float fin;                  ///< max rate cap, mL/hr
+    float current_lvl;          ///< current rate level
+    float tot;                  ///< remaining volume to infuse
+    float total_volume;         ///< original total volume (for RESET)
+    int64_t last_step_ms_ = 0;  ///< uptime of last rate step-up
+    static constexpr int64_t step_interval_ms_ = 60000;  ///< time between steps (ms)
 
+    /// @brief Sets ramp start/increment/cap and total volume.
     LinearRampMode(float st, float in, float fi, float total,
                    VolumeTracker &vt, OcclusionMonitor &om, AlarmManager &am)
         : InfusionMode(vt, om, am), initial(st), incr(in), fin(fi),
@@ -78,5 +77,5 @@ class LinearRampMode : public InfusionMode {
     float computeTargetRate() override;
 };
 
-/// @brief Switch active mode without requiring a restart; resets new mode's timing/volume state
+/// @brief Switches active mode without restart, resetting new mode's timing/volume state.
 InfusionMode* switch_mode(InfusionMode* current, InfusionMode* next);

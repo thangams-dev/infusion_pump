@@ -32,12 +32,12 @@
             <td></td>
             <td class="headerItem">Lines:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
-            <td class="headerCovTableEntry">18</td>
-            <td class="headerCovTableEntry">18</td>
+            <td class="headerCovTableEntry">17</td>
+            <td class="headerCovTableEntry">17</td>
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-07-18 06:01:06</td>
+            <td class="headerValue">2026-07-23 18:27:45</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -50,8 +50,8 @@
             <td></td>
             <td class="headerItem">Branches:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
-            <td class="headerCovTableEntry">10</td>
-            <td class="headerCovTableEntry">10</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">6</td>
           </tr>
                   <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
                 </table>
@@ -82,40 +82,39 @@
 <span id="L11"><span class="lineNum">      11</span>                 :             : #include &lt;zephyr/sys/printk.h&gt;</span>
 <span id="L12"><span class="lineNum">      12</span>                 :             : #endif</span>
 <span id="L13"><span class="lineNum">      13</span>                 :             : </span>
-<span id="L14"><span class="lineNum">      14</span>                 :             : </span>
-<span id="L15"><span class="lineNum">      15</span>                 :             : static constexpr float ms_per_hr = 3600000.0F;</span>
-<span id="L16"><span class="lineNum">      16</span>                 :             : static constexpr float accuracy_lvl = 5.0F;</span>
-<span id="L17"><span class="lineNum">      17</span>                 :             : static constexpr float tot_percentage = 100.0F;</span>
-<span id="L18"><span class="lineNum">      18</span>                 :             : </span>
-<span id="L19"><span class="lineNum">      19</span>                 :<span class="tlaGNC tlaBgGNC">          49 : auto VolumeTracker::cal(float rate, float steps_per_sec) -&gt; bool {</span></span>
-<span id="L20"><span class="lineNum">      20</span>                 :             :     (void)steps_per_sec;</span>
-<span id="L21"><span class="lineNum">      21</span>                 :             : </span>
-<span id="L22"><span class="lineNum">      22</span>                 :<span class="tlaGNC">          49 :     ticks = static_cast&lt;float&gt;(get_encoder_position()) - encoder_offset;</span></span>
+<span id="L14"><span class="lineNum">      14</span>                 :             : static constexpr float ms_per_hr = 3600000.0F;    ///&lt; ms in an hour</span>
+<span id="L15"><span class="lineNum">      15</span>                 :             : static constexpr float accuracy_lvl = 5.0F;        ///&lt; max allowed deviation, %</span>
+<span id="L16"><span class="lineNum">      16</span>                 :             : static constexpr float tot_percentage = 100.0F;    ///&lt; for % conversion</span>
+<span id="L17"><span class="lineNum">      17</span>                 :             : </span>
+<span id="L18"><span class="lineNum">      18</span>                 :             : /// @brief Compares delivered volume (encoder ticks) to expected volume for given rate.</span>
+<span id="L19"><span class="lineNum">      19</span>                 :             : /// @param rate Target rate, mL/hr.</span>
+<span id="L20"><span class="lineNum">      20</span>                 :             : /// @return true if deviation is within accuracy_lvl.</span>
+<span id="L21"><span class="lineNum">      21</span>                 :<span class="tlaGNC tlaBgGNC">          36 : auto VolumeTracker::cal(float rate) -&gt; bool {</span></span>
+<span id="L22"><span class="lineNum">      22</span>                 :<span class="tlaGNC">          36 :     ticks = fabsf(static_cast&lt;float&gt;(get_encoder_position()) - encoder_offset);</span></span>
 <span id="L23"><span class="lineNum">      23</span>                 :             : </span>
-<span id="L24"><span class="lineNum">      24</span>                 :<span class="tlaGNC">          49 :     elapsed_time = static_cast&lt;float&gt;(k_uptime_get() - initial) / ms_per_hr;</span></span>
-<span id="L25"><span class="lineNum">      25</span>                 :<span class="tlaGNC">          49 :     expected = elapsed_time * rate;</span></span>
-<span id="L26"><span class="lineNum">      26</span>                 :<span class="tlaGNC">          49 :     actual   = ticks * ml_per_tick * correction;</span></span>
-<span id="L27"><span class="lineNum">      27</span>                 :             : </span>
-<span id="L28"><span class="lineNum">      28</span>         [<span class="tlaGBC" title="Branch 0 was taken 21 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 28 times"> + </span>]:<span class="tlaGNC">          49 :     if (expected &lt; 0.0001F) { return true; }</span></span>
-<span id="L29"><span class="lineNum">      29</span>         [<span class="tlaGBC" title="Branch 0 was taken 3 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 25 times"> + </span>]:<span class="tlaGNC">          28 :     if ((k_uptime_get() - initial) &lt; 5000) { return true; }</span></span>
-<span id="L30"><span class="lineNum">      30</span>                 :             : </span>
-<span id="L31"><span class="lineNum">      31</span>   [<span class="tlaGBC" title="Branch 0 was taken 22 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 3 times"> + </span><span class="tlaGBC" title="Branch 2 was taken 6 times"> + </span><span class="tlaGBC" title="Branch 3 was taken 16 times"> + </span>]:<span class="tlaGNC">          25 :     if (!corrected &amp;&amp; ticks &gt; 50.0F) {</span></span>
-<span id="L32"><span class="lineNum">      32</span>                 :<span class="tlaGNC">           6 :         correction = expected / (ticks * ml_per_tick);</span></span>
-<span id="L33"><span class="lineNum">      33</span>                 :<span class="tlaGNC">           6 :         corrected  = true;</span></span>
-<span id="L34"><span class="lineNum">      34</span>                 :             :     }</span>
+<span id="L24"><span class="lineNum">      24</span>                 :<span class="tlaGNC">          36 :     int64_t now_ms = k_uptime_get();</span></span>
+<span id="L25"><span class="lineNum">      25</span>         [<span class="tlaGBC" title="Branch 0 was taken 22 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 14 times"> + </span>]:<span class="tlaGNC">          36 :     if (last_calc_ms == 0) { last_calc_ms = now_ms; }</span></span>
+<span id="L26"><span class="lineNum">      26</span>                 :<span class="tlaGNC">          36 :     float dt_hr = static_cast&lt;float&gt;(now_ms - last_calc_ms) / ms_per_hr;</span></span>
+<span id="L27"><span class="lineNum">      27</span>                 :<span class="tlaGNC">          36 :     expected += rate * dt_hr;</span></span>
+<span id="L28"><span class="lineNum">      28</span>                 :<span class="tlaGNC">          36 :     last_calc_ms = now_ms;</span></span>
+<span id="L29"><span class="lineNum">      29</span>                 :             : </span>
+<span id="L30"><span class="lineNum">      30</span>                 :<span class="tlaGNC">          36 :     actual = ticks * ml_per_tick;</span></span>
+<span id="L31"><span class="lineNum">      31</span>                 :             : </span>
+<span id="L32"><span class="lineNum">      32</span>         [<span class="tlaGBC" title="Branch 0 was taken 23 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 13 times"> + </span>]:<span class="tlaGNC">          36 :     if (expected &lt; 0.0001F) { return true; }</span></span>
+<span id="L33"><span class="lineNum">      33</span>                 :             : </span>
+<span id="L34"><span class="lineNum">      34</span>                 :<span class="tlaGNC">          13 :     deviation = fabsf(expected - actual) / expected * tot_percentage;</span></span>
 <span id="L35"><span class="lineNum">      35</span>                 :             : </span>
-<span id="L36"><span class="lineNum">      36</span>                 :<span class="tlaGNC">          25 :     deviation = fabsf(expected - actual) / expected * tot_percentage;</span></span>
-<span id="L37"><span class="lineNum">      37</span>                 :             :     static float last_ticks = 0.0F;</span>
-<span id="L38"><span class="lineNum">      38</span>                 :             :     static int64_t last_t = 0;</span>
-<span id="L39"><span class="lineNum">      39</span>                 :<span class="tlaGNC">          25 :     int64_t now_ms = k_uptime_get();</span></span>
-<span id="L40"><span class="lineNum">      40</span>         [<span class="tlaGBC" title="Branch 0 was taken 3 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 22 times"> + </span>]:<span class="tlaGNC">          25 :     if (now_ms - last_t &gt;= 4000) {</span></span>
-<span id="L41"><span class="lineNum">      41</span>                 :<span class="tlaGNC">           3 :         printk(&quot;rate:%d | Tickes:%d actual:%d (expected:%d) | dev:%d\n&quot;,</span></span>
-<span id="L42"><span class="lineNum">      42</span>                 :<span class="tlaGNC">           3 :                (int)rate, (int)ticks, (int)(actual*1000), (int)(expected*1000), (int)deviation);</span></span>
-<span id="L43"><span class="lineNum">      43</span>                 :<span class="tlaGNC">           3 :         last_ticks = ticks;</span></span>
-<span id="L44"><span class="lineNum">      44</span>                 :<span class="tlaGNC">           3 :         last_t = now_ms;</span></span>
-<span id="L45"><span class="lineNum">      45</span>                 :             :     }</span>
-<span id="L46"><span class="lineNum">      46</span>                 :<span class="tlaGNC">          25 :     return deviation &lt;= (accuracy_lvl + 0.01F);</span></span>
-<span id="L47"><span class="lineNum">      47</span>                 :             : }</span>
+<span id="L36"><span class="lineNum">      36</span>                 :             :     static int64_t last_print = 0;</span>
+<span id="L37"><span class="lineNum">      37</span>         [<span class="tlaGBC" title="Branch 0 was taken 2 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 11 times"> + </span>]:<span class="tlaGNC">          13 :     if (now_ms - last_print &gt;= 2000) {</span></span>
+<span id="L38"><span class="lineNum">      38</span>                 :<span class="tlaGNC">           2 :         printk(&quot;[STATUS] Rate:%d mL/hr | Delivered:%d.%02d mL | Expected:%d.%02d mL | Dev:%d%%\n&quot;,</span></span>
+<span id="L39"><span class="lineNum">      39</span>                 :             :                (int)rate,</span>
+<span id="L40"><span class="lineNum">      40</span>                 :<span class="tlaGNC">           2 :                (int)actual, (int)(fabsf(actual - (int)actual) * 100),</span></span>
+<span id="L41"><span class="lineNum">      41</span>                 :<span class="tlaGNC">           2 :                (int)expected, (int)(fabsf(expected - (int)expected) * 100),</span></span>
+<span id="L42"><span class="lineNum">      42</span>                 :<span class="tlaGNC">           2 :                (int)deviation);</span></span>
+<span id="L43"><span class="lineNum">      43</span>                 :<span class="tlaGNC">           2 :         last_print = now_ms;</span></span>
+<span id="L44"><span class="lineNum">      44</span>                 :             :     }</span>
+<span id="L45"><span class="lineNum">      45</span>                 :<span class="tlaGNC">          13 :     return deviation &gt;= accuracy_lvl;</span></span>
+<span id="L46"><span class="lineNum">      46</span>                 :             : }</span>
         </pre>
               </td>
             </tr>
