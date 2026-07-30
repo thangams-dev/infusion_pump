@@ -1,2 +1,0 @@
-# Load Zephyr board Kconfig descriptions.
-osource "/home/thanga-inc-5829/zephyrproject/zephyr/boards/st/nucleo_f446re/Kconfig"

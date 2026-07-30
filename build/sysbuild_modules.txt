@@ -1,1 +1,0 @@
-"mcuboot":"/home/thanga-inc-5829/zephyrproject/bootloader/mcuboot":"/home/thanga-inc-5829/zephyrproject/bootloader/mcuboot/boot/zephyr/sysbuild"
