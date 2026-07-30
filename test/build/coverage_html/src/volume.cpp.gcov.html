@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-07-23 18:27:45</td>
+            <td class="headerValue">2026-07-29 10:04:23</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -82,39 +82,38 @@
 <span id="L11"><span class="lineNum">      11</span>                 :             : #include &lt;zephyr/sys/printk.h&gt;</span>
 <span id="L12"><span class="lineNum">      12</span>                 :             : #endif</span>
 <span id="L13"><span class="lineNum">      13</span>                 :             : </span>
-<span id="L14"><span class="lineNum">      14</span>                 :             : static constexpr float ms_per_hr = 3600000.0F;    ///&lt; ms in an hour</span>
-<span id="L15"><span class="lineNum">      15</span>                 :             : static constexpr float accuracy_lvl = 5.0F;        ///&lt; max allowed deviation, %</span>
-<span id="L16"><span class="lineNum">      16</span>                 :             : static constexpr float tot_percentage = 100.0F;    ///&lt; for % conversion</span>
-<span id="L17"><span class="lineNum">      17</span>                 :             : </span>
-<span id="L18"><span class="lineNum">      18</span>                 :             : /// @brief Compares delivered volume (encoder ticks) to expected volume for given rate.</span>
-<span id="L19"><span class="lineNum">      19</span>                 :             : /// @param rate Target rate, mL/hr.</span>
-<span id="L20"><span class="lineNum">      20</span>                 :             : /// @return true if deviation is within accuracy_lvl.</span>
-<span id="L21"><span class="lineNum">      21</span>                 :<span class="tlaGNC tlaBgGNC">          36 : auto VolumeTracker::cal(float rate) -&gt; bool {</span></span>
-<span id="L22"><span class="lineNum">      22</span>                 :<span class="tlaGNC">          36 :     ticks = fabsf(static_cast&lt;float&gt;(get_encoder_position()) - encoder_offset);</span></span>
-<span id="L23"><span class="lineNum">      23</span>                 :             : </span>
-<span id="L24"><span class="lineNum">      24</span>                 :<span class="tlaGNC">          36 :     int64_t now_ms = k_uptime_get();</span></span>
-<span id="L25"><span class="lineNum">      25</span>         [<span class="tlaGBC" title="Branch 0 was taken 22 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 14 times"> + </span>]:<span class="tlaGNC">          36 :     if (last_calc_ms == 0) { last_calc_ms = now_ms; }</span></span>
-<span id="L26"><span class="lineNum">      26</span>                 :<span class="tlaGNC">          36 :     float dt_hr = static_cast&lt;float&gt;(now_ms - last_calc_ms) / ms_per_hr;</span></span>
-<span id="L27"><span class="lineNum">      27</span>                 :<span class="tlaGNC">          36 :     expected += rate * dt_hr;</span></span>
-<span id="L28"><span class="lineNum">      28</span>                 :<span class="tlaGNC">          36 :     last_calc_ms = now_ms;</span></span>
+<span id="L14"><span class="lineNum">      14</span>                 :             : static constexpr float ms_per_hr = 3600000.0F;</span>
+<span id="L15"><span class="lineNum">      15</span>                 :             : static constexpr float accuracy_lvl = 5.0F;</span>
+<span id="L16"><span class="lineNum">      16</span>                 :             : static constexpr float tot_percentage = 100.0F;</span>
+<span id="L17"><span class="lineNum">      17</span>                 :             : static constexpr int64_t grace_ms = 3000;   ///&lt; skip data for 3s after start</span>
+<span id="L18"><span class="lineNum">      18</span>                 :             : </span>
+<span id="L19"><span class="lineNum">      19</span>                 :             : auto VolumeTracker::cal(float rate) -&gt; bool {</span>
+<span id="L20"><span class="lineNum">      20</span>                 :             :     ticks = fabsf(static_cast&lt;float&gt;(get_encoder_position()) - encoder_offset);</span>
+<span id="L21"><span class="lineNum">      21</span>                 :<span class="tlaGNC tlaBgGNC">         204 : </span></span>
+<span id="L22"><span class="lineNum">      22</span>                 :<span class="tlaGNC">         204 :     int64_t now_ms = k_uptime_get();</span></span>
+<span id="L23"><span class="lineNum">      23</span>                 :             :     if (last_calc_ms == 0) { last_calc_ms = now_ms; }</span>
+<span id="L24"><span class="lineNum">      24</span>                 :<span class="tlaGNC">         204 :     float dt_hr = static_cast&lt;float&gt;(now_ms - last_calc_ms) / ms_per_hr;</span></span>
+<span id="L25"><span class="lineNum">      25</span>         [<span class="tlaGBC" title="Branch 0 was taken 126 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 78 times"> + </span>]:<span class="tlaGNC">         204 :     expected += rate * dt_hr;</span></span>
+<span id="L26"><span class="lineNum">      26</span>                 :<span class="tlaGNC">         204 :     last_calc_ms = now_ms;</span></span>
+<span id="L27"><span class="lineNum">      27</span>                 :<span class="tlaGNC">         204 : </span></span>
+<span id="L28"><span class="lineNum">      28</span>                 :<span class="tlaGNC">         204 :     actual = ticks * ml_per_tick;</span></span>
 <span id="L29"><span class="lineNum">      29</span>                 :             : </span>
-<span id="L30"><span class="lineNum">      30</span>                 :<span class="tlaGNC">          36 :     actual = ticks * ml_per_tick;</span></span>
+<span id="L30"><span class="lineNum">      30</span>                 :<span class="tlaGNC">         204 :     if (expected &lt; 0.0001F) { return true; }</span></span>
 <span id="L31"><span class="lineNum">      31</span>                 :             : </span>
-<span id="L32"><span class="lineNum">      32</span>         [<span class="tlaGBC" title="Branch 0 was taken 23 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 13 times"> + </span>]:<span class="tlaGNC">          36 :     if (expected &lt; 0.0001F) { return true; }</span></span>
+<span id="L32"><span class="lineNum">      32</span>         [<span class="tlaGBC" title="Branch 0 was taken 132 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 72 times"> + </span>]:<span class="tlaGNC">         204 :     deviation = fabsf(expected - actual) / expected * tot_percentage;</span></span>
 <span id="L33"><span class="lineNum">      33</span>                 :             : </span>
-<span id="L34"><span class="lineNum">      34</span>                 :<span class="tlaGNC">          13 :     deviation = fabsf(expected - actual) / expected * tot_percentage;</span></span>
+<span id="L34"><span class="lineNum">      34</span>                 :<span class="tlaGNC">          72 :     if (now_ms - start_ms &lt; grace_ms) { return true; }</span></span>
 <span id="L35"><span class="lineNum">      35</span>                 :             : </span>
-<span id="L36"><span class="lineNum">      36</span>                 :             :     static int64_t last_print = 0;</span>
-<span id="L37"><span class="lineNum">      37</span>         [<span class="tlaGBC" title="Branch 0 was taken 2 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 11 times"> + </span>]:<span class="tlaGNC">          13 :     if (now_ms - last_print &gt;= 2000) {</span></span>
-<span id="L38"><span class="lineNum">      38</span>                 :<span class="tlaGNC">           2 :         printk(&quot;[STATUS] Rate:%d mL/hr | Delivered:%d.%02d mL | Expected:%d.%02d mL | Dev:%d%%\n&quot;,</span></span>
-<span id="L39"><span class="lineNum">      39</span>                 :             :                (int)rate,</span>
-<span id="L40"><span class="lineNum">      40</span>                 :<span class="tlaGNC">           2 :                (int)actual, (int)(fabsf(actual - (int)actual) * 100),</span></span>
-<span id="L41"><span class="lineNum">      41</span>                 :<span class="tlaGNC">           2 :                (int)expected, (int)(fabsf(expected - (int)expected) * 100),</span></span>
-<span id="L42"><span class="lineNum">      42</span>                 :<span class="tlaGNC">           2 :                (int)deviation);</span></span>
-<span id="L43"><span class="lineNum">      43</span>                 :<span class="tlaGNC">           2 :         last_print = now_ms;</span></span>
-<span id="L44"><span class="lineNum">      44</span>                 :             :     }</span>
-<span id="L45"><span class="lineNum">      45</span>                 :<span class="tlaGNC">          13 :     return deviation &gt;= accuracy_lvl;</span></span>
-<span id="L46"><span class="lineNum">      46</span>                 :             : }</span>
+<span id="L36"><span class="lineNum">      36</span>                 :             :     if (now_ms - last_print &gt;= 2000) {</span>
+<span id="L37"><span class="lineNum">      37</span>         [<span class="tlaGBC" title="Branch 0 was taken 12 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 60 times"> + </span>]:<span class="tlaGNC">          72 :         printk(&quot;[STATUS] Rate:%d mL/hr | Delivered:%d.%02d mL | Expected:%d.%02d mL | Dev:%d%%\n&quot;,</span></span>
+<span id="L38"><span class="lineNum">      38</span>                 :<span class="tlaGNC">          12 :                (int)rate,</span></span>
+<span id="L39"><span class="lineNum">      39</span>                 :             :                (int)actual, (int)(fabsf(actual - (int)actual) * 100),</span>
+<span id="L40"><span class="lineNum">      40</span>                 :<span class="tlaGNC">          12 :                (int)expected, (int)(fabsf(expected - (int)expected) * 100),</span></span>
+<span id="L41"><span class="lineNum">      41</span>                 :<span class="tlaGNC">          12 :                (int)deviation);</span></span>
+<span id="L42"><span class="lineNum">      42</span>                 :<span class="tlaGNC">          12 :         last_print = now_ms;</span></span>
+<span id="L43"><span class="lineNum">      43</span>                 :<span class="tlaGNC">          12 :     }</span></span>
+<span id="L44"><span class="lineNum">      44</span>                 :             :     return deviation &lt; accuracy_lvl;</span>
+<span id="L45"><span class="lineNum">      45</span>                 :<span class="tlaGNC">          72 : }</span></span>
         </pre>
               </td>
             </tr>

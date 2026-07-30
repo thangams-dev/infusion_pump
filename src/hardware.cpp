@@ -1,7 +1,6 @@
 #ifdef UNIT_TEST
 #include <zephyr/sys/printk.h>
 #include <zephyr/drivers/sensor.h>
-#include "mock_hardware.hpp"
 #else
 #include "hardware.hpp"
 #include "alarm.hpp"
@@ -13,31 +12,6 @@ static const struct gpio_dt_spec enab    = GPIO_DT_SPEC_GET(DT_ALIAS(enab1), gpi
 static const struct device *qdec = DEVICE_DT_GET(DT_ALIAS(qdec0));
 static const struct pwm_dt_spec step_pwm = PWM_DT_SPEC_GET(DT_ALIAS(step1));
 const struct device *lps = DEVICE_DT_GET_ANY(st_lps22hb_press);
-
-/// @brief Reads quadrature encoder and returns cumulative tick count.
-int32_t get_encoder_position() {
-    struct sensor_value val;
-    sensor_sample_fetch(qdec);
-    sensor_channel_get(qdec, SENSOR_CHAN_ROTATION, &val);
-    int32_t raw = (val.val1 * 2400) / 360;   // 0-2400 within one rotation
-
-    static int32_t last_raw = raw;  // it will run once
-    static int32_t cumulative = 0; 
-
-    int32_t delta = raw - last_raw;
-
-    // detect wrap: large jump means it wrapped around
-    if (delta < -1200) {
-        delta += 2400;   // wrapped forward (e.g. 2350 -> 20)
-    } else if (delta > 1200) {
-        delta -= 2400;   // wrapped backward (reverse direction)
-    }
-
-    cumulative += delta;
-    last_raw = raw;
-
-    return cumulative;
-}
 
 /// @brief Initializes all GPIO/PWM/sensor peripherals, checks each is ready.
 void hardware_init() {
@@ -96,6 +70,31 @@ void motor_start() {
 void set_delay_rate(uint32_t delay_us) {
     uint32_t period_ns = delay_us * 1000U;
     pwm_set_dt(&step_pwm, period_ns, period_ns / 2U);  // 50% duty cycle
+}
+
+/// @brief Reads quadrature encoder and returns cumulative tick count.
+int32_t get_encoder_position() {
+    struct sensor_value val;
+    sensor_sample_fetch(qdec);
+    sensor_channel_get(qdec, SENSOR_CHAN_ROTATION, &val);
+    int32_t raw = (val.val1 * 2400) / 360;   // 0-2400 within one rotation
+
+    static int32_t last_raw = raw;  // it will run once
+    static int32_t cumulative = 0; 
+
+    int32_t delta = raw - last_raw;
+
+    // detect wrap: large jump means it wrapped around
+    if (delta < -1200) {
+        delta += 2400;   // wrapped forward (e.g. 2350 -> 20)
+    } else if (delta > 1200) {
+        delta -= 2400;   // wrapped backward (reverse direction)
+    }
+
+    cumulative += delta;
+    last_raw = raw;
+
+    return cumulative;
 }
 
 #endif

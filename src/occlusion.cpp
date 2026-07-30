@@ -1,8 +1,10 @@
 #include <cmath>
 #include "occlusion.hpp"
+
 #ifdef UNIT_TEST
 #include "stub_file.hpp"
 #include <cstdio>
+#define printk printf
 #else
 #include <zephyr/sys/printk.h>
 #endif
@@ -20,5 +22,5 @@ auto OcclusionMonitor::isPressureNormal() -> bool {
                (int)thrshold, (int)(fabsf(thrshold - (int)thrshold) * 100));
         last_print = now_ms;
     }
-    return press > thrshold;
+    return press <= thrshold;
 }

@@ -1,4 +1,62 @@
+cmake:
+  application:
+    configuration-dir: '/home/thanga-inc-5829/Documents/Infusion_pump'
+    source-dir: '/home/thanga-inc-5829/Documents/Infusion_pump'
+  board:
+    name: 'nucleo_f446re'
+    path:
+     - '/home/thanga-inc-5829/zephyrproject/zephyr/boards/st/nucleo_f446re'
+    qualifiers: 'stm32f446xx'
+    revision: ''
+  devicetree:
+    bindings-dirs:
+     - '/home/thanga-inc-5829/zephyrproject/zephyr/dts/bindings'
+    files:
+     - '/home/thanga-inc-5829/zephyrproject/zephyr/boards/st/nucleo_f446re/nucleo_f446re.dts'
+     - '/home/thanga-inc-5829/Documents/Infusion_pump/boards/nucleo_f446re.overlay'
+    include-dirs:
+     - '/home/thanga-inc-5829/zephyrproject/modules/hal/ambiq/dts'
+     - '/home/thanga-inc-5829/zephyrproject/modules/hal/atmel/include'
+     - '/home/thanga-inc-5829/zephyrproject/modules/hal/bouffalolab/include'
+     - '/home/thanga-inc-5829/zephyrproject/modules/hal/bouffalolab/include/zephyr'
+     - '/home/thanga-inc-5829/zephyrproject/modules/hal/gigadevice/include'
+     - '/home/thanga-inc-5829/zephyrproject/modules/hal/microchip/include'
+     - '/home/thanga-inc-5829/zephyrproject/modules/hal/microchip/dts'
+     - '/home/thanga-inc-5829/zephyrproject/modules/hal/nuvoton/dts'
+     - '/home/thanga-inc-5829/zephyrproject/modules/hal/nxp/dts'
+     - '/home/thanga-inc-5829/zephyrproject/modules/hal/stm32/dts'
+     - '/home/thanga-inc-5829/zephyrproject/modules/hal/ti/dts'
+     - '/home/thanga-inc-5829/Documents/Infusion_pump/include'
+     - '/home/thanga-inc-5829/zephyrproject/zephyr/include'
+     - '/home/thanga-inc-5829/zephyrproject/zephyr/include/zephyr'
+     - '/home/thanga-inc-5829/zephyrproject/zephyr/dts/common'
+     - '/home/thanga-inc-5829/zephyrproject/zephyr/dts/vendor'
+     - '/home/thanga-inc-5829/zephyrproject/zephyr/dts/rx'
+     - '/home/thanga-inc-5829/zephyrproject/zephyr/dts/x86'
+     - '/home/thanga-inc-5829/zephyrproject/zephyr/dts/xtensa'
+     - '/home/thanga-inc-5829/zephyrproject/zephyr/dts/sparc'
+     - '/home/thanga-inc-5829/zephyrproject/zephyr/dts/riscv'
+     - '/home/thanga-inc-5829/zephyrproject/zephyr/dts/posix'
+     - '/home/thanga-inc-5829/zephyrproject/zephyr/dts/arm64'
+     - '/home/thanga-inc-5829/zephyrproject/zephyr/dts/arm'
+     - '/home/thanga-inc-5829/zephyrproject/zephyr/dts/arc'
+     - '/home/thanga-inc-5829/zephyrproject/zephyr/dts'
+    user-files:
+     - '/home/thanga-inc-5829/Documents/Infusion_pump/boards/nucleo_f446re.overlay'
+  kconfig:
+    files:
+     - '/home/thanga-inc-5829/zephyrproject/zephyr/boards/st/nucleo_f446re/nucleo_f446re_defconfig'
+     - '/home/thanga-inc-5829/Documents/Infusion_pump/prj.conf'
+    user-files:
+     - '/home/thanga-inc-5829/Documents/Infusion_pump/prj.conf'
+  toolchain:
+    name: 'zephyr'
+    path: '/home/thanga-inc-5829/zephyr-sdk-1.0.1'
+  zephyr:
+    version: '4.4.99'
+    zephyr-base: '/home/thanga-inc-5829/zephyrproject/zephyr'
+version: '0.1.0'
 west:
-  command: /home/thanga-inc-5829/.local/bin/west build -b nucleo_g474re -p always
-  topdir: /home/thanga-inc-5829/zephyrproject
-  version: 1.5.0
+  command: '/home/thanga-inc-5829/.local/bin/west build -b nucleo_f446re . -p always'
+  topdir: '/home/thanga-inc-5829/zephyrproject'
+  version: '1.5.0'

@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-07-23 18:27:45</td>
+            <td class="headerValue">2026-07-29 10:04:23</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -94,63 +94,62 @@
 <span id="L23"><span class="lineNum">      23</span>                 :             :     uint32_t delay = 0U;           ///&lt; delay per motor step (µs)</span>
 <span id="L24"><span class="lineNum">      24</span>                 :             : </span>
 <span id="L25"><span class="lineNum">      25</span>                 :             :     /// @brief Binds mode to shared volume/occlusion/alarm modules.</span>
-<span id="L26"><span class="lineNum">      26</span>                 :<span class="tlaGNC tlaBgGNC">         101 :     InfusionMode(VolumeTracker &amp;vol, OcclusionMonitor &amp;occ, AlarmManager &amp;ala)</span></span>
-<span id="L27"><span class="lineNum">      27</span>                 :<span class="tlaGNC">         101 :         : volume(vol), occlu(occ), alarm(ala) {}</span></span>
+<span id="L26"><span class="lineNum">      26</span>                 :<span class="tlaGNC tlaBgGNC">         594 :     InfusionMode(VolumeTracker &amp;vol, OcclusionMonitor &amp;occ, AlarmManager &amp;ala)</span></span>
+<span id="L27"><span class="lineNum">      27</span>                 :<span class="tlaGNC">         594 :         : volume(vol), occlu(occ), alarm(ala) {}</span></span>
 <span id="L28"><span class="lineNum">      28</span>                 :             : </span>
-<span id="L29"><span class="lineNum">      29</span>                 :             :     // no-heap policy forbids delete on base ptr -&gt; deleting-dtor variant unreachable</span>
-<span id="L30"><span class="lineNum">      30</span>                 :             :     // LCOV_EXCL_LINE tells lcov to skip this line from coverage count (not a real gap)</span>
-<span id="L31"><span class="lineNum">      31</span>                 :             :     virtual ~InfusionMode() {} // LCOV_EXCL_LINE</span>
-<span id="L32"><span class="lineNum">      32</span>                 :             : </span>
-<span id="L33"><span class="lineNum">      33</span>                 :             :     /// @brief Runs one infusion cycle: compute -&gt; apply -&gt; check.</span>
-<span id="L34"><span class="lineNum">      34</span>                 :             :     void run();</span>
-<span id="L35"><span class="lineNum">      35</span>                 :             : </span>
-<span id="L36"><span class="lineNum">      36</span>                 :             :     /// @brief Mode-specific rate calculation.</span>
-<span id="L37"><span class="lineNum">      37</span>                 :             :     virtual float computeTargetRate() = 0;</span>
-<span id="L38"><span class="lineNum">      38</span>                 :             : </span>
-<span id="L39"><span class="lineNum">      39</span>                 :             :     /// @brief Applies rate to stepper.</span>
-<span id="L40"><span class="lineNum">      40</span>                 :             :     /// @param rate Target rate, mL/hr.</span>
-<span id="L41"><span class="lineNum">      41</span>                 :             :     void applyRate(float rate);</span>
-<span id="L42"><span class="lineNum">      42</span>                 :             : </span>
-<span id="L43"><span class="lineNum">      43</span>                 :             :     /// @brief Checks volume/occlusion and raises alarms if needed.</span>
-<span id="L44"><span class="lineNum">      44</span>                 :             :     /// @param rate Current rate, mL/hr.</span>
-<span id="L45"><span class="lineNum">      45</span>                 :             :     void checkAlarm(float rate);</span>
-<span id="L46"><span class="lineNum">      46</span>                 :             : };</span>
-<span id="L47"><span class="lineNum">      47</span>                 :             : </span>
-<span id="L48"><span class="lineNum">      48</span>                 :             : /// @brief Fixed-rate infusion mode.</span>
-<span id="L49"><span class="lineNum">      49</span>                 :             : class ConstantRateMode : public InfusionMode {</span>
-<span id="L50"><span class="lineNum">      50</span>                 :             :     public:</span>
-<span id="L51"><span class="lineNum">      51</span>                 :             :     float setrate;   ///&lt; fixed target rate, mL/hr</span>
-<span id="L52"><span class="lineNum">      52</span>                 :             : </span>
-<span id="L53"><span class="lineNum">      53</span>                 :             :     /// @brief Sets a fixed infusion rate.</span>
-<span id="L54"><span class="lineNum">      54</span>                 :<span class="tlaGNC">          50 :     ConstantRateMode(float rate, VolumeTracker &amp;vt, OcclusionMonitor &amp;om, AlarmManager &amp;am)</span></span>
-<span id="L55"><span class="lineNum">      55</span>                 :<span class="tlaGNC">          50 :         : InfusionMode(vt, om, am), setrate(rate) {}</span></span>
-<span id="L56"><span class="lineNum">      56</span>                 :             : </span>
-<span id="L57"><span class="lineNum">      57</span>                 :             :     float computeTargetRate() override;</span>
-<span id="L58"><span class="lineNum">      58</span>                 :             : };</span>
-<span id="L59"><span class="lineNum">      59</span>                 :             : </span>
-<span id="L60"><span class="lineNum">      60</span>                 :             : /// @brief Step-wise ramping infusion mode, rate increases until capped at fin.</span>
-<span id="L61"><span class="lineNum">      61</span>                 :             : class LinearRampMode : public InfusionMode {</span>
-<span id="L62"><span class="lineNum">      62</span>                 :             :     public:</span>
-<span id="L63"><span class="lineNum">      63</span>                 :             :     float initial;              ///&lt; starting rate, mL/hr</span>
-<span id="L64"><span class="lineNum">      64</span>                 :             :     float incr;                 ///&lt; rate increase per step</span>
-<span id="L65"><span class="lineNum">      65</span>                 :             :     float fin;                  ///&lt; max rate cap, mL/hr</span>
-<span id="L66"><span class="lineNum">      66</span>                 :             :     float current_lvl;          ///&lt; current rate level</span>
-<span id="L67"><span class="lineNum">      67</span>                 :             :     float tot;                  ///&lt; remaining volume to infuse</span>
-<span id="L68"><span class="lineNum">      68</span>                 :             :     float total_volume;         ///&lt; original total volume (for RESET)</span>
-<span id="L69"><span class="lineNum">      69</span>                 :             :     int64_t last_step_ms_ = 0;  ///&lt; uptime of last rate step-up</span>
-<span id="L70"><span class="lineNum">      70</span>                 :             :     static constexpr int64_t step_interval_ms_ = 60000;  ///&lt; time between steps (ms)</span>
-<span id="L71"><span class="lineNum">      71</span>                 :             : </span>
-<span id="L72"><span class="lineNum">      72</span>                 :             :     /// @brief Sets ramp start/increment/cap and total volume.</span>
-<span id="L73"><span class="lineNum">      73</span>                 :<span class="tlaGNC">          51 :     LinearRampMode(float st, float in, float fi, float total,</span></span>
-<span id="L74"><span class="lineNum">      74</span>                 :             :                    VolumeTracker &amp;vt, OcclusionMonitor &amp;om, AlarmManager &amp;am)</span>
-<span id="L75"><span class="lineNum">      75</span>                 :<span class="tlaGNC">         102 :         : InfusionMode(vt, om, am), initial(st), incr(in), fin(fi),</span></span>
-<span id="L76"><span class="lineNum">      76</span>                 :<span class="tlaGNC">          51 :           current_lvl(st), tot(total), total_volume(total) {}</span></span>
-<span id="L77"><span class="lineNum">      77</span>                 :             : </span>
-<span id="L78"><span class="lineNum">      78</span>                 :             :     float computeTargetRate() override;</span>
-<span id="L79"><span class="lineNum">      79</span>                 :             : };</span>
-<span id="L80"><span class="lineNum">      80</span>                 :             : </span>
-<span id="L81"><span class="lineNum">      81</span>                 :             : /// @brief Switches active mode without restart, resetting new mode's timing/volume state.</span>
-<span id="L82"><span class="lineNum">      82</span>                 :             : InfusionMode* switch_mode(InfusionMode* current, InfusionMode* next);</span>
+<span id="L29"><span class="lineNum">      29</span>                 :             :     // destructor</span>
+<span id="L30"><span class="lineNum">      30</span>                 :             :     virtual ~InfusionMode() {} // LCOV_EXCL_LINE</span>
+<span id="L31"><span class="lineNum">      31</span>                 :             : </span>
+<span id="L32"><span class="lineNum">      32</span>                 :             :     /// @brief Runs one infusion cycle: compute -&gt; apply -&gt; check.</span>
+<span id="L33"><span class="lineNum">      33</span>                 :             :     void run();</span>
+<span id="L34"><span class="lineNum">      34</span>                 :             : </span>
+<span id="L35"><span class="lineNum">      35</span>                 :             :     /// @brief Mode-specific rate calculation.</span>
+<span id="L36"><span class="lineNum">      36</span>                 :             :     virtual float computeTargetRate() = 0;</span>
+<span id="L37"><span class="lineNum">      37</span>                 :             : </span>
+<span id="L38"><span class="lineNum">      38</span>                 :             :     /// @brief Applies rate to stepper.</span>
+<span id="L39"><span class="lineNum">      39</span>                 :             :     /// @param rate Target rate, mL/hr.</span>
+<span id="L40"><span class="lineNum">      40</span>                 :             :     void applyRate(float rate);</span>
+<span id="L41"><span class="lineNum">      41</span>                 :             : </span>
+<span id="L42"><span class="lineNum">      42</span>                 :             :     /// @brief Checks volume/occlusion and raises alarms if needed.</span>
+<span id="L43"><span class="lineNum">      43</span>                 :             :     /// @param rate Current rate, mL/hr.</span>
+<span id="L44"><span class="lineNum">      44</span>                 :             :     void checkAlarm(float rate);</span>
+<span id="L45"><span class="lineNum">      45</span>                 :             : };</span>
+<span id="L46"><span class="lineNum">      46</span>                 :             : </span>
+<span id="L47"><span class="lineNum">      47</span>                 :             : /// @brief Fixed-rate infusion mode.</span>
+<span id="L48"><span class="lineNum">      48</span>                 :             : class ConstantRateMode : public InfusionMode {</span>
+<span id="L49"><span class="lineNum">      49</span>                 :             :     public:</span>
+<span id="L50"><span class="lineNum">      50</span>                 :             :     float setrate;   ///&lt; fixed target rate, mL/hr</span>
+<span id="L51"><span class="lineNum">      51</span>                 :             : </span>
+<span id="L52"><span class="lineNum">      52</span>                 :             :     /// @brief Sets a fixed infusion rate.</span>
+<span id="L53"><span class="lineNum">      53</span>                 :<span class="tlaGNC">         294 :     ConstantRateMode(float rate, VolumeTracker &amp;vt, OcclusionMonitor &amp;om, AlarmManager &amp;am)</span></span>
+<span id="L54"><span class="lineNum">      54</span>                 :<span class="tlaGNC">         294 :         : InfusionMode(vt, om, am), setrate(rate) {}</span></span>
+<span id="L55"><span class="lineNum">      55</span>                 :             : </span>
+<span id="L56"><span class="lineNum">      56</span>                 :             :     float computeTargetRate() override;</span>
+<span id="L57"><span class="lineNum">      57</span>                 :             : };</span>
+<span id="L58"><span class="lineNum">      58</span>                 :             : </span>
+<span id="L59"><span class="lineNum">      59</span>                 :             : /// @brief Step-wise ramping infusion mode, rate increases until capped at fin.</span>
+<span id="L60"><span class="lineNum">      60</span>                 :             : class LinearRampMode : public InfusionMode {</span>
+<span id="L61"><span class="lineNum">      61</span>                 :             :     public:</span>
+<span id="L62"><span class="lineNum">      62</span>                 :             :     float initial;              ///&lt; starting rate, mL/hr</span>
+<span id="L63"><span class="lineNum">      63</span>                 :             :     float incr;                 ///&lt; rate increase per step</span>
+<span id="L64"><span class="lineNum">      64</span>                 :             :     float fin;                  ///&lt; max rate cap, mL/hr</span>
+<span id="L65"><span class="lineNum">      65</span>                 :             :     float current_lvl;          ///&lt; current rate level</span>
+<span id="L66"><span class="lineNum">      66</span>                 :             :     float tot;                  ///&lt; remaining volume to infuse</span>
+<span id="L67"><span class="lineNum">      67</span>                 :             :     float total_volume;         ///&lt; original total volume (for RESET)</span>
+<span id="L68"><span class="lineNum">      68</span>                 :             :     int64_t last_step_ms_ = 0;  ///&lt; uptime of last rate step-up</span>
+<span id="L69"><span class="lineNum">      69</span>                 :             :     static constexpr int64_t step_interval_ms_ = 60000;  ///&lt; time between steps (ms)</span>
+<span id="L70"><span class="lineNum">      70</span>                 :             : </span>
+<span id="L71"><span class="lineNum">      71</span>                 :             :     /// @brief Sets ramp start/increment/cap and total volume.</span>
+<span id="L72"><span class="lineNum">      72</span>                 :<span class="tlaGNC">         300 :     LinearRampMode(float st, float in, float fi, float total,</span></span>
+<span id="L73"><span class="lineNum">      73</span>                 :             :                    VolumeTracker &amp;vt, OcclusionMonitor &amp;om, AlarmManager &amp;am)</span>
+<span id="L74"><span class="lineNum">      74</span>                 :<span class="tlaGNC">         600 :         : InfusionMode(vt, om, am), initial(st), incr(in), fin(fi),</span></span>
+<span id="L75"><span class="lineNum">      75</span>                 :<span class="tlaGNC">         300 :           current_lvl(st), tot(total), total_volume(total) {}</span></span>
+<span id="L76"><span class="lineNum">      76</span>                 :             : </span>
+<span id="L77"><span class="lineNum">      77</span>                 :             :     float computeTargetRate() override;</span>
+<span id="L78"><span class="lineNum">      78</span>                 :             : };</span>
+<span id="L79"><span class="lineNum">      79</span>                 :             : </span>
+<span id="L80"><span class="lineNum">      80</span>                 :             : /// @brief Switches active mode without restart, resetting new mode's timing/volume state.</span>
+<span id="L81"><span class="lineNum">      81</span>                 :             : InfusionMode* switch_mode(InfusionMode* current, InfusionMode* next);</span>
         </pre>
               </td>
             </tr>

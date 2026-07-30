@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-07-23 18:27:45</td>
+            <td class="headerValue">2026-07-29 10:04:23</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -71,31 +71,30 @@
 <pre class="source">
 <span id="L1"><span class="lineNum">       1</span>                 :             : #include &lt;cmath&gt;</span>
 <span id="L2"><span class="lineNum">       2</span>                 :             : #include &quot;occlusion.hpp&quot;</span>
-<span id="L3"><span class="lineNum">       3</span>                 :             : #ifdef UNIT_TEST</span>
-<span id="L4"><span class="lineNum">       4</span>                 :             : #include &quot;stub_file.hpp&quot;</span>
-<span id="L5"><span class="lineNum">       5</span>                 :             : #include &lt;cstdio&gt;</span>
-<span id="L6"><span class="lineNum">       6</span>                 :             : #define printk printf</span>
-<span id="L7"><span class="lineNum">       7</span>                 :             : #else</span>
-<span id="L8"><span class="lineNum">       8</span>                 :             : #include &quot;hardware.hpp&quot;</span>
+<span id="L3"><span class="lineNum">       3</span>                 :             : </span>
+<span id="L4"><span class="lineNum">       4</span>                 :             : #ifdef UNIT_TEST</span>
+<span id="L5"><span class="lineNum">       5</span>                 :             : #include &quot;stub_file.hpp&quot;</span>
+<span id="L6"><span class="lineNum">       6</span>                 :             : #include &lt;cstdio&gt;</span>
+<span id="L7"><span class="lineNum">       7</span>                 :             : #define printk printf</span>
+<span id="L8"><span class="lineNum">       8</span>                 :             : #else</span>
 <span id="L9"><span class="lineNum">       9</span>                 :             : #include &lt;zephyr/sys/printk.h&gt;</span>
 <span id="L10"><span class="lineNum">      10</span>                 :             : #endif</span>
 <span id="L11"><span class="lineNum">      11</span>                 :             : </span>
 <span id="L12"><span class="lineNum">      12</span>                 :             : /// @brief Checks pressure against threshold, logs status every 2s.</span>
 <span id="L13"><span class="lineNum">      13</span>                 :             : /// @return true if pressure is at/below threshold (no occlusion).</span>
-<span id="L14"><span class="lineNum">      14</span>                 :<span class="tlaGNC tlaBgGNC">          29 : auto OcclusionMonitor::isPressureNormal() -&gt; bool {</span></span>
-<span id="L15"><span class="lineNum">      15</span>                 :<span class="tlaGNC">          29 :     press = sensor_press();</span></span>
+<span id="L14"><span class="lineNum">      14</span>                 :<span class="tlaGNC tlaBgGNC">         162 : auto OcclusionMonitor::isPressureNormal() -&gt; bool {</span></span>
+<span id="L15"><span class="lineNum">      15</span>                 :<span class="tlaGNC">         162 :     press = sensor_press();</span></span>
 <span id="L16"><span class="lineNum">      16</span>                 :             : </span>
 <span id="L17"><span class="lineNum">      17</span>                 :             :     static int64_t last_print = 0;</span>
-<span id="L18"><span class="lineNum">      18</span>                 :<span class="tlaGNC">          29 :     int64_t now_ms = k_uptime_get();</span></span>
-<span id="L19"><span class="lineNum">      19</span>         [<span class="tlaGBC" title="Branch 0 was taken 2 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 27 times"> + </span>]:<span class="tlaGNC">          29 :     if (now_ms - last_print &gt;= 2000) {</span></span>
-<span id="L20"><span class="lineNum">      20</span>                 :<span class="tlaGNC">           2 :         printk(&quot;[PRESSURE] Current:%d.%02d kPa | Threshold:%d.%02d kPa\n&quot;,</span></span>
-<span id="L21"><span class="lineNum">      21</span>                 :<span class="tlaGNC">           2 :                (int)press, (int)(fabsf(press - (int)press) * 100),</span></span>
+<span id="L18"><span class="lineNum">      18</span>                 :<span class="tlaGNC">         162 :     int64_t now_ms = k_uptime_get();</span></span>
+<span id="L19"><span class="lineNum">      19</span>         [<span class="tlaGBC" title="Branch 0 was taken 12 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 150 times"> + </span>]:<span class="tlaGNC">         162 :     if (now_ms - last_print &gt;= 2000) {</span></span>
+<span id="L20"><span class="lineNum">      20</span>                 :<span class="tlaGNC">          12 :         printk(&quot;[PRESSURE] Current:%d.%02d kPa | Threshold:%d.%02d kPa\n&quot;,</span></span>
+<span id="L21"><span class="lineNum">      21</span>                 :<span class="tlaGNC">          12 :                (int)press, (int)(fabsf(press - (int)press) * 100),</span></span>
 <span id="L22"><span class="lineNum">      22</span>                 :             :                (int)thrshold, (int)(fabsf(thrshold - (int)thrshold) * 100));</span>
-<span id="L23"><span class="lineNum">      23</span>                 :<span class="tlaGNC">           2 :         last_print = now_ms;</span></span>
+<span id="L23"><span class="lineNum">      23</span>                 :<span class="tlaGNC">          12 :         last_print = now_ms;</span></span>
 <span id="L24"><span class="lineNum">      24</span>                 :             :     }</span>
-<span id="L25"><span class="lineNum">      25</span>                 :             : </span>
-<span id="L26"><span class="lineNum">      26</span>                 :<span class="tlaGNC">          29 :     return press &lt;= thrshold;</span></span>
-<span id="L27"><span class="lineNum">      27</span>                 :             : }</span>
+<span id="L25"><span class="lineNum">      25</span>                 :<span class="tlaGNC">         162 :     return press &lt;= thrshold;</span></span>
+<span id="L26"><span class="lineNum">      26</span>                 :             : }</span>
         </pre>
               </td>
             </tr>

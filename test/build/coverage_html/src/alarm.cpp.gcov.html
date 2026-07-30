@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-07-23 18:27:45</td>
+            <td class="headerValue">2026-07-29 10:04:23</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -72,44 +72,44 @@
 <span id="L1"><span class="lineNum">       1</span>                 :             : #include &quot;alarm.hpp&quot;</span>
 <span id="L2"><span class="lineNum">       2</span>                 :             : </span>
 <span id="L3"><span class="lineNum">       3</span>                 :             : /// @brief Registers an observer, up to MAX_OBSERVERS.</span>
-<span id="L4"><span class="lineNum">       4</span>                 :<span class="tlaGNC tlaBgGNC">          13 : void AlarmManager::add(AlarmObserver* obj) {</span></span>
-<span id="L5"><span class="lineNum">       5</span>         [<span class="tlaGBC" title="Branch 0 was taken 12 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 1 time"> + </span>]:<span class="tlaGNC">          13 :     if (count &lt; MAX_OBSERVERS) {</span></span>
-<span id="L6"><span class="lineNum">       6</span>                 :<span class="tlaGNC">          12 :         alarm[count] = obj;</span></span>
-<span id="L7"><span class="lineNum">       7</span>                 :<span class="tlaGNC">          12 :         count++;</span></span>
+<span id="L4"><span class="lineNum">       4</span>                 :<span class="tlaGNC tlaBgGNC">          78 : void AlarmManager::add(AlarmObserver* obj) {</span></span>
+<span id="L5"><span class="lineNum">       5</span>         [<span class="tlaGBC" title="Branch 0 was taken 72 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 6 times"> + </span>]:<span class="tlaGNC">          78 :     if (count &lt; MAX_OBSERVERS) {</span></span>
+<span id="L6"><span class="lineNum">       6</span>                 :<span class="tlaGNC">          72 :         alarm[count] = obj;</span></span>
+<span id="L7"><span class="lineNum">       7</span>                 :<span class="tlaGNC">          72 :         count++;</span></span>
 <span id="L8"><span class="lineNum">       8</span>                 :             :     }</span>
-<span id="L9"><span class="lineNum">       9</span>                 :<span class="tlaGNC">          13 : }</span></span>
+<span id="L9"><span class="lineNum">       9</span>                 :<span class="tlaGNC">          78 : }</span></span>
 <span id="L10"><span class="lineNum">      10</span>                 :             : </span>
 <span id="L11"><span class="lineNum">      11</span>                 :             : /// @brief Raises given alarm type and notifies all observers.</span>
-<span id="L12"><span class="lineNum">      12</span>                 :<span class="tlaGNC">          37 : void AlarmManager::notify(AlarmType type) {</span></span>
-<span id="L13"><span class="lineNum">      13</span>         [<span class="tlaGBC" title="Branch 0 was taken 10 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 27 times"> + </span>]:<span class="tlaGNC">          37 :     if (type == AlarmType::kVolume)    { volume_active = true; }</span></span>
-<span id="L14"><span class="lineNum">      14</span>         [<span class="tlaGBC" title="Branch 0 was taken 27 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 10 times"> + </span>]:<span class="tlaGNC">          37 :     if (type == AlarmType::kOcclusion) { occlusion_active = true; }</span></span>
+<span id="L12"><span class="lineNum">      12</span>                 :<span class="tlaGNC">          96 : void AlarmManager::notify(AlarmType type) {</span></span>
+<span id="L13"><span class="lineNum">      13</span>         [<span class="tlaGBC" title="Branch 0 was taken 60 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 36 times"> + </span>]:<span class="tlaGNC">          96 :     if (type == AlarmType::kVolume)    { volume_active = true; }</span></span>
+<span id="L14"><span class="lineNum">      14</span>         [<span class="tlaGBC" title="Branch 0 was taken 36 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 60 times"> + </span>]:<span class="tlaGNC">          96 :     if (type == AlarmType::kOcclusion) { occlusion_active = true; }</span></span>
 <span id="L15"><span class="lineNum">      15</span>                 :             : </span>
-<span id="L16"><span class="lineNum">      16</span>         [<span class="tlaGBC" title="Branch 0 was taken 6 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 37 times"> + </span>]:<span class="tlaGNC">          43 :     for (uint8_t i = 0U; i &lt; count; i++) {</span></span>
-<span id="L17"><span class="lineNum">      17</span>                 :<span class="tlaGNC">           6 :         alarm[i]-&gt;update(true);</span></span>
+<span id="L16"><span class="lineNum">      16</span>         [<span class="tlaGBC" title="Branch 0 was taken 36 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 96 times"> + </span>]:<span class="tlaGNC">         132 :     for (uint8_t i = 0U; i &lt; count; i++) {</span></span>
+<span id="L17"><span class="lineNum">      17</span>                 :<span class="tlaGNC">          36 :         alarm[i]-&gt;update(true);</span></span>
 <span id="L18"><span class="lineNum">      18</span>                 :             :     }</span>
-<span id="L19"><span class="lineNum">      19</span>                 :<span class="tlaGNC">          37 :     noti_count++;</span></span>
-<span id="L20"><span class="lineNum">      20</span>                 :<span class="tlaGNC">          37 : }</span></span>
+<span id="L19"><span class="lineNum">      19</span>                 :<span class="tlaGNC">          96 :     noti_count++;</span></span>
+<span id="L20"><span class="lineNum">      20</span>                 :<span class="tlaGNC">          96 : }</span></span>
 <span id="L21"><span class="lineNum">      21</span>                 :             : </span>
 <span id="L22"><span class="lineNum">      22</span>                 :             : /// @brief Clears given alarm type; notifies observers only once all alarms are clear.</span>
-<span id="L23"><span class="lineNum">      23</span>                 :<span class="tlaGNC">          25 : void AlarmManager::clear(AlarmType type) {</span></span>
-<span id="L24"><span class="lineNum">      24</span>         [<span class="tlaGBC" title="Branch 0 was taken 22 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 3 times"> + </span>]:<span class="tlaGNC">          25 :     if (type == AlarmType::kVolume)    { volume_active = false; }</span></span>
-<span id="L25"><span class="lineNum">      25</span>         [<span class="tlaGBC" title="Branch 0 was taken 3 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 22 times"> + </span>]:<span class="tlaGNC">          25 :     if (type == AlarmType::kOcclusion) { occlusion_active = false; }</span></span>
+<span id="L23"><span class="lineNum">      23</span>                 :<span class="tlaGNC">         252 : void AlarmManager::clear(AlarmType type) {</span></span>
+<span id="L24"><span class="lineNum">      24</span>         [<span class="tlaGBC" title="Branch 0 was taken 120 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 132 times"> + </span>]:<span class="tlaGNC">         252 :     if (type == AlarmType::kVolume)    { volume_active = false; }</span></span>
+<span id="L25"><span class="lineNum">      25</span>         [<span class="tlaGBC" title="Branch 0 was taken 132 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 120 times"> + </span>]:<span class="tlaGNC">         252 :     if (type == AlarmType::kOcclusion) { occlusion_active = false; }</span></span>
 <span id="L26"><span class="lineNum">      26</span>                 :             : </span>
-<span id="L27"><span class="lineNum">      27</span>   [<span class="tlaGBC" title="Branch 0 was taken 24 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 1 time"> + </span><span class="tlaGBC" title="Branch 2 was taken 16 times"> + </span><span class="tlaGBC" title="Branch 3 was taken 8 times"> + </span>]:<span class="tlaGNC">          25 :     if (!volume_active &amp;&amp; !occlusion_active) {</span></span>
-<span id="L28"><span class="lineNum">      28</span>         [<span class="tlaGBC" title="Branch 0 was taken 4 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 16 times"> + </span>]:<span class="tlaGNC">          20 :         for (uint8_t i = 0U; i &lt; count; i++) {</span></span>
-<span id="L29"><span class="lineNum">      29</span>                 :<span class="tlaGNC">           4 :             alarm[i]-&gt;update(false);</span></span>
+<span id="L27"><span class="lineNum">      27</span>   [<span class="tlaGBC" title="Branch 0 was taken 222 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 30 times"> + </span><span class="tlaGBC" title="Branch 2 was taken 216 times"> + </span><span class="tlaGBC" title="Branch 3 was taken 6 times"> + </span>]:<span class="tlaGNC">         252 :     if (!volume_active &amp;&amp; !occlusion_active) {</span></span>
+<span id="L28"><span class="lineNum">      28</span>         [<span class="tlaGBC" title="Branch 0 was taken 24 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 216 times"> + </span>]:<span class="tlaGNC">         240 :         for (uint8_t i = 0U; i &lt; count; i++) {</span></span>
+<span id="L29"><span class="lineNum">      29</span>                 :<span class="tlaGNC">          24 :             alarm[i]-&gt;update(false);</span></span>
 <span id="L30"><span class="lineNum">      30</span>                 :             :         }</span>
 <span id="L31"><span class="lineNum">      31</span>                 :             :     }</span>
-<span id="L32"><span class="lineNum">      32</span>                 :<span class="tlaGNC">          25 : }</span></span>
+<span id="L32"><span class="lineNum">      32</span>                 :<span class="tlaGNC">         252 : }</span></span>
 <span id="L33"><span class="lineNum">      33</span>                 :             : </span>
 <span id="L34"><span class="lineNum">      34</span>                 :             : /// @brief Clears all alarms and notifies observers.</span>
-<span id="L35"><span class="lineNum">      35</span>                 :<span class="tlaGNC">           3 : void AlarmManager::clearAll() {</span></span>
-<span id="L36"><span class="lineNum">      36</span>                 :<span class="tlaGNC">           3 :     volume_active = false;</span></span>
-<span id="L37"><span class="lineNum">      37</span>                 :<span class="tlaGNC">           3 :     occlusion_active = false;</span></span>
-<span id="L38"><span class="lineNum">      38</span>         [<span class="tlaGBC" title="Branch 0 was taken 2 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 3 times"> + </span>]:<span class="tlaGNC">           5 :     for (uint8_t i = 0U; i &lt; count; i++) {</span></span>
-<span id="L39"><span class="lineNum">      39</span>                 :<span class="tlaGNC">           2 :         alarm[i]-&gt;update(false);</span></span>
+<span id="L35"><span class="lineNum">      35</span>                 :<span class="tlaGNC">          18 : void AlarmManager::clearAll() {</span></span>
+<span id="L36"><span class="lineNum">      36</span>                 :<span class="tlaGNC">          18 :     volume_active = false;</span></span>
+<span id="L37"><span class="lineNum">      37</span>                 :<span class="tlaGNC">          18 :     occlusion_active = false;</span></span>
+<span id="L38"><span class="lineNum">      38</span>         [<span class="tlaGBC" title="Branch 0 was taken 12 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 18 times"> + </span>]:<span class="tlaGNC">          30 :     for (uint8_t i = 0U; i &lt; count; i++) {</span></span>
+<span id="L39"><span class="lineNum">      39</span>                 :<span class="tlaGNC">          12 :         alarm[i]-&gt;update(false);</span></span>
 <span id="L40"><span class="lineNum">      40</span>                 :             :     }</span>
-<span id="L41"><span class="lineNum">      41</span>                 :<span class="tlaGNC">           3 : }</span></span>
+<span id="L41"><span class="lineNum">      41</span>                 :<span class="tlaGNC">          18 : }</span></span>
         </pre>
               </td>
             </tr>

@@ -1,4 +1,4 @@
-name: Syringe Pump CI
+name: Infusion Pump CI
 
 on:
   push:
@@ -17,10 +17,9 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y cmake ninja-build lcov g++ libgtest-dev
-
+          sudo apt-get install -y cmake ninja-build lcov g++
       - name: Configure host/native test build
-        run: cmake -B build_tests -S tests -DCMAKE_BUILD_TYPE=Debug -DENABLE_COVERAGE=ON -GNinja
+        run: cmake -B build_tests -S tests -DCMAKE_BUILD_TYPE=Debug -GNinja
 
       - name: Build tests
         run: cmake --build build_tests

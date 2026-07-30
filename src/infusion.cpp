@@ -39,7 +39,7 @@
 
         steps_per_sec = steps_per_ml * ml_per_sec; // we calculate steps per sec
         motor_start();
-
+        
         delay = static_cast<uint32_t>(usec_per_sec / steps_per_sec);        // converst steps per second into microseconds
         set_delay_rate(delay);
     }
@@ -61,7 +61,7 @@
         }
 
         // Occlusion check: pressure out of range -> alert, else clear only occlusion
-        if (occlu.isPressureNormal()) {
+        if (!occlu.isPressureNormal()) {
             printk("[ALARM] Occlusion detected - pressure out of range\n");
             alarm.notify(AlarmType::kOcclusion);
         } else {

@@ -7,7 +7,7 @@ class OcclusionMonitor {
     public:
     float press;   ///< last read pressure
 
-    static constexpr float thrshold = 100.56F;  ///< occlusion threshold
+    static constexpr float thrshold = 99.56F;  ///< occlusion threshold
 
     /// @brief Checks current pressure against threshold.
     /// @return true if pressure is at/below threshold (no occlusion).

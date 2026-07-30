@@ -30,7 +30,7 @@ private:
     static constexpr uint8_t MAX_OBSERVERS = 4U;
     AlarmObserver* alarm[MAX_OBSERVERS] = {nullptr};
     uint8_t count = 0U;
-    uint8_t n 
+    uint8_t noti_count = 0;
 
     bool volume_active = false;
     bool occlusion_active = false;

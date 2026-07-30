@@ -10,14 +10,12 @@
 #include "hardware.hpp"
 #include <zephyr/sys/printk.h>
 #endif
- 
-static constexpr float ms_per_hr = 3600000.0F;    ///< ms in an hour
-static constexpr float accuracy_lvl = 5.0F;        ///< max allowed deviation, %
-static constexpr float tot_percentage = 100.0F;    ///< for % conversion
 
-/// @brief Compares delivered volume (encoder ticks) to expected volume for given rate.
-/// @param rate Target rate, mL/hr.
-/// @return true if deviation is within accuracy_lvl.
+static constexpr float ms_per_hr = 3600000.0F;
+static constexpr float accuracy_lvl = 5.0F;
+static constexpr float tot_percentage = 100.0F;
+static constexpr int64_t grace_ms = 3000;   ///< skip data for 3s after start
+
 auto VolumeTracker::cal(float rate) -> bool {
     ticks = fabsf(static_cast<float>(get_encoder_position()) - encoder_offset);
 
@@ -25,7 +23,7 @@ auto VolumeTracker::cal(float rate) -> bool {
     if (last_calc_ms == 0) { last_calc_ms = now_ms; }
     float dt_hr = static_cast<float>(now_ms - last_calc_ms) / ms_per_hr;
     expected += rate * dt_hr;
-    last_calc_ms = now_ms; 
+    last_calc_ms = now_ms;
 
     actual = ticks * ml_per_tick;
 
@@ -33,7 +31,8 @@ auto VolumeTracker::cal(float rate) -> bool {
 
     deviation = fabsf(expected - actual) / expected * tot_percentage;
 
-    static int64_t last_print = 0;
+    if (now_ms - start_ms < grace_ms) { return true; }
+
     if (now_ms - last_print >= 2000) {
         printk("[STATUS] Rate:%d mL/hr | Delivered:%d.%02d mL | Expected:%d.%02d mL | Dev:%d%%\n",
                (int)rate,
@@ -42,5 +41,5 @@ auto VolumeTracker::cal(float rate) -> bool {
                (int)deviation);
         last_print = now_ms;
     }
-    return deviation >= accuracy_lvl;
+    return deviation < accuracy_lvl;
 }
