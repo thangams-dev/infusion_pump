@@ -1,0 +1,259 @@
+Start testing: Jul 30 12:31 IST
+----------------------------------------------------------
+1/1 Testing: infusion_test
+1/1 Test: infusion_test
+Command: "/home/thanga-inc-5829/Documents/Infusion_pump/build_tests/infusion_test"
+Directory: /home/thanga-inc-5829/Documents/Infusion_pump/build_tests
+"infusion_test" start time: Jul 30 12:31 IST
+Output:
+----------------------------------------------------------
+Running main() from /home/thanga-inc-5829/Documents/Infusion_pump/build_tests/_deps/googletest-src/googletest/src/gtest_main.cc
+[==========] Running 48 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 48 tests from InfusionTest
+[ RUN      ] InfusionTest.OcclusionMonitor_NormalPressure_ReturnsTrue
+[       OK ] InfusionTest.OcclusionMonitor_NormalPressure_ReturnsTrue (0 ms)
+[ RUN      ] InfusionTest.OcclusionMonitor_EqualPressure_ReturnTrue
+[       OK ] InfusionTest.OcclusionMonitor_EqualPressure_ReturnTrue (0 ms)
+[ RUN      ] InfusionTest.OcclusionMonitor_HighPressure_ReturnsFalse
+[       OK ] InfusionTest.OcclusionMonitor_HighPressure_ReturnsFalse (0 ms)
+[ RUN      ] InfusionTest.OcclusionMonitor_SecondCallWithinWindow_NoReprint
+[       OK ] InfusionTest.OcclusionMonitor_SecondCallWithinWindow_NoReprint (0 ms)
+[ RUN      ] InfusionTest.OcclusionMonitor_CustomThreshold
+[       OK ] InfusionTest.OcclusionMonitor_CustomThreshold (0 ms)
+[ RUN      ] InfusionTest.AlarmManager_ClearOcclusion_ShortCircuitsOnVolume
+[       OK ] InfusionTest.AlarmManager_ClearOcclusion_ShortCircuitsOnVolume (0 ms)
+[ RUN      ] InfusionTest.AlarmObserver_VirtualDestructor_Coverage
+[       OK ] InfusionTest.AlarmObserver_VirtualDestructor_Coverage (0 ms)
+[ RUN      ] InfusionTest.AlarmManager_TwoObservers_NotifyCountOne
+[       OK ] InfusionTest.AlarmManager_TwoObservers_NotifyCountOne (0 ms)
+[ RUN      ] InfusionTest.AlarmManager_NoObservers_CountZero
+[       OK ] InfusionTest.AlarmManager_NoObservers_CountZero (0 ms)
+[ RUN      ] InfusionTest.AlarmManager_ClearAll_NoError
+[       OK ] InfusionTest.AlarmManager_ClearAll_NoError (0 ms)
+[ RUN      ] InfusionTest.AlarmManager_ClearAll_NoObservers
+[       OK ] InfusionTest.AlarmManager_ClearAll_NoObservers (0 ms)
+[ RUN      ] InfusionTest.AlarmManager_ClearVolumeWhileOcclusionActive
+[       OK ] InfusionTest.AlarmManager_ClearVolumeWhileOcclusionActive (0 ms)
+[ RUN      ] InfusionTest.AlarmManager_ClearBothAlarmsNotifiesObserver
+[       OK ] InfusionTest.AlarmManager_ClearBothAlarmsNotifiesObserver (0 ms)
+[ RUN      ] InfusionTest.AlarmManager_ClearOcclusionType_Branch
+[       OK ] InfusionTest.AlarmManager_ClearOcclusionType_Branch (0 ms)
+[ RUN      ] InfusionTest.AlarmManager_NotifyOcclusionType_Branch
+[       OK ] InfusionTest.AlarmManager_NotifyOcclusionType_Branch (0 ms)
+[ RUN      ] InfusionTest.AlarmManager_AddBeyondMax_Ignored
+[       OK ] InfusionTest.AlarmManager_AddBeyondMax_Ignored (0 ms)
+[ RUN      ] InfusionTest.AlarmManager_AllObservers_UpdateExecution
+[       OK ] InfusionTest.AlarmManager_AllObservers_UpdateExecution (0 ms)
+[ RUN      ] InfusionTest.AlarmManager_ClearAll_ResetsFlags
+[       OK ] InfusionTest.AlarmManager_ClearAll_ResetsFlags (0 ms)
+[ RUN      ] InfusionTest.VolumeTracker_ZeroTime_ReturnsTrue
+[       OK ] InfusionTest.VolumeTracker_ZeroTime_ReturnsTrue (0 ms)
+[ RUN      ] InfusionTest.VolumeTracker_TimeElapsed_ReturnsDeviation
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:100.00 mL | Dev:100%
+[       OK ] InfusionTest.VolumeTracker_TimeElapsed_ReturnsDeviation (0 ms)
+[ RUN      ] InfusionTest.VolumeTracker_CorrectTicks_ReturnsTrue
+[STATUS] Rate:100 mL/hr | Delivered:100.00 mL | Expected:100.00 mL | Dev:0%
+[       OK ] InfusionTest.VolumeTracker_CorrectTicks_ReturnsTrue (0 ms)
+[ RUN      ] InfusionTest.VolumeTracker_EarlyElapsed_ReturnsTrue
+[       OK ] InfusionTest.VolumeTracker_EarlyElapsed_ReturnsTrue (0 ms)
+[ RUN      ] InfusionTest.VolumeTracker_AlreadyCorrected_SkipsRecalc
+[       OK ] InfusionTest.VolumeTracker_AlreadyCorrected_SkipsRecalc (0 ms)
+[ RUN      ] InfusionTest.VolumeTracker_OffsetCapture_TicksReflectDelta
+[PRESSURE] Current:0.00 kPa | Threshold:99.55 kPa
+[       OK ] InfusionTest.VolumeTracker_OffsetCapture_TicksReflectDelta (0 ms)
+[ RUN      ] InfusionTest.VolumeTracker_SecondCallWithinWindow_NoReprint
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:0.01 mL | Dev:100%
+[       OK ] InfusionTest.VolumeTracker_SecondCallWithinWindow_NoReprint (0 ms)
+[ RUN      ] InfusionTest.VolumeTracker_NearZeroExpected_ReturnsTrue
+[       OK ] InfusionTest.VolumeTracker_NearZeroExpected_ReturnsTrue (0 ms)
+[ RUN      ] InfusionTest.VolumeTracker_HighDeviation_TriggersAlarmCondition
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:100.00 mL | Dev:100%
+[       OK ] InfusionTest.VolumeTracker_HighDeviation_TriggersAlarmCondition (0 ms)
+[ RUN      ] InfusionTest.InfusionMode_AlarmThrottle_FalseBranch
+[STATUS] Rate:100 mL/hr | Delivered:100.00 mL | Expected:100.00 mL | Dev:0%
+[       OK ] InfusionTest.InfusionMode_AlarmThrottle_FalseBranch (0 ms)
+[ RUN      ] InfusionTest.InfusionMode_VolumeAlarm_Coverage
+[STATUS] Rate:100 mL/hr | Delivered:100.00 mL | Expected:100.00 mL | Dev:0%
+[STATUS] Rate:100 mL/hr | Delivered:100.00 mL | Expected:100.06 mL | Dev:0%
+[PRESSURE] Current:0.00 kPa | Threshold:99.55 kPa
+[       OK ] InfusionTest.InfusionMode_VolumeAlarm_Coverage (0 ms)
+[ RUN      ] InfusionTest.VolumeAlertThrottled
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:100.00 mL | Dev:100%
+[ALARM] Volume deviation exceeded 5%
+[       OK ] InfusionTest.VolumeAlertThrottled (0 ms)
+[ RUN      ] InfusionTest.ConstantRateMode_ComputeRate_Returns100
+[       OK ] InfusionTest.ConstantRateMode_ComputeRate_Returns100 (0 ms)
+[ RUN      ] InfusionTest.LinearRampMode_FirstCall_ReturnsInitial
+[       OK ] InfusionTest.LinearRampMode_FirstCall_ReturnsInitial (0 ms)
+[ RUN      ] InfusionTest.LinearRampMode_VolumeComplete_StopsMotor
+>> Infusion completed
+[       OK ] InfusionTest.LinearRampMode_VolumeComplete_StopsMotor (0 ms)
+[ RUN      ] InfusionTest.LinearRampMode_VolumeNotComplete_NoStop
+[       OK ] InfusionTest.LinearRampMode_VolumeNotComplete_NoStop (0 ms)
+[ RUN      ] InfusionTest.LinearRampMode_AfterInterval_Increments
+[RAMP] Rate:12 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:90001 rate:12
+[       OK ] InfusionTest.LinearRampMode_AfterInterval_Increments (0 ms)
+[ RUN      ] InfusionTest.LinearRampMode_OverMax_CapsAtFin
+[RAMP] Rate:14 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:180002 rate:14
+[RAMP] Rate:16 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:270003 rate:16
+[RAMP] Rate:18 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:360004 rate:18
+[RAMP] Rate:20 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:450005 rate:20
+[RAMP] Rate:22 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:540006 rate:22
+[RAMP] Rate:24 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:630007 rate:24
+[RAMP] Rate:26 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:720008 rate:26
+[RAMP] Rate:28 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:810009 rate:28
+[RAMP] Rate:30 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:900010 rate:30
+[RAMP] Rate:32 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:990011 rate:32
+[RAMP] Rate:34 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:1080012 rate:34
+[RAMP] Rate:36 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:1170013 rate:36
+[RAMP] Rate:38 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:1260014 rate:38
+[RAMP] Rate:40 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:1350015 rate:40
+[RAMP] Rate:42 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:1440016 rate:42
+[RAMP] Rate:44 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:1530017 rate:44
+[RAMP] Rate:46 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:1620018 rate:46
+[RAMP] Rate:48 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:1710019 rate:48
+[RAMP] Rate:50 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:1800020 rate:50
+[RAMP] Rate:52 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:1890021 rate:52
+[RAMP] Rate:54 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:1980022 rate:54
+[RAMP] Rate:56 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:2070023 rate:56
+[RAMP] Rate:58 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:2160024 rate:58
+[RAMP] Rate:60 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:2250025 rate:60
+[RAMP] Rate:62 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:2340026 rate:62
+[RAMP] Rate:64 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:2430027 rate:64
+[RAMP] Rate:66 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:2520028 rate:66
+[RAMP] Rate:68 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:2610029 rate:68
+[RAMP] Rate:70 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:2700030 rate:70
+[RAMP] Rate:72 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:2790031 rate:72
+[RAMP] Rate:74 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:2880032 rate:74
+[RAMP] Rate:76 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:2970033 rate:76
+[RAMP] Rate:78 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:3060034 rate:78
+[RAMP] Rate:80 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:3150035 rate:80
+[RAMP] Rate:82 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:3240036 rate:82
+[RAMP] Rate:84 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:3330037 rate:84
+[RAMP] Rate:86 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:3420038 rate:86
+[RAMP] Rate:88 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:3510039 rate:88
+[RAMP] Rate:90 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:3600040 rate:90
+[RAMP] Rate:92 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:3690041 rate:92
+[RAMP] Rate:94 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:3780042 rate:94
+[RAMP] Rate:96 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:3870043 rate:96
+[RAMP] Rate:98 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:3960044 rate:98
+[RAMP] Rate:100 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:4050045 rate:100
+[RAMP] Rate:100 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:4140046 rate:100
+[RAMP] Rate:100 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:4230047 rate:100
+[RAMP] Rate:100 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:4320048 rate:100
+[RAMP] Rate:100 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:4410049 rate:100
+[RAMP] Rate:100 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:4500050 rate:100
+[RAMP] Rate:100 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:4590051 rate:100
+[RAMP] Rate:100 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:4680052 rate:100
+[RAMP] Rate:100 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:4770053 rate:100
+[RAMP] Rate:100 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:4860054 rate:100
+[RAMP] Rate:100 mL/hr | Remaining:99.99 mL
+[DATA] time_ms:4950055 rate:100
+[RAMP] Rate:100 mL/hr | Remaining:99.98 mL
+[DATA] time_ms:5040056 rate:100
+[RAMP] Rate:100 mL/hr | Remaining:99.98 mL
+[DATA] time_ms:5130057 rate:100
+[RAMP] Rate:100 mL/hr | Remaining:99.98 mL
+[DATA] time_ms:5220058 rate:100
+[RAMP] Rate:100 mL/hr | Remaining:99.98 mL
+[DATA] time_ms:5310059 rate:100
+[RAMP] Rate:100 mL/hr | Remaining:99.98 mL
+[DATA] time_ms:5400060 rate:100
+[       OK ] InfusionTest.LinearRampMode_OverMax_CapsAtFin (0 ms)
+[ RUN      ] InfusionTest.LinearRampMode_SecondCallWithinWindow_NoReprint
+[       OK ] InfusionTest.LinearRampMode_SecondCallWithinWindow_NoReprint (0 ms)
+[ RUN      ] InfusionTest.InfusionMode_SwitchMode_ComputesCorrectRate
+[       OK ] InfusionTest.InfusionMode_SwitchMode_ComputesCorrectRate (0 ms)
+[ RUN      ] InfusionTest.InfusionMode_OcclusionAlarm_NotifyCount1
+[ALARM] Occlusion detected - pressure out of range
+[       OK ] InfusionTest.InfusionMode_OcclusionAlarm_NotifyCount1 (0 ms)
+[ RUN      ] InfusionTest.InfusionMode_ApplyRate_NoError
+[       OK ] InfusionTest.InfusionMode_ApplyRate_NoError (0 ms)
+[ RUN      ] InfusionTest.InfusionMode_NoPressure_NoAlarm
+[       OK ] InfusionTest.InfusionMode_NoPressure_NoAlarm (0 ms)
+[ RUN      ] InfusionTest.InfusionMode_ZeroRate_NoAction
+[       OK ] InfusionTest.InfusionMode_ZeroRate_NoAction (0 ms)
+[ RUN      ] InfusionTest.ModeSwitch_SamePointer_ReturnsSame
+[       OK ] InfusionTest.ModeSwitch_SamePointer_ReturnsSame (0 ms)
+[ RUN      ] InfusionTest.ModeSwitch_NoRestart_ResetsNewModeState
+[       OK ] InfusionTest.ModeSwitch_NoRestart_ResetsNewModeState (0 ms)
+[ RUN      ] InfusionTest.LinearRampMode_TotalVolumeDepleted_CompletesInfusion
+>> Infusion completed
+[       OK ] InfusionTest.LinearRampMode_TotalVolumeDepleted_CompletesInfusion (0 ms)
+[ RUN      ] InfusionTest.InfusionMode_NearZeroRate_SkipsMotorStart
+[       OK ] InfusionTest.InfusionMode_NearZeroRate_SkipsMotorStart (0 ms)
+[ RUN      ] InfusionTest.InfusionMode_AlarmThrottle_Execution
+[STATUS] Rate:100 mL/hr | Delivered:0.00 mL | Expected:100.00 mL | Dev:100%
+[ALARM] Volume deviation exceeded 5%
+[       OK ] InfusionTest.InfusionMode_AlarmThrottle_Execution (0 ms)
+[ RUN      ] InfusionTest.Hardware_MotorStopStart_NoError
+[       OK ] InfusionTest.Hardware_MotorStopStart_NoError (0 ms)
+[----------] 48 tests from InfusionTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 48 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 48 tests.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"infusion_test" end time: Jul 30 12:31 IST
+"infusion_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jul 30 12:31 IST

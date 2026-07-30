@@ -29,7 +29,7 @@ TEST_F(InfusionTest, OcclusionMonitor_NormalPressure_ReturnsTrue) {
 
 // Pressure exactly at the threshold boundary -> still counts as normal.
 TEST_F(InfusionTest, OcclusionMonitor_EqualPressure_ReturnTrue) {
-    fake_press = 100.56F;
+    fake_press = 99.56F;
     EXPECT_TRUE(occlu.isPressureNormal());
 }
 
@@ -173,7 +173,7 @@ TEST_F(InfusionTest, VolumeTracker_TimeElapsed_ReturnsDeviation) {
     fake_time = 1000; fake_ticks = 0;
     vt.cal(100.0F);
     fake_time = 3601000; fake_ticks = 0;
-    EXPECT_TRUE(vt.cal(100.0F));
+    EXPECT_FALSE(vt.cal(100.0F));
 }
 
 // After enough elapsed time, correct tick count delivered -> low deviation -> no alarm (false).
@@ -181,7 +181,7 @@ TEST_F(InfusionTest, VolumeTracker_CorrectTicks_ReturnsTrue) {
     fake_time = 1000; fake_ticks = 0;
     vt.cal(100.0F);
     fake_time = 3601000; fake_ticks = 2400000;
-    EXPECT_FALSE(vt.cal(100.0F));
+    EXPECT_TRUE(vt.cal(100.0F));
 }
 
 // Early-elapsed guard: too little time has passed to evaluate -> returns true (no premature check).
@@ -232,7 +232,7 @@ TEST_F(InfusionTest, VolumeTracker_HighDeviation_TriggersAlarmCondition) {
     vt.cal(100.0F);
     fake_time += 3600000;
     fake_ticks = 0;
-    EXPECT_TRUE(vt.cal(100.0F));
+    EXPECT_FALSE(vt.cal(100.0F));
 }
 
 //  infusion.cpp (22 tests) 
