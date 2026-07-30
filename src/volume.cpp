@@ -31,8 +31,6 @@ auto VolumeTracker::cal(float rate) -> bool {
 
     deviation = fabsf(expected - actual) / expected * tot_percentage;
 
-    if (now_ms - start_ms < grace_ms) { return true; }
-
     if (now_ms - last_print >= 2000) {
         printk("[STATUS] Rate:%d mL/hr | Delivered:%d.%02d mL | Expected:%d.%02d mL | Dev:%d%%\n",
                (int)rate,

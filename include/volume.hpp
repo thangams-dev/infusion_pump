@@ -11,9 +11,7 @@ public:
     float deviation = 0.0F;           ///< % diff, expected vs actual
     float actual = 0.0F;              ///< mL actually delivered
     int64_t last_calc_ms = 0;         ///< last check timestamp
-    int64_t start_ms = 0;             ///< set on every START, drives grace period
     int64_t last_print = 0;           ///< last status-print timestamp
-
     static constexpr float ml_per_rotation    = 0.1F;
     static constexpr float ticks_per_rotation = 2400.0F;
     static constexpr float ml_per_tick = ml_per_rotation / ticks_per_rotation;

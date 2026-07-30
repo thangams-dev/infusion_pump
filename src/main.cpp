@@ -111,7 +111,6 @@ int main() {
                         active_mode->started_ = false;
                         active_mode->volume.initial = k_uptime_get();
                     }
-                    active_mode->volume.start_ms = k_uptime_get();
                     active_mode->volume.last_calc_ms = k_uptime_get();
                     running = true; paused = false;
                     k_mutex_unlock(&state_mutex);
